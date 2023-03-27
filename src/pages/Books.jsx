@@ -1,7 +1,7 @@
-import ResponsiveAppBar from "../components/Header";
-import CheckboxesGroup from "../components/FilterSort";
-import CardGrid from "../components/BookCardGrid";
-import BasicBreadcrumbs from "../components/Breadcrumb";
+import ResponsiveAppBar from "../mui_components/Header";
+import CheckboxesGroup from "../mui_components/FilterSort";
+import CardGrid from "../mui_components/BookCardGrid";
+import BasicBreadcrumbs from "../mui_components/Breadcrumb";
 import { Box } from "@mui/material";
 
 export default function Books() {

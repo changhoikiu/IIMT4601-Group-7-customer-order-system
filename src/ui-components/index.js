@@ -5,7 +5,6 @@
  **************************************************************************/
 
 export { default as Features4x1 } from "./Features4x1";
-export { default as Breadcrumb } from "./Breadcrumb";
 export { default as HeroLayout4 } from "./HeroLayout4";
 export { default as FAQItem } from "./FAQItem";
 export { default as FeaturesText2x2 } from "./FeaturesText2x2";
@@ -35,3 +34,6 @@ export { default as MarketingPricing } from "./MarketingPricing";
 export { default as HeroLayout2 } from "./HeroLayout2";
 export { default as studioTheme } from "./studioTheme";
 export { default as OrderBook } from "./OrderBook";
+export { default as SubmitReservation } from "./SubmitReservation";
+export { default as OrderCancel } from "./OrderCancel";
+export { default as SelectEnquiries } from "./SelectEnquiries";

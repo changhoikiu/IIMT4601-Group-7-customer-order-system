@@ -15,6 +15,7 @@ import Logo from './logo.png';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { styled, alpha } from '@mui/material/styles'; 
 import SearchIcon from '@mui/icons-material/Search';
+import NaviMenu from './NaviMenu';
 
 const theme = createTheme({
 	palette: {
@@ -119,6 +120,10 @@ function ResponsiveAppBar() {
 								</Button>
 							))}
 						</Box>
+
+						{/* <NaviMenu 
+							sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}
+						/> */}
 
 						<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
 							<IconButton

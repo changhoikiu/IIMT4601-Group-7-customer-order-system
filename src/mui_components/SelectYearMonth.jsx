@@ -1,8 +1,4 @@
 import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { BestSellerCard } from './BestSellerCard';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -10,11 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { Typography } from '@mui/material';
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-const theme = createTheme();
-
-export default function BestSellerCardGrid() {
+function SelectYearMonth() {
   const [year, setYear] = React.useState('');
 
   const handleChangeYear = (event) => {
@@ -28,12 +20,12 @@ export default function BestSellerCardGrid() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-              <Typography sx ={{ml: 4, mt: 3}}>
-          Search for past records:
-        </Typography>
-      <Box sx={{ ml:4, mt:1, maxWidth: 250, display: 'flex'}}>
-        <FormControl fullWidth sx={{mr:1}}>
+    <div>
+      <Typography sx={{ ml: 4, mt: 3 }}>
+        Search for past records:
+      </Typography>
+      <Box sx={{ ml: 4, mt: 1, maxWidth: 250, display: 'flex' }}>
+        <FormControl fullWidth sx={{ mr: 1 }}>
           <InputLabel id="year">Year</InputLabel>
           <Select
             labelId="year"
@@ -77,16 +69,8 @@ export default function BestSellerCardGrid() {
           </Select>
         </FormControl>
       </Box>
-
-      <Container sx={{ my: 2}}>
-        <Grid container spacing={2}>
-          {cards.map((card) => (
-            <Grid item key={card} xs={12} sm={12} md={12}>
-              <BestSellerCard />
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </ThemeProvider>
+    </div>
   );
 }
+
+export default SelectYearMonth;

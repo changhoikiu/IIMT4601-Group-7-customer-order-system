@@ -1,13 +1,30 @@
-import ResponsiveAppBar from "../components/Header";
-import { Box } from "@mui/material";
-import {
-    OrderBook 
-   } from '../ui-components';
-import "@aws-amplify/ui-react/styles.css";
+import * as React from 'react';
 
-export function Enquiries() {
-    // <Box>
-    //     <ResponsiveAppBar />
-        <OrderBook />
-    // </Box>
+import ResponsiveAppBar from '../mui_components/Header';
+import {
+    OrderBook, OrderCancel, SelectEnquiries
+} from '../ui-components';
+
+import { Box } from '@mui/material';
+
+
+function Enquiries() {
+    const [enquiryType, setEnquiryType] = React.useState('');
+
+    return (
+        <div>
+            <ResponsiveAppBar />
+            <Box mx={10}>
+                <SelectEnquiries
+                    onChange={fields => setEnquiryType(fields)}
+                />
+                {(enquiryType.name === 'Order a Book') && <OrderBook />}
+                {(enquiryType.name === 'Cancel an Order') && <OrderCancel />}
+            </Box>
+        </div>
+    );
 }
+
+
+
+export default Enquiries;

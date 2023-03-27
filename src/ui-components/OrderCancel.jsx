@@ -11,13 +11,12 @@ import {
   Flex,
   Grid,
   Heading,
-  SelectField,
   TextField,
   useTheme,
 } from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { fetchByPath, validateField } from "./utils";
-export default function OrderBook(props) {
+export default function OrderCancel(props) {
   const { onSubmit, onValidate, onChange, overrides, ...rest } = props;
   const { tokens } = useTheme();
   const initialValues = {
@@ -25,28 +24,24 @@ export default function OrderBook(props) {
     phoneNo: "",
     title: "",
     authors: "",
-    genre: undefined,
   };
   const [name, setName] = React.useState(initialValues.name);
   const [phoneNo, setPhoneNo] = React.useState(initialValues.phoneNo);
   const [title, setTitle] = React.useState(initialValues.title);
   const [authors, setAuthors] = React.useState(initialValues.authors);
-  const [genre, setGenre] = React.useState(initialValues.genre);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setName(initialValues.name);
     setPhoneNo(initialValues.phoneNo);
     setTitle(initialValues.title);
     setAuthors(initialValues.authors);
-    setGenre(initialValues.genre);
     setErrors({});
   };
   const validations = {
     name: [{ type: "Required" }],
     phoneNo: [{ type: "Required" }, { type: "Phone" }],
-    title: [{ type: "Required" }],
-    authors: [{ type: "Required" }],
-    genre: [],
+    title: [],
+    authors: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -78,7 +73,6 @@ export default function OrderBook(props) {
           phoneNo,
           title,
           authors,
-          genre,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -101,12 +95,12 @@ export default function OrderBook(props) {
         }
         await onSubmit(modelFields);
       }}
-      {...getOverrideProps(overrides, "OrderBook")}
+      {...getOverrideProps(overrides, "OrderCancel")}
       {...rest}
     >
       <Heading
         level={4}
-        children="Order Book"
+        children="Cancel an order or reservation"
         {...getOverrideProps(overrides, "SectionalElement0")}
       ></Heading>
       <TextField
@@ -122,7 +116,6 @@ export default function OrderBook(props) {
               phoneNo,
               title,
               authors,
-              genre,
             };
             const result = onChange(modelFields);
             value = result?.name ?? value;
@@ -140,7 +133,7 @@ export default function OrderBook(props) {
       <TextField
         label="Mobile Phone Number"
         isRequired={true}
-        placeholder="A number that can receive SMS"
+        placeholder="The number you used for ordering"
         type="tel"
         value={phoneNo}
         onChange={(e) => {
@@ -151,7 +144,6 @@ export default function OrderBook(props) {
               phoneNo: value,
               title,
               authors,
-              genre,
             };
             const result = onChange(modelFields);
             value = result?.phoneNo ?? value;
@@ -168,7 +160,6 @@ export default function OrderBook(props) {
       ></TextField>
       <TextField
         label="Book Title"
-        isRequired={true}
         value={title}
         onChange={(e) => {
           let { value } = e.target;
@@ -178,7 +169,6 @@ export default function OrderBook(props) {
               phoneNo,
               title: value,
               authors,
-              genre,
             };
             const result = onChange(modelFields);
             value = result?.title ?? value;
@@ -195,7 +185,6 @@ export default function OrderBook(props) {
       ></TextField>
       <TextField
         label="Authors/Editors"
-        isRequired={true}
         value={authors}
         onChange={(e) => {
           let { value } = e.target;
@@ -205,7 +194,6 @@ export default function OrderBook(props) {
               phoneNo,
               title,
               authors: value,
-              genre,
             };
             const result = onChange(modelFields);
             value = result?.authors ?? value;
@@ -220,159 +208,6 @@ export default function OrderBook(props) {
         hasError={errors.authors?.hasError}
         {...getOverrideProps(overrides, "authors")}
       ></TextField>
-      <SelectField
-        label="Genre"
-        placeholder="Please select the most suitable genre"
-        value={genre}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              name,
-              phoneNo,
-              title,
-              authors,
-              genre: value,
-            };
-            const result = onChange(modelFields);
-            value = result?.genre ?? value;
-          }
-          if (errors.genre?.hasError) {
-            runValidationTasks("genre", value);
-          }
-          setGenre(value);
-        }}
-        onBlur={() => runValidationTasks("genre", genre)}
-        errorMessage={errors.genre?.errorMessage}
-        hasError={errors.genre?.hasError}
-        {...getOverrideProps(overrides, "genre")}
-      >
-        <option
-          children="二手書架"
-          value="二手書架"
-          {...getOverrideProps(overrides, "genreoption0")}
-        ></option>
-        <option
-          children="電影/戲劇"
-          value="電影/戲劇"
-          {...getOverrideProps(overrides, "genreoption1")}
-        ></option>
-        <option
-          children="城市地理"
-          value="城市地理"
-          {...getOverrideProps(overrides, "genreoption2")}
-        ></option>
-        <option
-          children="雜誌/期刊"
-          value="雜誌/期刊"
-          {...getOverrideProps(overrides, "genreoption3")}
-        ></option>
-        <option
-          children="文學"
-          value="文學"
-          {...getOverrideProps(overrides, "genreoption4")}
-        ></option>
-        <option
-          children="文化 藝術理論"
-          value="文化 藝術理論"
-          {...getOverrideProps(overrides, "genreoption5")}
-        ></option>
-        <option
-          children="中國研究"
-          value="中國研究"
-          {...getOverrideProps(overrides, "genreoption6")}
-        ></option>
-        <option
-          children="台灣研究"
-          value="台灣研究"
-          {...getOverrideProps(overrides, "genreoption7")}
-        ></option>
-        <option
-          children="亞太研所"
-          value="亞太研所"
-          {...getOverrideProps(overrides, "genreoption8")}
-        ></option>
-        <option
-          children="香港研究"
-          value="香港研究"
-          {...getOverrideProps(overrides, "genreoption9")}
-        ></option>
-        <option
-          children="宗教 神學"
-          value="宗教 神學"
-          {...getOverrideProps(overrides, "genreoption10")}
-        ></option>
-        <option
-          children="哲學"
-          value="哲學"
-          {...getOverrideProps(overrides, "genreoption11")}
-        ></option>
-        <option
-          children="精神分析"
-          value="精神分析"
-          {...getOverrideProps(overrides, "genreoption12")}
-        ></option>
-        <option
-          children="中國哲學"
-          value="中國哲學"
-          {...getOverrideProps(overrides, "genreoption13")}
-        ></option>
-        <option
-          children="政治哲學"
-          value="政治哲學"
-          {...getOverrideProps(overrides, "genreoption14")}
-        ></option>
-        <option
-          children="性別研究"
-          value="性別研究"
-          {...getOverrideProps(overrides, "genreoption15")}
-        ></option>
-        <option
-          children="次文化"
-          value="次文化"
-          {...getOverrideProps(overrides, "genreoption16")}
-        ></option>
-        <option
-          children="同人誌"
-          value="同人誌"
-          {...getOverrideProps(overrides, "genreoption17")}
-        ></option>
-        <option
-          children="歷史與政治"
-          value="歷史與政治"
-          {...getOverrideProps(overrides, "genreoption18")}
-        ></option>
-        <option
-          children="社會 文化 經濟"
-          value="社會 文化 經濟"
-          {...getOverrideProps(overrides, "genreoption19")}
-        ></option>
-        <option
-          children="Literature"
-          value="Literature"
-          {...getOverrideProps(overrides, "genreoption20")}
-        ></option>
-        <option
-          children="Hong Kong Studies"
-          value="Hong Kong Studies"
-          {...getOverrideProps(overrides, "genreoption21")}
-        ></option>
-        <option
-          children="Social Science and History"
-          value="Social Science and History"
-          {...getOverrideProps(overrides, "genreoption22")}
-        ></option>
-        <option
-          children="Philosophy"
-          value="Philosophy"
-          {...getOverrideProps(overrides, "genreoption23")}
-        ></option>
-        <option
-          children="Urban Studies"
-          value="Urban Studies"
-          {...getOverrideProps(overrides, "genreoption24")}
-        ></option>
-      </SelectField>
       <Flex
         justifyContent="space-between"
         {...getOverrideProps(overrides, "CTAFlex")}

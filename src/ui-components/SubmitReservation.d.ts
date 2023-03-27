@@ -5,42 +5,33 @@
  **************************************************************************/
 
 import * as React from "react";
-import { GridProps, HeadingProps, SelectFieldProps, TextFieldProps } from "@aws-amplify/ui-react";
+import { GridProps, HeadingProps, TextFieldProps } from "@aws-amplify/ui-react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 export declare type ValidationResponse = {
     hasError: boolean;
     errorMessage?: string;
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
-export declare type OrderBookInputValues = {
+export declare type SubmitReservationInputValues = {
     name?: string;
     phoneNo?: string;
-    title?: string;
-    authors?: string;
-    genre?: string;
 };
-export declare type OrderBookValidationValues = {
+export declare type SubmitReservationValidationValues = {
     name?: ValidationFunction<string>;
     phoneNo?: ValidationFunction<string>;
-    title?: ValidationFunction<string>;
-    authors?: ValidationFunction<string>;
-    genre?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type OrderBookOverridesProps = {
-    OrderBookGrid?: PrimitiveOverrideProps<GridProps>;
+export declare type SubmitReservationOverridesProps = {
+    SubmitReservationGrid?: PrimitiveOverrideProps<GridProps>;
     SectionalElement0?: PrimitiveOverrideProps<HeadingProps>;
     name?: PrimitiveOverrideProps<TextFieldProps>;
     phoneNo?: PrimitiveOverrideProps<TextFieldProps>;
-    title?: PrimitiveOverrideProps<TextFieldProps>;
-    authors?: PrimitiveOverrideProps<TextFieldProps>;
-    genre?: PrimitiveOverrideProps<SelectFieldProps>;
 } & EscapeHatchProps;
-export declare type OrderBookProps = React.PropsWithChildren<{
-    overrides?: OrderBookOverridesProps | undefined | null;
+export declare type SubmitReservationProps = React.PropsWithChildren<{
+    overrides?: SubmitReservationOverridesProps | undefined | null;
 } & {
-    onSubmit: (fields: OrderBookInputValues) => void;
-    onChange?: (fields: OrderBookInputValues) => OrderBookInputValues;
-    onValidate?: OrderBookValidationValues;
+    onSubmit: (fields: SubmitReservationInputValues) => void;
+    onChange?: (fields: SubmitReservationInputValues) => SubmitReservationInputValues;
+    onValidate?: SubmitReservationValidationValues;
 } & React.CSSProperties>;
-export default function OrderBook(props: OrderBookProps): React.ReactElement;
+export default function SubmitReservation(props: SubmitReservationProps): React.ReactElement;

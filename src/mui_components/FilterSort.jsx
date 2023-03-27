@@ -8,7 +8,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 import { filter } from '@chakra-ui/react';
 
-// const filterCriteria = ["二手書架", "電影/戲劇", "城市地理", "雜誌/期刊", "文學", "文化 藝術理論", "中國研究", "台灣研究", "亞太研所", "香港研究", "宗教 神學", "哲學", "精神分析", "中國哲學", "政治哲學", "性別研究", "次文化", "同人誌", "歷史與政治", "社會 文化 經濟", "Literature", "Hong Kong Studies", "Social science and history", "Philosophy", "Urban studies"];
+// const filterCriteria = ["二手書架", "電影/戲劇", "城市地理", "雜誌/期刊", "文學", "文化 藝術理論", "中國研究", "台灣研究", "亞太研所", "香港研究", "宗教 神學", "哲學", "精神分析", "中國哲學", "政治 哲學", "性別研究", "次文化", "同人誌", "歷史與政治", "社會 文化 經濟", "Literature", "Hong Kong Studies", "Social science and history", "Philosophy", "Urban studies"];
 const filterCriteria = [{ "value": 0, "label": "二手書架" }, { "value": 1, "label": "電影/戲劇" }, { "value": 2, "label": "城市地理" }, { "value": 3, "label": "雜誌/期刊" }, { "value": 4, "label": "文學" }, { "value": 5, "label": "文化 藝術理論" }, { "value": 6, "label": "中國研究" }, { "value": 7, "label": "台灣研究" }, { "value": 8, "label": "亞太研所" }, { "value": 9, "label": "香港研究" }, { "value": 10, "label": "宗教 神學" }, { "value": 11, "label": "哲學" }, { "value": 12, "label": "精神分析" }, { "value": 13, "label": "中國哲學" }, { "value": 14, "label": "政治哲學" }, { "value": 15, "label": "性別研究" }, { "value": 16, "label": "次文化" }, { "value": 17, "label": "同人誌" }, { "value": 18, "label": "歷史與政治" }, { "value": 19, "label": "社會 文化 經濟" }, { "value": 20, "label": "Literature" }, { "value": 21, "label": "Hong Kong Studies" }, { "value": 22, "label": "Social science and history" }, { "value": 23, "label": "Philosophy" }, { "value": 24, "label": "Urban studies" }];
 const sortingCriteria = {
   1: 'Latest',
