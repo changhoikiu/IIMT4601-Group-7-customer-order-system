@@ -7,7 +7,6 @@ import { Box } from "@mui/material";
 export default function Books() {
     return (
       <Box mx={10}>
-        <ResponsiveAppBar />
         <Box sx={{display: 'flex'}}>
             <CheckboxesGroup />
             <Box sx={{display: 'block'}}>

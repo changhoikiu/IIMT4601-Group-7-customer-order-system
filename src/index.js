@@ -15,14 +15,37 @@ import { studioTheme } from "./ui-components";
 
 Amplify.configure(awsconfig);
 
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <ThemeProvider theme={studioTheme}>
+//       <App />
+//     </ThemeProvider>
+//   </React.StrictMode>
+// );
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={studioTheme}>
-    <App />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={studioTheme}>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
+
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <ThemeProvider theme={studioTheme}>
+//         <App />
+//       </ThemeProvider>
+//     </BrowserRouter>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

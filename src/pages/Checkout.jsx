@@ -11,7 +11,6 @@ function Checkout() {
 
     return (
         <div>
-            <ResponsiveAppBar />
             <Box 
                 mx={10} 
                 display={'flex'}

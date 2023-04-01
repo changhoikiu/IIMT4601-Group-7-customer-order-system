@@ -13,7 +13,6 @@ function Enquiries() {
 
     return (
         <div>
-            <ResponsiveAppBar />
             <Box mx={10}>
                 <SelectEnquiries
                     onChange={fields => setEnquiryType(fields)}
