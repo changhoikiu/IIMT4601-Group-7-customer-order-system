@@ -6,7 +6,8 @@ import Chip from '@mui/joy/Chip';
 import Typography from '@mui/joy/Typography';
 import { textAlign } from '@mui/system';
 
-function BestSellerCard( {i}) {
+function BestSellerCard({book, i}) {
+
   return (
     <Card
       variant="outlined"
@@ -27,7 +28,7 @@ function BestSellerCard( {i}) {
       >
         {i}
       </Chip>
-      <AspectRatio ratio="1" sx={{ width: 90 }}>
+      <AspectRatio ratio="6/9" sx={{ width: 90 }}>
         <img
           src=""
           srcSet=""
@@ -37,23 +38,15 @@ function BestSellerCard( {i}) {
       </AspectRatio>
       <div>
         <Typography level="h2" fontSize="lg" id="card-description" mb={0.5}>
-          TItle
+          Title
         </Typography>
         <Typography fontSize="sm" aria-describedby="card-description" mb={1}>
-          <Link
-            overlay
-            underline="none"
-            href="#interactive-card"
-            sx={{ color: 'text.tertiary' }}
-          >
             Author
-          </Link>
         </Typography>
         <Typography fontSize="sm" aria-describedby="card-description" mb={1}>
           <Link
             overlay
             underline="none"
-            href="#interactive-card"
             sx={{ color: 'text.tertiary' }}
           >
             Publisher

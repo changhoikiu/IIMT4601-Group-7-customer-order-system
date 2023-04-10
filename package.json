@@ -5,6 +5,7 @@
   "dependencies": {
     "@aws-amplify/ui-react": "^4.4.1",
     "@chakra-ui/react": "^2.5.3",
+    "@chec/commerce.js": "^2.8.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/roboto": "^4.5.8",

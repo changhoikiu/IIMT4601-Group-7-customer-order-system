@@ -8,12 +8,12 @@ import MenuBookRoundedIcon from '@mui/icons-material/MenuBookRounded';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
 import { Link } from 'react-router-dom';
-import { alpha} from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 
 
 export default function NaviMenu() {
-  const iconColor = alpha('#1E4158', 0.7);
-  const textColor = alpha('#1E4158', 0.7);
+  const iconColor = '#0d4fa2';
+  const textColor = '#0d4fa2';
 
   return (
     <Box>
@@ -21,6 +21,7 @@ export default function NaviMenu() {
         role="menubar"
         orientation="horizontal"
         sx={{
+          py: 2,
           '--List-radius': '8px',
           '--List-padding': '4px',
           '--List-gap': '8px', 
@@ -30,7 +31,7 @@ export default function NaviMenu() {
           <ListItemButton
             role="menuitem"
             component={Link}
-            to="/books"
+            to="/"
             sx={{ color: textColor }}
           >
             <ListItemDecorator sx={{ color: textColor }}>
@@ -65,6 +66,20 @@ export default function NaviMenu() {
               <QuestionAnswerRoundedIcon sx={{ color: iconColor }} />
             </ListItemDecorator>
             Enquiries
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem role="none">
+          <ListItemButton
+            role="menuitem"
+            component={Link}
+            to="/test"
+            sx={{ color: textColor }}
+          >
+            <ListItemDecorator sx={{ color: textColor }}>
+              <QuestionAnswerRoundedIcon sx={{ color: iconColor }} />
+            </ListItemDecorator>
+            Test
           </ListItemButton>
         </ListItem>
       </List>
