@@ -8,6 +8,7 @@
 import * as React from "react";
 import {
   Button,
+  CheckboxField,
   Flex,
   Grid,
   Heading,
@@ -22,18 +23,22 @@ export default function SubmitReservation(props) {
   const initialValues = {
     name: "",
     phoneNo: "",
+    agreement: false,
   };
   const [name, setName] = React.useState(initialValues.name);
   const [phoneNo, setPhoneNo] = React.useState(initialValues.phoneNo);
+  const [agreement, setAgreement] = React.useState(initialValues.agreement);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setName(initialValues.name);
     setPhoneNo(initialValues.phoneNo);
+    setAgreement(initialValues.agreement);
     setErrors({});
   };
   const validations = {
     name: [{ type: "Required" }],
     phoneNo: [{ type: "Required" }, { type: "Phone" }],
+    agreement: [{ type: "Required" }],
   };
   const runValidationTasks = async (
     fieldName,
@@ -57,12 +62,13 @@ export default function SubmitReservation(props) {
       as="form"
       rowGap="15px"
       columnGap="15px"
-      padding={tokens.space.large.value}
+      padding={tokens.space.xxxs.value}
       onSubmit={async (event) => {
         event.preventDefault();
         const modelFields = {
           name,
           phoneNo,
+          agreement,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -104,6 +110,7 @@ export default function SubmitReservation(props) {
             const modelFields = {
               name: value,
               phoneNo,
+              agreement,
             };
             const result = onChange(modelFields);
             value = result?.name ?? value;
@@ -130,6 +137,7 @@ export default function SubmitReservation(props) {
             const modelFields = {
               name,
               phoneNo: value,
+              agreement,
             };
             const result = onChange(modelFields);
             value = result?.phoneNo ?? value;
@@ -144,6 +152,33 @@ export default function SubmitReservation(props) {
         hasError={errors.phoneNo?.hasError}
         {...getOverrideProps(overrides, "phoneNo")}
       ></TextField>
+      <CheckboxField
+        label="I agreed that I will come to pick up the reserved books in person within 7 days after making this reservation."
+        isRequired={true}
+        name="fieldName"
+        value="fieldName"
+        checked={agreement}
+        onChange={(e) => {
+          let value = e.target.checked;
+          if (onChange) {
+            const modelFields = {
+              name,
+              phoneNo,
+              agreement: value,
+            };
+            const result = onChange(modelFields);
+            value = result?.agreement ?? value;
+          }
+          if (errors.agreement?.hasError) {
+            runValidationTasks("agreement", value);
+          }
+          setAgreement(value);
+        }}
+        onBlur={() => runValidationTasks("agreement", agreement)}
+        errorMessage={errors.agreement?.errorMessage}
+        hasError={errors.agreement?.hasError}
+        {...getOverrideProps(overrides, "agreement")}
+      ></CheckboxField>
       <Flex
         justifyContent="space-between"
         {...getOverrideProps(overrides, "CTAFlex")}

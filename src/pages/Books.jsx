@@ -1,24 +1,28 @@
 import * as React from "react";
-import BookFilterChips from "../mui_components/BookFilterChips";
+
 import Box from "@mui/joy/Box";
-import BookCard from "../mui_components/BookCard";
+import Typography from '@mui/joy/Typography';
+
 import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination";
-import BookSortChips from "../mui_components/BookSort";
-import Typography from '@mui/joy/Typography';
-import { State } from "../context/Context";
+import TextField from '@mui/material/TextField';
+import { InputAdornment } from "@mui/material";
 
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+
+import BookCard from "../mui_components/BookCard";
+import BookFilterChips from "../mui_components/BookFilterChips";
+import BookSortChips from "../mui_components/BookSort";
+
+import { State } from "../context/Context";
 
 export default function Books() {
 
-  const { 
+  const {
     state: { bookList },
   } = State();
 
-  // console.log(bookList);
-
   const pageSize = 12;
-  const numPages = Math.ceil(bookList.length / pageSize);
 
   const [page, setPage] = React.useState(0);
   const handlePageChange = (event, newPage) => {
@@ -35,9 +39,27 @@ export default function Books() {
     setSelectedSort(event);
   };
 
+  const [searchQuery, setSearchQuery] = React.useState('');
+  const handleSearchQueryChange = (event) => {
+    setSearchQuery(event.target.value);
+    setPage(0);
+  }
+
+  const filteredBookList = bookList.filter(book => {
+    const searchLower = searchQuery.toLowerCase();
+    const titleLower = book.title.toLowerCase();
+    const authorsLower = book.authors.map(author => author.toLowerCase()).join(' ');
+    const publisherLower = book.publisher.toLowerCase();
+    return titleLower.includes(searchLower) ||
+      authorsLower.includes(searchLower) ||
+      publisherLower.includes(searchLower);
+  });
+
+  const numPages = Math.ceil(filteredBookList.length / pageSize);
+
   return (
-    <Box sx={{ margin: 10 }}>
-      <Typography level="h1" fontSize="">
+    <>
+      <Typography level="h5" fontSize="">
         Books
       </Typography>
 
@@ -48,7 +70,7 @@ export default function Books() {
         }}
       >
         <Box
-          sx={{ width: '25%' }}
+          sx={{ maxWidth: '25%' }}
           marginRight={2}
           marginTop={2}
         >
@@ -62,29 +84,52 @@ export default function Books() {
           />
         </Box>
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2} mt={1}>
-            {bookList.slice(page * pageSize, (page + 1) * pageSize).map((book) => (
-              <Grid key={book.id} item xs={12} sm={6} md={6} lg={3}>
-                <BookCard key={book.id} {...book} />
-              </Grid>
-            )
-            )}
-          </Grid>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              marginTop: 2
-            }}
-          >
-            <Pagination
-              count={numPages}
-              page={page + 1}
-              onChange={handlePageChange}
+          <Box sx={{ marginBottom: 2 }}>
+            <TextField
+              label="Search"
+              variant="standard"
+              size="small"
+              fullWidth
+              value={searchQuery}
+              onChange={handleSearchQueryChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchRoundedIcon />
+                  </InputAdornment>
+                ),
+              }}
             />
           </Box>
+          {filteredBookList.length > 0 ? (
+            <>
+              <Grid container spacing={2}>
+                {filteredBookList.slice(page * pageSize, (page + 1) * pageSize).map((book) => (
+                  <Grid key={book.id} item xs={12} sm={6} md={6} lg={3}>
+                    <BookCard key={book.id} {...book} />
+                  </Grid>
+                )
+                )}
+              </Grid>
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginTop: 2
+                }}
+              >
+                <Pagination
+                  count={numPages}
+                  page={page + 1}
+                  onChange={handlePageChange}
+                />
+              </Box>
+            </>
+          ) : (
+            <Typography variant="body1">No books found.</Typography>
+          )}
         </Box>
       </Box>
-    </Box>
+    </>
   );
 }

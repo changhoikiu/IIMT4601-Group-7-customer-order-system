@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Chip from '@mui/joy/Chip';
+import Chip from '@mui/material/Chip';
 import Box from '@mui/joy/Box';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import Typography from '@mui/joy/Typography';
@@ -56,18 +56,14 @@ export default function FilterChips({selected, setSelected}) {
       {filterCriteria.map((criterion) => {
         const chipSelected = selected.includes(criterion.id);
         return (
-          <Chip
-            key={criterion.id}
-            selected={chipSelected}
+          <Chip 
+            key={criterion.id} 
+            label={criterion.label}
             onClick={() => handleChipClick(criterion.id)}
-            variant={chipSelected ? 'solid' : 'soft'}
-            sx={{ 
-              m: 0.5,
-            }}
-            endDecorator={chipSelected && <CloseRoundedIcon />}
-          >
-            {criterion.label}
-          </Chip>
+            color={chipSelected? 'primary' : 'default'}
+            variant={chipSelected ? 'soft' : 'outlined'}
+            sx={{ m: 0.5 }}
+          />
         );
       })}
     </Box>

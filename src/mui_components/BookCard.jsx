@@ -86,7 +86,6 @@ export default function BookCard(book) {
           isOpen={isDrawerOpen}
           onClose={handleDrawerClose}
           book={book}
-          // handleAddToCart={onAddToCart}
       />
 
     </>

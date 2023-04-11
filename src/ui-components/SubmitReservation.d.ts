@@ -5,7 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { GridProps, HeadingProps, TextFieldProps } from "@aws-amplify/ui-react";
+import { CheckboxFieldProps, GridProps, HeadingProps, TextFieldProps } from "@aws-amplify/ui-react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 export declare type ValidationResponse = {
     hasError: boolean;
@@ -15,10 +15,12 @@ export declare type ValidationFunction<T> = (value: T, validationResponse: Valid
 export declare type SubmitReservationInputValues = {
     name?: string;
     phoneNo?: string;
+    agreement?: boolean;
 };
 export declare type SubmitReservationValidationValues = {
     name?: ValidationFunction<string>;
     phoneNo?: ValidationFunction<string>;
+    agreement?: ValidationFunction<boolean>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type SubmitReservationOverridesProps = {
@@ -26,6 +28,7 @@ export declare type SubmitReservationOverridesProps = {
     SectionalElement0?: PrimitiveOverrideProps<HeadingProps>;
     name?: PrimitiveOverrideProps<TextFieldProps>;
     phoneNo?: PrimitiveOverrideProps<TextFieldProps>;
+    agreement?: PrimitiveOverrideProps<CheckboxFieldProps>;
 } & EscapeHatchProps;
 export declare type SubmitReservationProps = React.PropsWithChildren<{
     overrides?: SubmitReservationOverridesProps | undefined | null;

@@ -46,7 +46,7 @@ export default function SelectEnquiries(props) {
       as="form"
       rowGap="15px"
       columnGap="15px"
-      padding={tokens.space.large.value}
+      padding={tokens.space.xxxs.value}
       onSubmit={async (event) => {
         event.preventDefault();
         const modelFields = {

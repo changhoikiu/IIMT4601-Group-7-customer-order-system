@@ -1,27 +1,26 @@
 import * as React from 'react';
+import Typography from '@mui/joy/Typography';
 
-import ResponsiveAppBar from '../mui_components/Header';
 import {
-    OrderBook, OrderCancel, SelectEnquiries
+  OrderBook, OrderCancel, SelectEnquiries
 } from '../ui-components';
-
-import { Box } from '@mui/material';
 
 
 function Enquiries() {
-    const [enquiryType, setEnquiryType] = React.useState('');
+  const [enquiryType, setEnquiryType] = React.useState('');
 
-    return (
-        <div>
-            <Box mx={10}>
-                <SelectEnquiries
-                    onChange={fields => setEnquiryType(fields)}
-                />
-                {(enquiryType.name === 'Order a Book') && <OrderBook />}
-                {(enquiryType.name === 'Cancel an Order') && <OrderCancel />}
-            </Box>
-        </div>
-    );
+  return (
+    <>
+      <Typography level="h5" fontSize="">
+        Enquiries
+      </Typography>
+      <SelectEnquiries
+        onChange={fields => setEnquiryType(fields)}
+      />
+      {(enquiryType.name === 'Order a Book') && <OrderBook />}
+      {(enquiryType.name === 'Cancel an Order') && <OrderCancel />}
+    </>
+  );
 }
 
 
