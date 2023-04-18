@@ -5,7 +5,6 @@ import Books from './pages/Books';
 import BestSellers from './pages/BestSellers';
 import Enquiries from './pages/Enquiries';
 import Header from './mui_components/Header';
-import Test from './pages/Test';
 import SubmitReservation from './pages/SubmitReservation';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Route path="/" element={<Books />} />
         <Route path="/monthly-best-sellers" element={<BestSellers />} />
         <Route path="/enquiries" element={<Enquiries />} />
-        <Route path="/test" element={<Test />} />
         <Route path="/reserve" element={<SubmitReservation />} />
       </Routes>
       </Box>
