@@ -69,7 +69,7 @@ export default function NaviMenu() {
           </ListItemButton>
         </ListItem>
 
-        <ListItem role="none">
+        {/* <ListItem role="none">
           <ListItemButton
             role="menuitem"
             component={Link}
@@ -81,7 +81,7 @@ export default function NaviMenu() {
             </ListItemDecorator>
             Test
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
     </Box>
   );
