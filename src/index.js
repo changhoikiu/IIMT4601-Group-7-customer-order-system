@@ -6,17 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
 import { ThemeProvider } from "@aws-amplify/ui-react";
-import { Amplify, Auth } from 'aws-amplify';
-import awsconfig from './aws-exports';
+import { Amplify } from 'aws-amplify';
 import "@aws-amplify/ui-react/styles.css";
 import { studioTheme } from "./ui-components";
 
 
 import Context from "./context/Context";
 
-import SignUpForm from "./mui_components/test";
-
-Amplify.configure(awsconfig);
+Amplify.configure();
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
