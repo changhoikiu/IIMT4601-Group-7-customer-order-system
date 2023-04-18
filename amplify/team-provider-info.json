@@ -10,6 +10,11 @@
       "StackName": "amplify-customerorderingsys-dev-215435",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:164476025367:stack/amplify-customerorderingsys-dev-215435/3f7d2150-c982-11ed-9803-0a7aee2a0c78",
       "AmplifyAppId": "d22vn2zar3ohs7"
+    },
+    "categories": {
+      "auth": {
+        "customerorderingsys": {}
+      }
     }
   }
 }

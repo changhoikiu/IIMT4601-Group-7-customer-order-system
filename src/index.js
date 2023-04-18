@@ -16,13 +16,7 @@ import Context from "./context/Context";
 
 import SignUpForm from "./mui_components/test";
 
-Amplify.configure({
-  Auth: {
-    region: "ap-southeast-1",
-    userPoolId: "ap-southeast-1_jUzgEjjnS",
-    userPoolWebClientId: "668f17c94g8n4ll1hp7o916dhe",
-  },
-});
+Amplify.configure(awsconfig);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
