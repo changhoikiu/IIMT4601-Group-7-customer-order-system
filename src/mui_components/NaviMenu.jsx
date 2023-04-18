@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import { Link } from "react-router-dom";
 
-import Box from '@mui/joy/Box';
-import List from '@mui/joy/List';
-import ListItem from '@mui/joy/ListItem';
-import ListItemButton from '@mui/joy/ListItemButton';
-import ListItemDecorator from '@mui/joy/ListItemDecorator';
+import Box from "@mui/joy/Box";
+import List from "@mui/joy/List";
+import ListItem from "@mui/joy/ListItem";
+import ListItemButton from "@mui/joy/ListItemButton";
+import ListItemDecorator from "@mui/joy/ListItemDecorator";
 
-import MenuBookRoundedIcon from '@mui/icons-material/MenuBookRounded';
-import StarRoundedIcon from '@mui/icons-material/StarRounded';
-import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
+import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
+import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import QuestionAnswerRoundedIcon from "@mui/icons-material/QuestionAnswerRounded";
 
 export default function NaviMenu() {
-  const iconColor = '#0d4fa2';
-  const textColor = '#0d4fa2';
+  const iconColor = "#0d4fa2";
+  const textColor = "#0d4fa2";
 
   return (
     <Box>
@@ -22,9 +22,9 @@ export default function NaviMenu() {
         orientation="horizontal"
         sx={{
           py: 2,
-          '--List-radius': '8px',
-          '--List-padding': '4px',
-          '--List-gap': '8px', 
+          "--List-radius": "8px",
+          "--List-padding": "4px",
+          "--List-gap": "8px",
         }}
       >
         <ListItem role="none">

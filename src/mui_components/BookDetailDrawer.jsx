@@ -56,19 +56,19 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
           <Typography variant="h6" mb={1}>
             Authors:
           </Typography>
-          <Typography variant="body1" mb={2} ml={1}>
+          <Typography variant="body1" mb={2} ml={2}>
             {book.authors.join(', ')}
           </Typography>
           <Typography variant="h6" mb={1}>
             Publisher:
           </Typography>
-          <Typography variant="body1" mb={2} ml={1}>
+          <Typography variant="body1" mb={2} ml={2}>
             {book.publisher}
           </Typography>
           <Typography variant="h6" mb={1}>
             Description:
           </Typography>
-          <Typography variant="body1" mb={2} ml={1} textAlign="justify">
+          <Typography variant="body1" mb={2} ml={2} textAlign="justify">
             {book.description}
           </Typography>
           <Box

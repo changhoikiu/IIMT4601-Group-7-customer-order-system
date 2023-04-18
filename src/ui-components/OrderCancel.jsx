@@ -6,40 +6,42 @@
 
 /* eslint-disable */
 import * as React from "react";
-import {
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  TextField,
-  useTheme,
-} from "@aws-amplify/ui-react";
+import { Button, Flex, Grid, Heading, TextField } from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { fetchByPath, validateField } from "./utils";
 export default function OrderCancel(props) {
   const { onSubmit, onValidate, onChange, overrides, ...rest } = props;
-  const { tokens } = useTheme();
   const initialValues = {
     name: "",
+    Field0: "",
     phoneNo: "",
+    reservationID: "",
     title: "",
     authors: "",
   };
   const [name, setName] = React.useState(initialValues.name);
+  const [Field0, setField0] = React.useState(initialValues.Field0);
   const [phoneNo, setPhoneNo] = React.useState(initialValues.phoneNo);
+  const [reservationID, setReservationID] = React.useState(
+    initialValues.reservationID
+  );
   const [title, setTitle] = React.useState(initialValues.title);
   const [authors, setAuthors] = React.useState(initialValues.authors);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setName(initialValues.name);
+    setField0(initialValues.Field0);
     setPhoneNo(initialValues.phoneNo);
+    setReservationID(initialValues.reservationID);
     setTitle(initialValues.title);
     setAuthors(initialValues.authors);
     setErrors({});
   };
   const validations = {
     name: [{ type: "Required" }],
+    Field0: [{ type: "Email" }],
     phoneNo: [{ type: "Required" }, { type: "Phone" }],
+    reservationID: [{ type: "Required" }],
     title: [],
     authors: [],
   };
@@ -65,12 +67,14 @@ export default function OrderCancel(props) {
       as="form"
       rowGap="15px"
       columnGap="15px"
-      padding={tokens.space.xxxs.value}
+      padding="0px"
       onSubmit={async (event) => {
         event.preventDefault();
         const modelFields = {
           name,
+          Field0,
           phoneNo,
+          reservationID,
           title,
           authors,
         };
@@ -106,14 +110,16 @@ export default function OrderCancel(props) {
       <TextField
         label="Name"
         isRequired={true}
-        placeholder="Your Name"
+        placeholder="Your name"
         value={name}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
               name: value,
+              Field0,
               phoneNo,
+              reservationID,
               title,
               authors,
             };
@@ -131,6 +137,35 @@ export default function OrderCancel(props) {
         {...getOverrideProps(overrides, "name")}
       ></TextField>
       <TextField
+        label="Email"
+        isRequired={false}
+        placeholder="The email you used for ordering"
+        value={Field0}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              name,
+              Field0: value,
+              phoneNo,
+              reservationID,
+              title,
+              authors,
+            };
+            const result = onChange(modelFields);
+            value = result?.Field0 ?? value;
+          }
+          if (errors.Field0?.hasError) {
+            runValidationTasks("Field0", value);
+          }
+          setField0(value);
+        }}
+        onBlur={() => runValidationTasks("Field0", Field0)}
+        errorMessage={errors.Field0?.errorMessage}
+        hasError={errors.Field0?.hasError}
+        {...getOverrideProps(overrides, "Field0")}
+      ></TextField>
+      <TextField
         label="Mobile Phone Number"
         isRequired={true}
         placeholder="The number you used for ordering"
@@ -141,7 +176,9 @@ export default function OrderCancel(props) {
           if (onChange) {
             const modelFields = {
               name,
+              Field0,
               phoneNo: value,
+              reservationID,
               title,
               authors,
             };
@@ -159,14 +196,47 @@ export default function OrderCancel(props) {
         {...getOverrideProps(overrides, "phoneNo")}
       ></TextField>
       <TextField
+        label="Reservation ID"
+        isRequired={true}
+        placeholder="The ID you receive when you make an order or reservation"
+        value={reservationID}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              name,
+              Field0,
+              phoneNo,
+              reservationID: value,
+              title,
+              authors,
+            };
+            const result = onChange(modelFields);
+            value = result?.reservationID ?? value;
+          }
+          if (errors.reservationID?.hasError) {
+            runValidationTasks("reservationID", value);
+          }
+          setReservationID(value);
+        }}
+        onBlur={() => runValidationTasks("reservationID", reservationID)}
+        errorMessage={errors.reservationID?.errorMessage}
+        hasError={errors.reservationID?.hasError}
+        {...getOverrideProps(overrides, "reservationID")}
+      ></TextField>
+      <TextField
         label="Book Title"
+        isRequired={false}
+        placeholder="The book you ordered"
         value={title}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
               name,
+              Field0,
               phoneNo,
+              reservationID,
               title: value,
               authors,
             };
@@ -185,13 +255,16 @@ export default function OrderCancel(props) {
       ></TextField>
       <TextField
         label="Authors/Editors"
+        placeholder="Author/editor of the book you ordered"
         value={authors}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
               name,
+              Field0,
               phoneNo,
+              reservationID,
               title,
               authors: value,
             };

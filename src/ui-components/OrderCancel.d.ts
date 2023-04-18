@@ -14,13 +14,17 @@ export declare type ValidationResponse = {
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type OrderCancelInputValues = {
     name?: string;
+    Field0?: string;
     phoneNo?: string;
+    reservationID?: string;
     title?: string;
     authors?: string;
 };
 export declare type OrderCancelValidationValues = {
     name?: ValidationFunction<string>;
+    Field0?: ValidationFunction<string>;
     phoneNo?: ValidationFunction<string>;
+    reservationID?: ValidationFunction<string>;
     title?: ValidationFunction<string>;
     authors?: ValidationFunction<string>;
 };
@@ -29,7 +33,9 @@ export declare type OrderCancelOverridesProps = {
     OrderCancelGrid?: PrimitiveOverrideProps<GridProps>;
     SectionalElement0?: PrimitiveOverrideProps<HeadingProps>;
     name?: PrimitiveOverrideProps<TextFieldProps>;
+    Field0?: PrimitiveOverrideProps<TextFieldProps>;
     phoneNo?: PrimitiveOverrideProps<TextFieldProps>;
+    reservationID?: PrimitiveOverrideProps<TextFieldProps>;
     title?: PrimitiveOverrideProps<TextFieldProps>;
     authors?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;

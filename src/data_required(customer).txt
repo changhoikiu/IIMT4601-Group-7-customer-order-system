@@ -1,0 +1,74 @@
+GET Book_Info, Book_Inventory
+[
+    Book_ID: {
+            Book_Title: String;
+            Author: Array[String];
+            Publisher: String;
+            Genre: String;
+            ISBN: String;
+            Description: String;
+            Book_Cover_URL: String;
+            Selling_Price: Int;
+            In_Stock_Quantity: Int;
+            Hold_Quantity: Int;
+            Sold_Quantity: Int;
+            Last_Update_Date: timestamp;
+        }
+]
+
+GET Monthly_Bestseller
+[
+    Year: {
+        [
+            Month: {
+                Book_ID: Int;
+                Rank: Int;
+            }
+        ]
+    }
+]
+
+POST Customer_Enquiry (enquiryType: Order a Book)
+{
+    Customer_Name : form.name;
+    Customer_Email: form.email;
+    Customer_Phone_No: form.phoneNo;
+    Enquiry_timestamp: TIMESTAMP;
+    Enquiry_Subject: enquiryType.name;
+    Enquiry_Message: form.title + form.authors + form.genre; --String
+}
+
+POST Customer_Enquiry (enquiryType: Cancel an Order)
+{
+    Customer_Name : form.name;
+    Customer_Email: form.email;
+    Customer_Phone_No: form.phoneNo;
+    Enquiry_timestamp: TIMESTAMP;
+    Enquiry_Subject: enquiryType.name;
+    Enquiry_Message: form.title + form.authors; --String
+    Reservation_ID: form.reservationID
+}
+
+POST Customer_Enquiry (enquiryType: Other Enquiries)
+{
+    Customer_Name : form.name;
+    Customer_Email: form.email;
+    Customer_Phone_No: form.phoneNo;
+    Enquiry_timestamp: TIMESTAMP;
+    Enquiry_Subject: enquiryType.name;
+    Enquiry_Message: form.message;
+    Reservation_ID: null;
+}
+
+POST Book_In_Reservation, Reservation_Order (Checkout)
+{
+    Customer_Name : form.name;
+    Customer_Email: form.email;
+    Customer_Phone_No: form.phoneNo;
+    Reservation_Date: TIMESTAMP;
+    Reservation: [
+        Book_ID: Book_ID;
+        Quantity: Book.qty;
+        
+    ]
+}

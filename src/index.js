@@ -6,14 +6,24 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
 import { ThemeProvider } from "@aws-amplify/ui-react";
-import { Amplify } from 'aws-amplify';
+import { Amplify, Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import "@aws-amplify/ui-react/styles.css";
 import { studioTheme } from "./ui-components";
 
+
 import Context from "./context/Context";
 
-Amplify.configure(awsconfig);
+import SignUpForm from "./mui_components/test";
+
+Amplify.configure({
+  Auth: {
+    region: "ap-southeast-1",
+    userPoolId: "ap-southeast-1_jUzgEjjnS",
+    userPoolWebClientId: "668f17c94g8n4ll1hp7o916dhe",
+  },
+});
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +35,7 @@ root.render(
         </Context>
       </ThemeProvider>
     </BrowserRouter>
+  {/* <SignUpForm /> */}
   </React.StrictMode>
 );
 

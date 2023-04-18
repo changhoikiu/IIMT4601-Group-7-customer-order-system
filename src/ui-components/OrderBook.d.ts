@@ -14,6 +14,7 @@ export declare type ValidationResponse = {
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type OrderBookInputValues = {
     name?: string;
+    email?: string;
     phoneNo?: string;
     title?: string;
     authors?: string;
@@ -21,6 +22,7 @@ export declare type OrderBookInputValues = {
 };
 export declare type OrderBookValidationValues = {
     name?: ValidationFunction<string>;
+    email?: ValidationFunction<string>;
     phoneNo?: ValidationFunction<string>;
     title?: ValidationFunction<string>;
     authors?: ValidationFunction<string>;
@@ -31,6 +33,7 @@ export declare type OrderBookOverridesProps = {
     OrderBookGrid?: PrimitiveOverrideProps<GridProps>;
     SectionalElement0?: PrimitiveOverrideProps<HeadingProps>;
     name?: PrimitiveOverrideProps<TextFieldProps>;
+    email?: PrimitiveOverrideProps<TextFieldProps>;
     phoneNo?: PrimitiveOverrideProps<TextFieldProps>;
     title?: PrimitiveOverrideProps<TextFieldProps>;
     authors?: PrimitiveOverrideProps<TextFieldProps>;

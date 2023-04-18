@@ -32,7 +32,6 @@ const Checkout = ({handleNext, handleSubmittedData}) => {
 
 	const Item = styled(Paper)(({ theme }) => ({
 		backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-		// ...theme.typography.body2,
 		padding: theme.spacing(2),
 		textAlign: 'left',
 		color: theme.palette.text.secondary,
@@ -47,64 +46,56 @@ const Checkout = ({handleNext, handleSubmittedData}) => {
 	}));
 
 	return (
-		<>
-			<Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-				<Box sx={{ flex: 2, mr: 4 }}>
-					<List
-						variant="outlined"
-						sx={{
-							bgcolor: 'background.body',
-							borderRadius: 'sm',
-							boxShadow: 'sm',
-							py: 2,
-							'--ListItemDecorator-size': '48px',
-							'--ListItem-paddingLeft': '1.5rem',
-							'--ListItem-paddingRight': '1.5rem',
-						}}
-					>
-						<ListItem>
-							<Typography level='h4'>
-								Cart
-							</Typography>
-						</ListItem>
-						{cart.map(book => (
-							<Box>
-								<ListItem
-									key={book.id}
-									sx={{
-										mr: 3,
-									}}
-								>
-									<ListItemDecorator sx={{ width: '10%' }}>
-										<img src={book.image} alt={book.title} />
-									</ListItemDecorator>
-									<Column sx={{ width: '50%' }}>
-										<Typography level="h5">{book.title}</Typography>
-										<Typography>{book.authors}</Typography>
-									</Column>
-										<Typography level="h5" sx={{marginLeft: 'auto'}}>${book.price}x{book.qty}</Typography>
-								</ListItem>
-								<ListDivider inset="gutter" />
-							</Box>
-						))}
-						<ListItem>
-							<Typography level="h4">
-								Subtotal: {cart.length} item(s)
-							</Typography>
-							<Typography level="h4" sx={{ ml: 'auto' }}>
-								Total: ${total}
-							</Typography>
-						</ListItem>
-					</List>
-				</Box>
-				<Item sx={{ flex: 1 }}>
-					<SubmitReservation 
-					onSubmit={handleCheckout}
-					/>
-				</Item>
-			</Box>
-		</>
-	)
+    <>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box sx={{ flex: 2, mr: 4 }}>
+          <Item>
+            <List
+              sx={{
+                bgcolor: "background.body",
+                border: "none",
+                "--ListItemDecorator-size": "48px",
+              }}
+            >
+              <ListItem>
+                <Typography level="h4">Cart</Typography>
+              </ListItem>
+              {cart.map((book) => (
+                <Box>
+                  <ListItem
+                    key={book.id}
+                  >
+                    <ListItemDecorator sx={{ width: "10%" }}>
+                      <img src={book.image} alt={book.title} />
+                    </ListItemDecorator>
+                    <Column sx={{ width: "50%" }}>
+                      <Typography level="h5">{book.title}</Typography>
+                      <Typography>{book.authors.join(', ')}</Typography>
+                    </Column>
+                    <Typography level="h5" sx={{ marginLeft: "auto" }}>
+                      ${book.price}x{book.qty}
+                    </Typography>
+                  </ListItem>
+                  <ListDivider inset="gutter" />
+                </Box>
+              ))}
+              <ListItem>
+                <Typography level="h4">
+                  Subtotal: {cart.length} item(s)
+                </Typography>
+                <Typography level="h4" sx={{ ml: "auto" }}>
+                  Total: ${total}
+                </Typography>
+              </ListItem>
+            </List>
+          </Item>
+        </Box>
+        <Item sx={{ flex: 1 }}>
+          <SubmitReservation onSubmit={handleCheckout} />
+        </Item>
+      </Box>
+    </>
+  );
 }
 
 export default Checkout;

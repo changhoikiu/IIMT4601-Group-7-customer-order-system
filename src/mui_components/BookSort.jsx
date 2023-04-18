@@ -25,12 +25,13 @@ function SortChips(props) {
 
   return (
     <Box
+      className='sort-box'
       sx={{
         display: 'flexbox',
         flexWrap: 'wrap',
       }}
     >
-      <Typography level="h4" fontSize="lg" id="card-description" my={1}>
+      <Typography>
         Sort
       </Typography>
       {sortingCriteria.map((criterion) => {

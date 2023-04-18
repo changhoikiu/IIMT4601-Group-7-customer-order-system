@@ -1,14 +1,15 @@
 import * as React from "react";
 
 import Box from "@mui/joy/Box";
-import Typography from '@mui/joy/Typography';
+import Typography from "@mui/joy/Typography";
 
 import Grid from "@mui/material/Grid";
 import Pagination from "@mui/material/Pagination";
-import TextField from '@mui/material/TextField';
+import TextField from "@mui/material/TextField";
 import { InputAdornment } from "@mui/material";
 
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
 
 import BookCard from "../mui_components/BookCard";
 import BookFilterChips from "../mui_components/BookFilterChips";
@@ -17,7 +18,6 @@ import BookSortChips from "../mui_components/BookSort";
 import { State } from "../context/Context";
 
 export default function Books() {
-
   const {
     state: { bookList },
   } = State();
@@ -39,40 +39,49 @@ export default function Books() {
     setSelectedSort(event);
   };
 
-  const [searchQuery, setSearchQuery] = React.useState('');
+  const [searchQuery, setSearchQuery] = React.useState("");
   const handleSearchQueryChange = (event) => {
     setSearchQuery(event.target.value);
     setPage(0);
-  }
+  };
 
-  const filteredBookList = bookList.filter(book => {
+  const filteredBookList = bookList.filter((book) => {
     const searchLower = searchQuery.toLowerCase();
     const titleLower = book.title.toLowerCase();
-    const authorsLower = book.authors.map(author => author.toLowerCase()).join(' ');
+    const authorsLower = book.authors
+      .map((author) => author.toLowerCase())
+      .join(" ");
     const publisherLower = book.publisher.toLowerCase();
-    return titleLower.includes(searchLower) ||
+    return (
+      titleLower.includes(searchLower) ||
       authorsLower.includes(searchLower) ||
-      publisherLower.includes(searchLower);
+      publisherLower.includes(searchLower)
+    );
   });
 
   const numPages = Math.ceil(filteredBookList.length / pageSize);
 
   return (
     <>
-      <Typography level="h5" fontSize="">
+      <Typography level="h4">
+        <MenuBookRoundedIcon />
         Books
       </Typography>
 
       <Box
+        className="content-box"
         sx={{
-          display: 'flex',
-          overflow: 'auto',
+          display: "flex",
+          overflow: "auto",
+          marginTop: 2,
         }}
       >
         <Box
-          sx={{ maxWidth: '25%' }}
-          marginRight={2}
-          marginTop={2}
+          className="filter-Box"
+          sx={{
+            maxWidth: "25%",
+            marginRight: 2,
+          }}
         >
           <BookSortChips
             selected={selectedSort}
@@ -83,8 +92,19 @@ export default function Books() {
             setSelected={handleSelectedFilterChange}
           />
         </Box>
-        <Box sx={{ flexGrow: 1 }}>
-          <Box sx={{ marginBottom: 2 }}>
+        <Box
+          className="book-card-box"
+          sx={{
+            flexGrow: 1,
+            marginTop: 2,
+          }}
+        >
+          <Box
+            className="search-bar-box"
+            sx={{
+              marginBottom: 2,
+            }}
+          >
             <TextField
               label="Search"
               variant="standard"
@@ -104,18 +124,19 @@ export default function Books() {
           {filteredBookList.length > 0 ? (
             <>
               <Grid container spacing={2}>
-                {filteredBookList.slice(page * pageSize, (page + 1) * pageSize).map((book) => (
-                  <Grid key={book.id} item xs={12} sm={6} md={6} lg={3}>
-                    <BookCard key={book.id} {...book} />
-                  </Grid>
-                )
-                )}
+                {filteredBookList
+                  .slice(page * pageSize, (page + 1) * pageSize)
+                  .map((book) => (
+                    <Grid key={book.id} item xs={12} sm={6} md={6} lg={3}>
+                      <BookCard key={book.id} {...book} />
+                    </Grid>
+                  ))}
               </Grid>
               <Box
                 sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  marginTop: 2
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: 2,
                 }}
               >
                 <Pagination

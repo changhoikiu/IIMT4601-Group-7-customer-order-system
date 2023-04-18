@@ -6,12 +6,11 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { Flex, Grid, SelectField, useTheme } from "@aws-amplify/ui-react";
+import { Flex, Grid, SelectField } from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { fetchByPath, validateField } from "./utils";
 export default function SelectEnquiries(props) {
   const { onSubmit, onValidate, onChange, overrides, ...rest } = props;
-  const { tokens } = useTheme();
   const initialValues = {
     name: undefined,
   };
@@ -46,7 +45,7 @@ export default function SelectEnquiries(props) {
       as="form"
       rowGap="15px"
       columnGap="15px"
-      padding={tokens.space.xxxs.value}
+      padding="0px"
       onSubmit={async (event) => {
         event.preventDefault();
         const modelFields = {
@@ -108,6 +107,11 @@ export default function SelectEnquiries(props) {
           children="Cancel an Order"
           value="Cancel an Order"
           {...getOverrideProps(overrides, "nameoption1")}
+        ></option>
+        <option
+          children="Other Enquiry"
+          value="Other Enquiry"
+          {...getOverrideProps(overrides, "nameoption2")}
         ></option>
       </SelectField>
       <Flex

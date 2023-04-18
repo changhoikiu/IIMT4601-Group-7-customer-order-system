@@ -8,39 +8,39 @@
 import * as React from "react";
 import {
   Button,
-  CheckboxField,
   Flex,
   Grid,
   Heading,
+  TextAreaField,
   TextField,
 } from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { fetchByPath, validateField } from "./utils";
-export default function SubmitReservation(props) {
+export default function OtherEnquiry(props) {
   const { onSubmit, onValidate, onChange, overrides, ...rest } = props;
   const initialValues = {
     name: "",
     email: "",
     phoneNo: "",
-    agreement: false,
+    message: "",
   };
   const [name, setName] = React.useState(initialValues.name);
   const [email, setEmail] = React.useState(initialValues.email);
   const [phoneNo, setPhoneNo] = React.useState(initialValues.phoneNo);
-  const [agreement, setAgreement] = React.useState(initialValues.agreement);
+  const [message, setMessage] = React.useState(initialValues.message);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setName(initialValues.name);
     setEmail(initialValues.email);
     setPhoneNo(initialValues.phoneNo);
-    setAgreement(initialValues.agreement);
+    setMessage(initialValues.message);
     setErrors({});
   };
   const validations = {
     name: [{ type: "Required" }],
-    email: [{ type: "Email" }],
-    phoneNo: [{ type: "Required" }, { type: "Phone" }],
-    agreement: [],
+    email: [{ type: "Required" }, { type: "Email" }],
+    phoneNo: [{ type: "Phone" }],
+    message: [{ type: "Required" }],
   };
   const runValidationTasks = async (
     fieldName,
@@ -71,7 +71,7 @@ export default function SubmitReservation(props) {
           name,
           email,
           phoneNo,
-          agreement,
+          message,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -94,18 +94,18 @@ export default function SubmitReservation(props) {
         }
         await onSubmit(modelFields);
       }}
-      {...getOverrideProps(overrides, "SubmitReservation")}
+      {...getOverrideProps(overrides, "OtherEnquiry")}
       {...rest}
     >
       <Heading
         level={4}
-        children="Personal information"
+        children="Other enquiries"
         {...getOverrideProps(overrides, "SectionalElement0")}
       ></Heading>
       <TextField
         label="Name"
         isRequired={true}
-        placeholder="Your name"
+        placeholder="Your Name"
         value={name}
         onChange={(e) => {
           let { value } = e.target;
@@ -114,7 +114,7 @@ export default function SubmitReservation(props) {
               name: value,
               email,
               phoneNo,
-              agreement,
+              message,
             };
             const result = onChange(modelFields);
             value = result?.name ?? value;
@@ -131,7 +131,7 @@ export default function SubmitReservation(props) {
       ></TextField>
       <TextField
         label="Email"
-        isRequired={false}
+        isRequired={true}
         placeholder="Your email"
         value={email}
         onChange={(e) => {
@@ -141,7 +141,7 @@ export default function SubmitReservation(props) {
               name,
               email: value,
               phoneNo,
-              agreement,
+              message,
             };
             const result = onChange(modelFields);
             value = result?.email ?? value;
@@ -157,8 +157,8 @@ export default function SubmitReservation(props) {
         {...getOverrideProps(overrides, "email")}
       ></TextField>
       <TextField
-        label="Mobile phone number"
-        isRequired={true}
+        label="Phone Number"
+        isRequired={false}
         placeholder="Your phone number"
         type="tel"
         value={phoneNo}
@@ -169,7 +169,7 @@ export default function SubmitReservation(props) {
               name,
               email,
               phoneNo: value,
-              agreement,
+              message,
             };
             const result = onChange(modelFields);
             value = result?.phoneNo ?? value;
@@ -184,33 +184,32 @@ export default function SubmitReservation(props) {
         hasError={errors.phoneNo?.hasError}
         {...getOverrideProps(overrides, "phoneNo")}
       ></TextField>
-      <CheckboxField
-        label="I agreed that I will come to pick up the reserved books in person within 7 days after the reservation is accepted by Hong Kong Reader."
-        name="fieldName"
-        value="fieldName"
-        checked={agreement}
+      <TextAreaField
+        label="Your enquiry"
+        isRequired={true}
+        placeholder="What do you want to ask?"
         onChange={(e) => {
-          let value = e.target.checked;
+          let { value } = e.target;
           if (onChange) {
             const modelFields = {
               name,
               email,
               phoneNo,
-              agreement: value,
+              message: value,
             };
             const result = onChange(modelFields);
-            value = result?.agreement ?? value;
+            value = result?.message ?? value;
           }
-          if (errors.agreement?.hasError) {
-            runValidationTasks("agreement", value);
+          if (errors.message?.hasError) {
+            runValidationTasks("message", value);
           }
-          setAgreement(value);
+          setMessage(value);
         }}
-        onBlur={() => runValidationTasks("agreement", agreement)}
-        errorMessage={errors.agreement?.errorMessage}
-        hasError={errors.agreement?.hasError}
-        {...getOverrideProps(overrides, "agreement")}
-      ></CheckboxField>
+        onBlur={() => runValidationTasks("message", message)}
+        errorMessage={errors.message?.errorMessage}
+        hasError={errors.message?.hasError}
+        {...getOverrideProps(overrides, "message")}
+      ></TextAreaField>
       <Flex
         justifyContent="space-between"
         {...getOverrideProps(overrides, "CTAFlex")}

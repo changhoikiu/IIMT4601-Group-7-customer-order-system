@@ -13,21 +13,21 @@ import {
   Heading,
   SelectField,
   TextField,
-  useTheme,
 } from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { fetchByPath, validateField } from "./utils";
 export default function OrderBook(props) {
   const { onSubmit, onValidate, onChange, overrides, ...rest } = props;
-  const { tokens } = useTheme();
   const initialValues = {
     name: "",
+    email: "",
     phoneNo: "",
     title: "",
     authors: "",
     genre: undefined,
   };
   const [name, setName] = React.useState(initialValues.name);
+  const [email, setEmail] = React.useState(initialValues.email);
   const [phoneNo, setPhoneNo] = React.useState(initialValues.phoneNo);
   const [title, setTitle] = React.useState(initialValues.title);
   const [authors, setAuthors] = React.useState(initialValues.authors);
@@ -35,6 +35,7 @@ export default function OrderBook(props) {
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     setName(initialValues.name);
+    setEmail(initialValues.email);
     setPhoneNo(initialValues.phoneNo);
     setTitle(initialValues.title);
     setAuthors(initialValues.authors);
@@ -43,6 +44,7 @@ export default function OrderBook(props) {
   };
   const validations = {
     name: [{ type: "Required" }],
+    email: [{ type: "Required" }, { type: "Email" }],
     phoneNo: [{ type: "Required" }, { type: "Phone" }],
     title: [{ type: "Required" }],
     authors: [{ type: "Required" }],
@@ -70,11 +72,12 @@ export default function OrderBook(props) {
       as="form"
       rowGap="15px"
       columnGap="15px"
-      padding={tokens.space.xxxs.value}
+      padding="0px"
       onSubmit={async (event) => {
         event.preventDefault();
         const modelFields = {
           name,
+          email,
           phoneNo,
           title,
           authors,
@@ -106,19 +109,20 @@ export default function OrderBook(props) {
     >
       <Heading
         level={4}
-        children="Order Book"
+        children="Order a book that you want us to get for you."
         {...getOverrideProps(overrides, "SectionalElement0")}
       ></Heading>
       <TextField
         label="Name"
         isRequired={true}
-        placeholder="Your Name"
+        placeholder="Your name"
         value={name}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
               name: value,
+              email,
               phoneNo,
               title,
               authors,
@@ -138,9 +142,38 @@ export default function OrderBook(props) {
         {...getOverrideProps(overrides, "name")}
       ></TextField>
       <TextField
+        label="Email"
+        isRequired={true}
+        placeholder="Your email"
+        value={email}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              name,
+              email: value,
+              phoneNo,
+              title,
+              authors,
+              genre,
+            };
+            const result = onChange(modelFields);
+            value = result?.email ?? value;
+          }
+          if (errors.email?.hasError) {
+            runValidationTasks("email", value);
+          }
+          setEmail(value);
+        }}
+        onBlur={() => runValidationTasks("email", email)}
+        errorMessage={errors.email?.errorMessage}
+        hasError={errors.email?.hasError}
+        {...getOverrideProps(overrides, "email")}
+      ></TextField>
+      <TextField
         label="Mobile Phone Number"
         isRequired={true}
-        placeholder="A number that can receive SMS"
+        placeholder="Your mobile phone number"
         type="tel"
         value={phoneNo}
         onChange={(e) => {
@@ -148,6 +181,7 @@ export default function OrderBook(props) {
           if (onChange) {
             const modelFields = {
               name,
+              email,
               phoneNo: value,
               title,
               authors,
@@ -175,6 +209,7 @@ export default function OrderBook(props) {
           if (onChange) {
             const modelFields = {
               name,
+              email,
               phoneNo,
               title: value,
               authors,
@@ -202,6 +237,7 @@ export default function OrderBook(props) {
           if (onChange) {
             const modelFields = {
               name,
+              email,
               phoneNo,
               title,
               authors: value,
@@ -229,6 +265,7 @@ export default function OrderBook(props) {
           if (onChange) {
             const modelFields = {
               name,
+              email,
               phoneNo,
               title,
               authors,
