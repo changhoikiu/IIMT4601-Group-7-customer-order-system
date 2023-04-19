@@ -65,7 +65,7 @@ export default function Books() {
     <>
       <Typography level="h4">
         <MenuBookRoundedIcon />
-        Books
+        &nbsp;&nbsp;Books
       </Typography>
 
       <Box

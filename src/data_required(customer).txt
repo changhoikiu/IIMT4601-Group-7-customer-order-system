@@ -28,36 +28,17 @@ GET Monthly_Bestseller
     }
 ]
 
-POST Customer_Enquiry (enquiryType: Order a Book)
+POST Customer_Enquiry
 {
-    Customer_Name : form.name;
-    Customer_Email: form.email;
-    Customer_Phone_No: form.phoneNo;
-    Enquiry_timestamp: TIMESTAMP;
-    Enquiry_Subject: enquiryType.name;
-    Enquiry_Message: form.title + form.authors + form.genre; --String
-}
-
-POST Customer_Enquiry (enquiryType: Cancel an Order)
-{
-    Customer_Name : form.name;
-    Customer_Email: form.email;
-    Customer_Phone_No: form.phoneNo;
-    Enquiry_timestamp: TIMESTAMP;
-    Enquiry_Subject: enquiryType.name;
-    Enquiry_Message: form.title + form.authors; --String
-    Reservation_ID: form.reservationID
-}
-
-POST Customer_Enquiry (enquiryType: Other Enquiries)
-{
-    Customer_Name : form.name;
-    Customer_Email: form.email;
-    Customer_Phone_No: form.phoneNo;
-    Enquiry_timestamp: TIMESTAMP;
-    Enquiry_Subject: enquiryType.name;
-    Enquiry_Message: form.message;
-    Reservation_ID: null;
+    Enquiry_ID
+    Customer_Name: form.name, 
+    Customer_Email: form.email, 
+    Customer_Phone_No: form.phoneNo, 
+    Enquiry_timestamp
+    Enquiry_Subject: form.type:['Order a book'|'Cancel a reservation/order'|'Other'],
+    Enquiry_Message: form.message
+    reservation_id
+    Enquiry_status
 }
 
 POST Book_In_Reservation, Reservation_Order (Checkout)

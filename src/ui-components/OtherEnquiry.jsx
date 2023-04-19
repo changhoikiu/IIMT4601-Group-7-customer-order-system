@@ -10,7 +10,7 @@ import {
   Button,
   Flex,
   Grid,
-  Heading,
+  SelectField,
   TextAreaField,
   TextField,
 } from "@aws-amplify/ui-react";
@@ -19,17 +19,20 @@ import { fetchByPath, validateField } from "./utils";
 export default function OtherEnquiry(props) {
   const { onSubmit, onValidate, onChange, overrides, ...rest } = props;
   const initialValues = {
+    type: undefined,
     name: "",
     email: "",
     phoneNo: "",
     message: "",
   };
+  const [type, setType] = React.useState(initialValues.type);
   const [name, setName] = React.useState(initialValues.name);
   const [email, setEmail] = React.useState(initialValues.email);
   const [phoneNo, setPhoneNo] = React.useState(initialValues.phoneNo);
   const [message, setMessage] = React.useState(initialValues.message);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
+    setType(initialValues.type);
     setName(initialValues.name);
     setEmail(initialValues.email);
     setPhoneNo(initialValues.phoneNo);
@@ -37,6 +40,7 @@ export default function OtherEnquiry(props) {
     setErrors({});
   };
   const validations = {
+    type: [],
     name: [{ type: "Required" }],
     email: [{ type: "Required" }, { type: "Email" }],
     phoneNo: [{ type: "Phone" }],
@@ -68,6 +72,7 @@ export default function OtherEnquiry(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         const modelFields = {
+          type,
           name,
           email,
           phoneNo,
@@ -97,11 +102,49 @@ export default function OtherEnquiry(props) {
       {...getOverrideProps(overrides, "OtherEnquiry")}
       {...rest}
     >
-      <Heading
-        level={4}
-        children="Other enquiries"
-        {...getOverrideProps(overrides, "SectionalElement0")}
-      ></Heading>
+      <SelectField
+        label="Select the type of your enquiry"
+        placeholder="Please select an option"
+        value={type}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              type: value,
+              name,
+              email,
+              phoneNo,
+              message,
+            };
+            const result = onChange(modelFields);
+            value = result?.type ?? value;
+          }
+          if (errors.type?.hasError) {
+            runValidationTasks("type", value);
+          }
+          setType(value);
+        }}
+        onBlur={() => runValidationTasks("type", type)}
+        errorMessage={errors.type?.errorMessage}
+        hasError={errors.type?.hasError}
+        {...getOverrideProps(overrides, "type")}
+      >
+        <option
+          children="Order a book"
+          value="Order a book"
+          {...getOverrideProps(overrides, "typeoption0")}
+        ></option>
+        <option
+          children="Cancel a reservation/order"
+          value="Cancel a reservation/order"
+          {...getOverrideProps(overrides, "typeoption1")}
+        ></option>
+        <option
+          children="Other"
+          value="Other"
+          {...getOverrideProps(overrides, "typeoption2")}
+        ></option>
+      </SelectField>
       <TextField
         label="Name"
         isRequired={true}
@@ -111,6 +154,7 @@ export default function OtherEnquiry(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
+              type,
               name: value,
               email,
               phoneNo,
@@ -138,6 +182,7 @@ export default function OtherEnquiry(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
+              type,
               name,
               email: value,
               phoneNo,
@@ -166,6 +211,7 @@ export default function OtherEnquiry(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
+              type,
               name,
               email,
               phoneNo: value,
@@ -192,6 +238,7 @@ export default function OtherEnquiry(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
+              type,
               name,
               email,
               phoneNo,

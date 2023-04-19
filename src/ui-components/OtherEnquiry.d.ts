@@ -5,7 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
-import { GridProps, HeadingProps, TextAreaFieldProps, TextFieldProps } from "@aws-amplify/ui-react";
+import { GridProps, SelectFieldProps, TextAreaFieldProps, TextFieldProps } from "@aws-amplify/ui-react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 export declare type ValidationResponse = {
     hasError: boolean;
@@ -13,12 +13,14 @@ export declare type ValidationResponse = {
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type OtherEnquiryInputValues = {
+    type?: string;
     name?: string;
     email?: string;
     phoneNo?: string;
     message?: string;
 };
 export declare type OtherEnquiryValidationValues = {
+    type?: ValidationFunction<string>;
     name?: ValidationFunction<string>;
     email?: ValidationFunction<string>;
     phoneNo?: ValidationFunction<string>;
@@ -27,7 +29,7 @@ export declare type OtherEnquiryValidationValues = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type OtherEnquiryOverridesProps = {
     OtherEnquiryGrid?: PrimitiveOverrideProps<GridProps>;
-    SectionalElement0?: PrimitiveOverrideProps<HeadingProps>;
+    type?: PrimitiveOverrideProps<SelectFieldProps>;
     name?: PrimitiveOverrideProps<TextFieldProps>;
     email?: PrimitiveOverrideProps<TextFieldProps>;
     phoneNo?: PrimitiveOverrideProps<TextFieldProps>;

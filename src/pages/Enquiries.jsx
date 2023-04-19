@@ -1,42 +1,48 @@
 import * as React from "react";
 import Typography from "@mui/joy/Typography";
 import Box from "@mui/joy/Box";
-
 import QuestionAnswerRoundedIcon from "@mui/icons-material/QuestionAnswerRounded";
+import { OtherEnquiry } from "../ui-components";
+import EnquiryTab from "../mui_components/EnquiryTab";
+import { styled } from "@mui/material/styles";
+import { Paper } from "@mui/material";
 
-import {
-  OrderBook,
-  OrderCancel,
-  SelectEnquiries,
-  OtherEnquiry,
-} from "../ui-components";
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  padding: theme.spacing(2),
+  textAlign: "left",
+  color: theme.palette.text.secondary,
+  display: "flex",
+  flexDirection: "column",
+  variant: "outlined",
+}));
 
 function Enquiries() {
-  const [enquiryType, setEnquiryType] = React.useState("");
+  const [form, setForm] = React.useState(null);
+
+  console.log(form);
 
   return (
     <>
       <Typography level="h4">
         <QuestionAnswerRoundedIcon />
-        Enquiries
+        &nbsp;&nbsp;Enquiries
       </Typography>
       <Box
-        className="selec-enquiry-box"
+        className="template-box"
         sx={{
           marginTop: 2,
         }}
       >
-        <SelectEnquiries onChange={(fields) => setEnquiryType(fields)} />
+        <Typography level="body1">
+          You can copy a template according to your enquiry.
+        </Typography>
+        <EnquiryTab />
       </Box>
-      <Box
-        className="form-box"
-        sx={{
-          marginTop: 2,
-        }}
-      >
-        {enquiryType.name === "Order a Book" && <OrderBook />}
-        {enquiryType.name === "Cancel an Order" && <OrderCancel />}
-        {enquiryType.name === "Other Enquiry" && <OtherEnquiry />}
+      <Box className="form-box">
+        <Item>
+          <OtherEnquiry onChange={(fields) => setForm(fields)} />
+        </Item>
       </Box>
     </>
   );

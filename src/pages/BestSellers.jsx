@@ -30,10 +30,10 @@ export default function BestSellers() {
 
   return (
     <div>
-			<Typography level="h4">
-				<StarRoundedIcon />
-				Monthly Best Sellers
-			</Typography>
+      <Typography level="h4">
+        <StarRoundedIcon />
+        &nbsp;&nbsp;Monthly Best Sellers
+      </Typography>
       <Typography sx={{ marginTop: 2 }}>Search for past records:</Typography>
       <Box
         sx={{
