@@ -7,6 +7,8 @@ import EnquiryTab from "../mui_components/EnquiryTab";
 import { styled } from "@mui/material/styles";
 import { Paper } from "@mui/material";
 
+import { Storage } from "aws-amplify";
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   padding: theme.spacing(2),
@@ -21,6 +23,10 @@ function Enquiries() {
   const [form, setForm] = React.useState(null);
 
   console.log(form);
+
+  Storage.list("") // for listing ALL files without prefix, pass '' instead
+  .then(({ results }) => console.log(results))
+  .catch((err) => console.log(err));
 
   return (
     <>
