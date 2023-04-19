@@ -41,7 +41,12 @@ function Enquiries() {
       </Box>
       <Box className="form-box">
         <Item>
-          <OtherEnquiry onChange={(fields) => setForm(fields)} />
+          <OtherEnquiry
+            onChange={(fields) => setForm(fields)}
+            overrides={{
+              type: [{ type: "Required" }]
+            }}
+          />
         </Item>
       </Box>
     </>

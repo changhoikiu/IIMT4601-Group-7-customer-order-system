@@ -37,7 +37,7 @@ POST Customer_Enquiry
     Enquiry_timestamp
     Enquiry_Subject: form.type:['Order a book'|'Cancel a reservation/order'|'Other'],
     Enquiry_Message: form.message
-    reservation_id
+    reservation_id: form.reservation_id
     Enquiry_status
 }
 

@@ -17,6 +17,7 @@ export declare type OtherEnquiryInputValues = {
     name?: string;
     email?: string;
     phoneNo?: string;
+    reservation_id?: string;
     message?: string;
 };
 export declare type OtherEnquiryValidationValues = {
@@ -24,6 +25,7 @@ export declare type OtherEnquiryValidationValues = {
     name?: ValidationFunction<string>;
     email?: ValidationFunction<string>;
     phoneNo?: ValidationFunction<string>;
+    reservation_id?: ValidationFunction<string>;
     message?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -33,6 +35,7 @@ export declare type OtherEnquiryOverridesProps = {
     name?: PrimitiveOverrideProps<TextFieldProps>;
     email?: PrimitiveOverrideProps<TextFieldProps>;
     phoneNo?: PrimitiveOverrideProps<TextFieldProps>;
+    reservation_id?: PrimitiveOverrideProps<TextFieldProps>;
     message?: PrimitiveOverrideProps<TextAreaFieldProps>;
 } & EscapeHatchProps;
 export declare type OtherEnquiryProps = React.PropsWithChildren<{

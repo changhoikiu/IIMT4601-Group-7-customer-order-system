@@ -23,12 +23,16 @@ export default function OtherEnquiry(props) {
     name: "",
     email: "",
     phoneNo: "",
+    reservation_id: "",
     message: "",
   };
   const [type, setType] = React.useState(initialValues.type);
   const [name, setName] = React.useState(initialValues.name);
   const [email, setEmail] = React.useState(initialValues.email);
   const [phoneNo, setPhoneNo] = React.useState(initialValues.phoneNo);
+  const [reservation_id, setReservation_id] = React.useState(
+    initialValues.reservation_id
+  );
   const [message, setMessage] = React.useState(initialValues.message);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
@@ -36,6 +40,7 @@ export default function OtherEnquiry(props) {
     setName(initialValues.name);
     setEmail(initialValues.email);
     setPhoneNo(initialValues.phoneNo);
+    setReservation_id(initialValues.reservation_id);
     setMessage(initialValues.message);
     setErrors({});
   };
@@ -43,7 +48,8 @@ export default function OtherEnquiry(props) {
     type: [],
     name: [{ type: "Required" }],
     email: [{ type: "Required" }, { type: "Email" }],
-    phoneNo: [{ type: "Phone" }],
+    phoneNo: [{ type: "Required" }, { type: "Phone" }],
+    reservation_id: [],
     message: [{ type: "Required" }],
   };
   const runValidationTasks = async (
@@ -76,6 +82,7 @@ export default function OtherEnquiry(props) {
           name,
           email,
           phoneNo,
+          reservation_id,
           message,
         };
         const validationResponses = await Promise.all(
@@ -114,6 +121,7 @@ export default function OtherEnquiry(props) {
               name,
               email,
               phoneNo,
+              reservation_id,
               message,
             };
             const result = onChange(modelFields);
@@ -158,6 +166,7 @@ export default function OtherEnquiry(props) {
               name: value,
               email,
               phoneNo,
+              reservation_id,
               message,
             };
             const result = onChange(modelFields);
@@ -186,6 +195,7 @@ export default function OtherEnquiry(props) {
               name,
               email: value,
               phoneNo,
+              reservation_id,
               message,
             };
             const result = onChange(modelFields);
@@ -203,7 +213,7 @@ export default function OtherEnquiry(props) {
       ></TextField>
       <TextField
         label="Phone Number"
-        isRequired={false}
+        isRequired={true}
         placeholder="Your phone number"
         type="tel"
         value={phoneNo}
@@ -215,6 +225,7 @@ export default function OtherEnquiry(props) {
               name,
               email,
               phoneNo: value,
+              reservation_id,
               message,
             };
             const result = onChange(modelFields);
@@ -230,6 +241,34 @@ export default function OtherEnquiry(props) {
         hasError={errors.phoneNo?.hasError}
         {...getOverrideProps(overrides, "phoneNo")}
       ></TextField>
+      <TextField
+        label="Reservation ID (if any)"
+        placeholder="If you want to cancel a reservation/order."
+        value={reservation_id}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              type,
+              name,
+              email,
+              phoneNo,
+              reservation_id: value,
+              message,
+            };
+            const result = onChange(modelFields);
+            value = result?.reservation_id ?? value;
+          }
+          if (errors.reservation_id?.hasError) {
+            runValidationTasks("reservation_id", value);
+          }
+          setReservation_id(value);
+        }}
+        onBlur={() => runValidationTasks("reservation_id", reservation_id)}
+        errorMessage={errors.reservation_id?.errorMessage}
+        hasError={errors.reservation_id?.hasError}
+        {...getOverrideProps(overrides, "reservation_id")}
+      ></TextField>
       <TextAreaField
         label="Your enquiry"
         isRequired={true}
@@ -242,6 +281,7 @@ export default function OtherEnquiry(props) {
               name,
               email,
               phoneNo,
+              reservation_id,
               message: value,
             };
             const result = onChange(modelFields);
