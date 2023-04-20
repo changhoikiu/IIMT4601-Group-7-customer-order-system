@@ -3,7 +3,10 @@
     "customer": {
       "dependsOn": [
         {
-          "attributes": ["Name", "Arn"],
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
           "category": "function",
           "resourceName": "bookHandler"
         }
@@ -18,7 +21,9 @@
       "dependsOn": [],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
-        "mfaTypes": ["SMS"],
+        "mfaTypes": [
+          "SMS"
+        ],
         "passwordProtectionSettings": {
           "passwordPolicyCharacters": [
             "REQUIRES_LOWERCASE",
@@ -28,10 +33,16 @@
           ],
           "passwordPolicyMinLength": 8
         },
-        "signupAttributes": ["EMAIL"],
+        "signupAttributes": [
+          "EMAIL"
+        ],
         "socialProviders": [],
-        "usernameAttributes": ["EMAIL"],
-        "verificationMechanisms": ["EMAIL"]
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
@@ -45,6 +56,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_bookHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bookHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_bookHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bookHandler"
+        }
+      ]
+    },
     "AMPLIFY_storage_customerorderingsys6c99340a_bucketName": {
       "usedBy": [
         {
@@ -68,12 +95,6 @@
       "providerPlugin": "awscloudformation",
       "service": "S3",
       "serviceType": "imported"
-    }
-  },
-  "policy": {
-    "s3Auth": {
-      "service": "iam",
-      "providerPlugin": "awscloudformation"
     }
   }
 }

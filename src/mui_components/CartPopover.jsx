@@ -8,6 +8,7 @@ import { Container } from "@mui/system";
 import { State } from "../context/Context";
 import { IconButton } from "@mui/material";
 
+
 function CartPopover({ anchorEl, open, handlePopoverClose }) {
   const {
     state: { cart },
@@ -54,14 +55,18 @@ function CartPopover({ anchorEl, open, handlePopoverClose }) {
                   justifyContent: "space-between",
                 }}
               >
-                <img src={book.cover} alt={book.title} style={{ width: 50 }} />
+                <img
+                  src={book.book_cover}
+                  alt={book.book_title}
+                  style={{ width: 50 }}
+                />
                 <Box sx={{ mx: 2, flexGrow: 1, maxWidth: "70%" }}>
-                  <Typography variant="subtitle1">{book.title}</Typography>
+                  <Typography variant="subtitle1">{book.book_title}</Typography>
                   <Typography variant="subtitle1">
-                    {book.authors.join(" ")}
+                    {book.author.join(" ")}
                   </Typography>
                   <Typography variant="subtitle2" color="text.secondary">
-                    ${book.price} x {book.qty}
+                    ${book.selling_price} x {book.qty}
                   </Typography>
                 </Box>
                 <IconButton

@@ -45,19 +45,58 @@ export default function Books() {
     setPage(0);
   };
 
-  const filteredBookList = bookList.filter((book) => {
-    const searchLower = searchQuery.toLowerCase();
-    const titleLower = book.title.toLowerCase();
-    const authorsLower = book.authors
-      .map((author) => author.toLowerCase())
-      .join(" ");
-    const publisherLower = book.publisher.toLowerCase();
+  console.log(selectedFilter);
+  console.log(selectedSort);
+
+const filteredBookList = bookList.filter((book) => {
+  let searchLower, titleLower, authorsLower, publisherLower;
+  try {
+    searchLower = searchQuery.toLowerCase();
+    titleLower = book.book_title.toLowerCase();
+    authorsLower = book.author.map((a) => a.toLowerCase()).join(" ");
+    publisherLower = book.publisher.toLowerCase();
+  } catch (err) {
+    searchLower = searchQuery;
+    titleLower = book.book_title;
+    authorsLower = book.author.map((a) => a).join(" ");
+    publisherLower = book.publisher;
+  }
+  if (selectedFilter.length === 0) {
     return (
       titleLower.includes(searchLower) ||
       authorsLower.includes(searchLower) ||
       publisherLower.includes(searchLower)
     );
+  } else {
+    return (
+      selectedFilter.includes(book.genre) &&
+      (titleLower.includes(searchLower) ||
+        authorsLower.includes(searchLower) ||
+        publisherLower.includes(searchLower))
+    );
+  }
+});
+  
+  const sortedBookList = filteredBookList.sort((a, b) => {
+    if (selectedSort === "Price (ascending)") {
+      return a.selling_price - b.selling_price;
+    } else if (selectedSort === "Price (descending)") {
+      return b.selling_price - a.selling_price;
+    } else if (selectedSort === "Latest") {
+      const a_date = new Date(a.last_update);
+      const b_date = new Date(b.last_update);
+      return b_date.getTime() - a_date.getTime();
+    } else if (selectedSort === "Oldest") {
+      const a_date = new Date(a.last_updated);
+      const b_date = new Date(b.last_updated);
+      return a_date.getTime() - b_date.getTime();
+    } else if (selectedSort === "Best Seller") {
+      return b.sold_quantity - a.sold_quantity;
+    }
   });
+
+  console.log(filteredBookList);
+
 
   const numPages = Math.ceil(filteredBookList.length / pageSize);
 

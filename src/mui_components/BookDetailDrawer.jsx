@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
 import Button from '@mui/joy/Button';
+import AspectRatio from "@mui/joy/AspectRatio";
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Add from '@mui/icons-material/Add';
@@ -40,30 +41,38 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
   return (
     <>
       <Drawer anchor="right" open={isOpen} onClose={onClose}>
-        <Box sx={{ width: '30vw', padding: 7 }}>
+        <Box sx={{ width: "50vw", padding: 7 }}>
           <IconButton onClick={onClose} sx={{ mb: 2 }}>
             <ArrowBackIcon />
           </IconButton>
-          <img
-            src={book.cover}
-            loading="lazy"
-            alt={book.title}
-            style={{ display: 'block' }}
-          />
+          <AspectRatio ratio="6/9" sx={{ width: "fitContent" }}>
+            <img
+              src={book.book_cover}
+              loading="lazy"
+              alt={book.book_title}
+              style={{ display: "block" }}
+            />
+          </AspectRatio>
           <Typography variant="h4" my={2}>
-            {book.title}
+            {book.book_title}
           </Typography>
           <Typography variant="h6" mb={1}>
             Authors:
           </Typography>
           <Typography variant="body1" mb={2} ml={2}>
-            {book.authors.join(', ')}
+            {book.author.join(", ")}
           </Typography>
           <Typography variant="h6" mb={1}>
             Publisher:
           </Typography>
           <Typography variant="body1" mb={2} ml={2}>
             {book.publisher}
+          </Typography>
+          <Typography variant="h6" mb={1}>
+            Genre:
+          </Typography>
+          <Typography variant="body1" mb={2} ml={2}>
+            {book.genre}
           </Typography>
           <Typography variant="h6" mb={1}>
             Description:
@@ -73,13 +82,13 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
           </Typography>
           <Box
             sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <Typography variant="h4" my={2}>
-              ${book.price}
+              ${book.selling_price}
             </Typography>
             <Button
               color="primary"
@@ -90,12 +99,19 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
               Add to Cart
             </Button>
           </Box>
-          {isAddToCartDisabled && (<Typography variant="body2" textAlign='right'>
-            Change the quantity in Cart.
-          </Typography>)}
+          {isAddToCartDisabled && (
+            <Typography variant="body2" textAlign="right">
+              Change the quantity in Cart.
+            </Typography>
+          )}
         </Box>
       </Drawer>
-      {isAddedToCart && (<CartSuccess isAddedToCart={isAddedToCart} onClose={handleCloseSnackbar} />)}
+      {isAddedToCart && (
+        <CartSuccess
+          isAddedToCart={isAddedToCart}
+          onClose={handleCloseSnackbar}
+        />
+      )}
     </>
   );
 }

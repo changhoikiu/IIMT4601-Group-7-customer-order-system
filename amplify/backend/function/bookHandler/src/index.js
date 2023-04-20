@@ -21,10 +21,9 @@ exports.handler = async (event) => {
             console.error('connection error: ' + err);
             throw err;
         };
-
         console.log('connected');
     });
-
+    console.log('hi!');
     const query = 'SELECT 1+1 AS solution;';
     var response;
     const result = await connection.query(query, function (err, result) {
@@ -32,8 +31,9 @@ exports.handler = async (event) => {
             console.error('query error: ' + err);
             throw err
         };
-        response = result;
-        console.log(response);
+        console.log('result: ' + result[0].solution);
+        response = result[0].solution;
+        console.log('response: ' + response);
     });
 
     return {

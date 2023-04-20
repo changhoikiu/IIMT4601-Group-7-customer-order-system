@@ -21,6 +21,12 @@
           "bucketName": "hkreader-book-cover",
           "region": "ap-southeast-1"
         }
+      },
+      "function": {
+        "bookHandler": {
+          "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
+          "s3Key": "amplify-builds/bookHandler-3930646778594f433979-build.zip"
+        }
       }
     }
   }
