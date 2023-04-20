@@ -26,8 +26,6 @@ const steps = [
 export default function SubmitReservation() {
   const { dispatch } = State();
 
-  const [submittedData, setSubmittedData] = React.useState({});
-  console.log(submittedData);
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -75,7 +73,6 @@ export default function SubmitReservation() {
         <Content>
           <Checkout
             handleNext={handleNext}
-            handleSubmittedData={setSubmittedData}
           />
         </Content>
       // ) : activeStep === 2 ? (

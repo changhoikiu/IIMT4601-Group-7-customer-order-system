@@ -20,7 +20,10 @@ import { State } from "../context/Context";
 export default function Books() {
   const {
     state: { bookList },
+    dispatch,
   } = State();
+
+  console.log(bookList)
 
   const pageSize = 12;
 
@@ -47,56 +50,63 @@ export default function Books() {
 
   // console.log(selectedFilter);
   // console.log(selectedSort);
+  let filteredBookList = [];
+  if (bookList.length > 0) {
+    filteredBookList = bookList.filter((book) => {
+      console.log(book);
+      let searchLower, titleLower, authorsLower, publisherLower;
+      try {
+        searchLower = searchQuery.toLowerCase();
+        titleLower = book.Book_Title.toLowerCase();
+        authorsLower = book.Author.toLowerCase();
+        publisherLower = book.Publisher.toLowerCase();
+      } catch (err) {
+        searchLower = searchQuery;
+        titleLower = book.Book_Title;
+        authorsLower = book.Author;
+        publisherLower = book.Publisher;
+      }
+      console.log(searchLower);
+      console.log(titleLower);
+      console.log(authorsLower);
+      console.log(publisherLower);
 
-const filteredBookList = bookList.filter((book) => {
-  let searchLower, titleLower, authorsLower, publisherLower;
-  try {
-    searchLower = searchQuery.toLowerCase();
-    titleLower = book.Book_Title.toLowerCase();
-    authorsLower = book.Author.toLowerCase();
-    publisherLower = book.Publisher.toLowerCase();
-  } catch (err) {
-    searchLower = searchQuery;
-    titleLower = book.Book_Title;
-    authorsLower = book.Author;
-    publisherLower = book.Publisher;
-  }
-  if (selectedFilter.length === 0) {
-    return (
-      titleLower.includes(searchLower) ||
-      authorsLower.includes(searchLower) ||
-      publisherLower.includes(searchLower)
-    );
-  } else {
-    return (
-      selectedFilter.includes(book.Genre) &&
-      (titleLower.includes(searchLower) ||
-        authorsLower.includes(searchLower) ||
-        publisherLower.includes(searchLower))
-    );
-  }
-});
-  
+      if (selectedFilter.length === 0) {
+        return (
+          titleLower.includes(searchLower) ||
+          authorsLower.includes(searchLower) ||
+          publisherLower.includes(searchLower)
+        );
+      } else {
+        return (
+          selectedFilter.includes(book.genre) &&
+          (titleLower.includes(searchLower) ||
+            authorsLower.includes(searchLower) ||
+            publisherLower.includes(searchLower))
+        );
+      }
+    });
+  };
+
   const sortedBookList = filteredBookList.sort((a, b) => {
     if (selectedSort === "Price (ascending)") {
-      return a.Selling_Price - b.Selling_Price;
+      return a.selling_price - b.selling_price;
     } else if (selectedSort === "Price (descending)") {
-      return b.Selling_Price - a.Selling_Price;
+      return b.selling_price - a.selling_price;
     } else if (selectedSort === "Latest") {
-      const a_date = new Date(a.Last_Update_Date);
-      const b_date = new Date(b.Last_Update_Date);
+      const a_date = new Date(a.last_update);
+      const b_date = new Date(b.last_update);
       return b_date.getTime() - a_date.getTime();
     } else if (selectedSort === "Oldest") {
-      const a_date = new Date(a.Last_Update_Date);
-      const b_date = new Date(b.Last_Update_Date);
+      const a_date = new Date(a.last_updated);
+      const b_date = new Date(b.last_updated);
       return a_date.getTime() - b_date.getTime();
     } else if (selectedSort === "Best Seller") {
-      return b.Sold_Quantity - a.Sold_Quantity;
+      return b.sold_quantity - a.sold_quantity;
     }
   });
 
   // console.log(filteredBookList);
-
 
   const numPages = Math.ceil(filteredBookList.length / pageSize);
 
@@ -167,7 +177,7 @@ const filteredBookList = bookList.filter((book) => {
                   .slice(page * pageSize, (page + 1) * pageSize)
                   .map((book) => (
                     <Grid key={book.Book_id} item xs={12} sm={6} md={6} lg={3}>
-                      <BookCard key={book.Book_id} {...book} />
+                      <BookCard key={book.id} {...book} />
                     </Grid>
                   ))}
               </Grid>

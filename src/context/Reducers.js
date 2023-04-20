@@ -2,7 +2,7 @@ export const cartReducer = (state, action) => {
     switch (action.type) {
       case "ADD_TO_CART":
         const existingItemIndex = state.cart.findIndex(
-          (item) => item.id === action.payload.id
+          (item) => item.Book_id === action.payload.Book_id
         );
         if (existingItemIndex >= 0) {
           return { ...state, cart: [...state.cart] };
@@ -15,13 +15,13 @@ export const cartReducer = (state, action) => {
       case "REMOVE_FROM_CART":
         return {
           ...state,
-          cart: state.cart.filter((item) => item.id !== action.payload.id),
+          cart: state.cart.filter((item) => item.Book_id !== action.payload.Book_id),
         };
       case "CHANGE_CART_QUANTITY":
         return {
           ...state,
           cart: state.cart.filter((c) =>
-            c.id === action.payload.id ? (c.qty = action.payload.qty) : c.qty
+            c.Book_id === action.payload.Book_id ? (c.qty = action.payload.qty) : c.qty
           ),
         };
       case "CLEAR_CART":

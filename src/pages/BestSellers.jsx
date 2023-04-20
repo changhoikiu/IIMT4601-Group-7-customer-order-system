@@ -11,22 +11,39 @@ import Select from "@mui/material/Select";
 
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
 
+import Amplify, { API } from "aws-amplify";
+
 export default function BestSellers() {
   const {
     state: { bookList },
   } = State();
 
   const [year, setYear] = React.useState(new Date().getFullYear());
-
   const handleChangeYear = (event) => {
     setYear(event.target.value);
   };
 
   const [month, setMonth] = React.useState(new Date().getMonth());
-
   const handleChangeMonth = (event) => {
     setMonth(event.target.value);
   };
+
+  const [bestSeller, setBestSeller] = React.useState(null);
+
+  React.useEffect(() => {
+    const myAPI = "customer";
+    const path = "/bestseller";
+
+    API.get(myAPI, path + "/" + year + "/" + month)
+      .then((response) => {
+        setBestSeller(response.Bestsellers);
+      })
+      .catch((error) => {
+        console.log(error.response);
+      });
+  }, []);
+
+  console.log(bestSeller);
 
   return (
     <div>
@@ -70,6 +87,7 @@ export default function BestSellers() {
             label="Month"
             onChange={handleChangeMonth}
           >
+            //(1,2,3)
             <MenuItem value={0}>January</MenuItem>
             <MenuItem value={1}>February</MenuItem>
             <MenuItem value={2}>March</MenuItem>
@@ -91,9 +109,13 @@ export default function BestSellers() {
           marginTop: 2,
         }}
       >
-        {bookList.slice(0, 10).map((book, index) => {
-          return <BestSellerCard book={book} i={index + 1} key={book.id} />;
-        })}
+        {bestSeller !== null
+          ? bestSeller.map((book, index) => {
+              return (
+                <BestSellerCard book={book} i={index + 1} key={book.Book_id} />
+              );
+            })
+          : console.log("loading...")}
       </Box>
     </div>
   );

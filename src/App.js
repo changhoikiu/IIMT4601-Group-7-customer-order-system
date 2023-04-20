@@ -6,13 +6,13 @@ import BestSellers from './pages/BestSellers';
 import Enquiries from './pages/Enquiries';
 import Header from './mui_components/Header';
 import SubmitReservation from './pages/SubmitReservation';
-import { GetData } from './context/FetchBooks';
+// import { GetData } from './context/FetchBooks';
 
 function App() {
 
   return (
     <React.Fragment>
-      <GetData />
+      {/* <GetData /> */}
       <Header />
       <Box sx={{ mx: 15, my: 10 }}>
       <Routes>

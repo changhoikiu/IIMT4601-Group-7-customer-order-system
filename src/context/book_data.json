@@ -1,738 +1,736 @@
 {
     "1": {
-        "book_title": "演算法圖鑒：26種演算法+7種資料結構，人工智慧、數據分析、邏輯思考的原理和應用全圖解",
-        "author": [
-            "石田保輝、宮崎修一著，陳彩華譯"
-        ],
-        "publisher": "城邦文化",
-        "genre": "邏輯 思維",
-        "isbn": "9789862356319",
-        "description": "讀再多文字解說都看不懂？沒關係，全部畫給你看，一次弄懂演算法到底是什麼！直觀理解，從基礎開始學習，一用就上手的演算法專書！全圖像化step by step，完整拆解制霸AI時代的演算法精髓！\n詳解演算法的奧妙、運作效率、優缺點，活化思維，做出最佳決斷！演算法時代來了！現今我們的世界已離不開演算法，從線上搜尋、社群交友、法院判案、醫學診斷、金融運作、大腦決策到人工智慧的未來，越了解演算法，越可能掌控權力，成為時代的贏家。有些演算法對我們有益、有些有用，有些則可能使我們陷入大麻煩，但我們對這些演算法所知極少。不管用哪種程式語言編寫程式，演算法都是不可或缺的，不過如果認為只有學電腦的人才要了解演算法，那就太可惜了。演算法其實是一連串解決問題的邏輯步驟，只要熟悉這些步驟和運用方式，每個人都能設計自己的演算法並應用於各種不同領域。學習演算法正是建構嚴謹思維和幫助做出最佳判斷的訓練。演算法的第一本書，從基礎開始學習！演算法是用以執行計算或完成作業的程序，可以想像成料理食譜，如果做出某種料理的步驟是食譜，那麼用電腦解出特定問題的步驟就是演算法了。然而，食譜與演算法的決定性差異，在於演算法非常嚴謹。相較於食譜有很多概略的描述，演算法的所有步驟都用數學方式表現，沒有模糊地帶。本書蒐羅介紹26種基本的演算法和7種資料結構，貨真價實完全圖解。每一個步驟都以圖片和文字詳細說明，拆解具體演算過程，逐步建立邏輯概念，輕鬆進入演算法的世界。書中解說的演算法範疇包括「排序」、「陣列搜尋」、「圖形搜尋」、「安全性演算法」、「聚類」，以及「網頁排名」等各種廣泛使用的基礎演算法。不用艱澀的專有名詞，步步口語分解，完全沒有概念的人也能漸進學習。",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/1.jpg",
-        "selling_price": 110.0,
-        "in_stock_quantity": 10,
-        "hold_quantity": 1,
-        "sold_quantity": 1,
-        "last_update": "2023-03-17 12:00:00"
+        "Book_Title": "演算法圖鑒：26種演算法+7種資料結構，人工智慧、數據分析、邏輯思考的原理和應用全圖解",
+        "Author": "石田保輝、宮崎修一著，陳彩華譯",
+        "Publisher": "城邦文化",
+        "Genre": "邏輯 思維",
+        "ISBN": "9789862356319",
+        "Description": "讀再多文字解說都看不懂？沒關係，全部畫給你看，一次弄懂演算法到底是什麼！直觀理解，從基礎開始學習，一用就上手的演算法專書！全圖像化step by step，完整拆解制霸AI時代的演算法精髓！\n詳解演算法的奧妙、運作效率、優缺點，活化思維，做出最佳決斷！演算法時代來了！現今我們的世界已離不開演算法，從線上搜尋、社群交友、法院判案、醫學診斷、金融運作、大腦決策到人工智慧的未來，越了解演算法，越可能掌控權力，成為時代的贏家。有些演算法對我們有益、有些有用，有些則可能使我們陷入大麻煩，但我們對這些演算法所知極少。不管用哪種程式語言編寫程式，演算法都是不可或缺的，不過如果認為只有學電腦的人才要了解演算法，那就太可惜了。演算法其實是一連串解決問題的邏輯步驟，只要熟悉這些步驟和運用方式，每個人都能設計自己的演算法並應用於各種不同領域。學習演算法正是建構嚴謹思維和幫助做出最佳判斷的訓練。演算法的第一本書，從基礎開始學習！演算法是用以執行計算或完成作業的程序，可以想像成料理食譜，如果做出某種料理的步驟是食譜，那麼用電腦解出特定問題的步驟就是演算法了。然而，食譜與演算法的決定性差異，在於演算法非常嚴謹。相較於食譜有很多概略的描述，演算法的所有步驟都用數學方式表現，沒有模糊地帶。本書蒐羅介紹26種基本的演算法和7種資料結構，貨真價實完全圖解。每一個步驟都以圖片和文字詳細說明，拆解具體演算過程，逐步建立邏輯概念，輕鬆進入演算法的世界。書中解說的演算法範疇包括「排序」、「陣列搜尋」、「圖形搜尋」、「安全性演算法」、「聚類」，以及「網頁排名」等各種廣泛使用的基礎演算法。不用艱澀的專有名詞，步步口語分解，完全沒有概念的人也能漸進學習。",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/1.jpg",
+        "Selling_Price": 110.0,
+        "In_Stock_Quantity": 10,
+        "Hold_Quantity": 1,
+        "Sold_Quantity": 1,
+        "Last_Update_Date": "2023-03-17 12:00:00"
     },
     "2": {
-        "book_title": "后翼棄兵",
-        "author": [
+        "Book_Title": "后翼棄兵",
+        "Author": [
             "沃爾特·特維斯著，呂玉嬋、陳芙楊譯"
         ],
-        "publisher": "皇冠文化出版有限公司",
-        "genre": "Novel",
-        "isbn": "9789573336952",
-        "description": "NETFLIX史上最強神劇經典原著小說！\n橫掃63國收視冠軍！榮獲金球獎最佳迷你影集、最佳女主角！「后翼棄兵」是一種西洋棋的開局法，執白子者為了取得優勢，會先犧牲一個兵。貝絲的故事，也是從當「棄子」開始。在她小時候，媽媽常嚷著「去死」，直到八歲那年，媽媽真的死了，於是她住進了梅休因之家。偶爾有一些穿著體面的夫婦會來到這裡，牽著幸運的女孩離開，但更多人像貝絲一樣，知道自己永遠也離不開。幸好大多數的時候日子還過得去，她每天可以領兩次安定心神的小藥丸，禮拜二算術課結束後，她會到地下室清理板擦，順便看工友薛波先生玩那個叫做「西洋棋」的神秘遊戲。一開始她只是靜靜地在旁觀看，然後在失眠的夜裡，將寢室的天花板化作棋盤，在腦海中演繹自己的棋局。貝絲的心隨著棋盤上的黑白棋子起舞，它們接納她的靈魂，她的靈魂也接納了它們。「女孩子不下棋。」薛波先生起初對貝絲不以為然，直到她第一次戰勝了他，然後是高中圍棋社老師、地區西洋棋大師……回過神來，她已展開美國國際西洋棋公開賽冠軍的角逐。然而伴隨著獎金和名氣而來的，卻是如影隨形的孤獨和藥物成癮的夢魘。她能戰勝心魔，下好「人生」這一盤棋嗎？",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/2.jpg",
-        "selling_price": 10.0,
-        "in_stock_quantity": 20,
-        "hold_quantity": 5,
-        "sold_quantity": 8,
-        "last_update": "2023-04-17 09:33:45"
+        "Publisher": "皇冠文化出版有限公司",
+        "Genre": "Novel",
+        "ISBN": "9789573336952",
+        "Description": "NETFLIX史上最強神劇經典原著小說！\n橫掃63國收視冠軍！榮獲金球獎最佳迷你影集、最佳女主角！「后翼棄兵」是一種西洋棋的開局法，執白子者為了取得優勢，會先犧牲一個兵。貝絲的故事，也是從當「棄子」開始。在她小時候，媽媽常嚷著「去死」，直到八歲那年，媽媽真的死了，於是她住進了梅休因之家。偶爾有一些穿著體面的夫婦會來到這裡，牽著幸運的女孩離開，但更多人像貝絲一樣，知道自己永遠也離不開。幸好大多數的時候日子還過得去，她每天可以領兩次安定心神的小藥丸，禮拜二算術課結束後，她會到地下室清理板擦，順便看工友薛波先生玩那個叫做「西洋棋」的神秘遊戲。一開始她只是靜靜地在旁觀看，然後在失眠的夜裡，將寢室的天花板化作棋盤，在腦海中演繹自己的棋局。貝絲的心隨著棋盤上的黑白棋子起舞，它們接納她的靈魂，她的靈魂也接納了它們。「女孩子不下棋。」薛波先生起初對貝絲不以為然，直到她第一次戰勝了他，然後是高中圍棋社老師、地區西洋棋大師……回過神來，她已展開美國國際西洋棋公開賽冠軍的角逐。然而伴隨著獎金和名氣而來的，卻是如影隨形的孤獨和藥物成癮的夢魘。她能戰勝心魔，下好「人生」這一盤棋嗎？",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/2.jpg",
+        "Selling_Price": 100.0,
+        "In_Stock_Quantity": 20,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 8,
+        "Last_Update_Date": "2023-04-17 09:33:45"
     },
     "3": {
-        "book_title": "To Kill a Mockingbird",
-        "author": [
+        "Book_Title": "To Kill a Mockingbird",
+        "Author": [
             "Harper Lee"
         ],
-        "publisher": "Grand Central Publishing",
-        "genre": "Novel",
-        "isbn": "9780446310789",
-        "description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.\n\nCompassionate, dramatic, and deeply moving, To Kill A Mockingbird takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 18 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/3.jpg",
-        "selling_price": 101.062,
-        "in_stock_quantity": 50,
-        "hold_quantity": 10,
-        "sold_quantity": 40,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Grand Central Publishing",
+        "Genre": "Novel",
+        "ISBN": "9780446310789",
+        "Description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.\n\nCompassionate, dramatic, and deeply moving, To Kill A Mockingbird takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 18 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/3.jpg",
+        "Selling_Price": 101.062,
+        "In_Stock_Quantity": 50,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 40,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "4": {
-        "book_title": "1984",
-        "author": [
+        "Book_Title": "1984",
+        "Author": [
             "George Orwell"
         ],
-        "publisher": "Signet Classic",
-        "genre": "Novel",
-        "isbn": "9780451524935",
-        "description": "“The Party told you to reject the evidence of your eyes and ears. It was their final, most essential command.”\n\nWinston Smith toes the Party line, rewriting history to satisfy the demands of the Ministry of Truth. With each lie he writes, Winston grows to hate the Party that seeks power for its own sake and persecutes those who dare to commit thoughtcrimes. But as he starts to think for himself, Winston can’t escape the fact that Big Brother is always watching...\n\nA startling and haunting novel, 1984 creates an imaginary world that is completely convincing from start to finish. No one can deny the novel’s hold on the imaginations of whole generations, or the power of its admonitions—a power that seems to grow, not lessen, with the passage of time.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/4.jpg",
-        "selling_price": 77.7222,
-        "in_stock_quantity": 25,
-        "hold_quantity": 5,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Signet Classic",
+        "Genre": "Novel",
+        "ISBN": "9780451524935",
+        "Description": "“The Party told you to reject the evidence of your eyes and ears. It was their final, most essential command.”\n\nWinston Smith toes the Party line, rewriting history to satisfy the demands of the Ministry of Truth. With each lie he writes, Winston grows to hate the Party that seeks power for its own sake and persecutes those who dare to commit thoughtcrimes. But as he starts to think for himself, Winston can’t escape the fact that Big Brother is always watching...\n\nA startling and haunting novel, 1984 creates an imaginary world that is completely convincing from start to finish. No one can deny the novel’s hold on the imaginations of whole generations, or the power of its admonitions—a power that seems to grow, not lessen, with the passage of time.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/4.jpg",
+        "Selling_Price": 77.70,
+        "In_Stock_Quantity": 25,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "5": {
-        "book_title": "The Great Gatsby",
-        "author": [
+        "Book_Title": "The Great Gatsby",
+        "Author": [
             "F. Scott Fitzgerald"
         ],
-        "publisher": "Scribner",
-        "genre": "Novel",
-        "isbn": "9780743273565",
-        "description": "The Great Gatsby, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. First published in 1925, this quintessential novel of the Jazz Age has been acclaimed by generations of readers. The story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted “gin was the national drink and sex the national obsession,” it is an exquisitely crafted tale of America in the 1920s.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/5.jpg",
-        "selling_price": 116.622,
-        "in_stock_quantity": 35,
-        "hold_quantity": 15,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Scribner",
+        "Genre": "Novel",
+        "ISBN": "9780743273565",
+        "Description": "The Great Gatsby, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. First published in 1925, this quintessential novel of the Jazz Age has been acclaimed by generations of readers. The story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted “gin was the national drink and sex the national obsession,” it is an exquisitely crafted tale of America in the 1920s.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/5.jpg",
+        "Selling_Price": 116.62,
+        "In_Stock_Quantity": 35,
+        "Hold_Quantity": 15,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "6": {
-        "book_title": "Animal Farm",
-        "author": [
+        "Book_Title": "Animal Farm",
+        "Author": [
             "George Orwell"
         ],
-        "publisher": "Signet Classic",
-        "genre": "Biography",
-        "isbn": "9780452284241",
-        "description": "“All animals are equal, but some animals are more equal than others.”\n\nA farm is taken over by its overworked, mistreated animals. With flaming idealism and stirring slogans, they set out to create a paradise of progress, justice, and equality. Thus the stage is set for one of the most telling satiric fables ever penned—a razor-edged fairy tale for grown-ups that records the evolution from revolution against tyranny to a totalitarianism just as terrible. \n \nWhen Animal Farm was first published, Stalinist Russia was seen as its target. Today it is devastatingly clear that wherever and whenever freedom is attacked, under whatever banner, the cutting clarity and savage comedy of George Orwell’s masterpiece have a meaning and message still ferociously fresh.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/6.jpg",
-        "selling_price": 69.9422,
-        "in_stock_quantity": 45,
-        "hold_quantity": 0,
-        "sold_quantity": 45,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Signet Classic",
+        "Genre": "Biography",
+        "ISBN": "9780452284241",
+        "Description": "“All animals are equal, but some animals are more equal than others.”\n\nA farm is taken over by its overworked, mistreated animals. With flaming idealism and stirring slogans, they set out to create a paradise of progress, justice, and equality. Thus the stage is set for one of the most telling satiric fables ever penned—a razor-edged fairy tale for grown-ups that records the evolution from revolution against tyranny to a totalitarianism just as terrible. \n \nWhen Animal Farm was first published, Stalinist Russia was seen as its target. Today it is devastatingly clear that wherever and whenever freedom is attacked, under whatever banner, the cutting clarity and savage comedy of George Orwell’s masterpiece have a meaning and message still ferociously fresh.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/6.jpg",
+        "Selling_Price": 69.9422,
+        "In_Stock_Quantity": 45,
+        "Hold_Quantity": 0,
+        "Sold_Quantity": 45,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "7": {
-        "book_title": "Brave New World",
-        "author": [
+        "Book_Title": "Brave New World",
+        "Author": [
             "Aldous Huxley"
         ],
-        "publisher": "Harper Perennial",
-        "genre": "Social science and history",
-        "isbn": "9780060850524",
-        "description": "Aldous Huxley's profoundly important classic of world literature, Brave New World is a searching vision of an unequal, technologically-advanced future where humans are genetically bred, socially indoctrinated, and pharmaceutically anesthetized to passively uphold an authoritarian ruling order–all at the cost of our freedom, full humanity, and perhaps also our souls. “A genius [who] who spent his life decrying the onward march of the Machine” (The New Yorker), Huxley was a man of incomparable talents: equally an artist, a spiritual seeker, and one of history’s keenest observers of human nature and civilization. Brave New World, his masterpiece, has enthralled and terrified millions of readers, and retains its urgent relevance to this day as both a warning to be heeded as we head into tomorrow and as thought-provoking, satisfying work of literature. Written in the shadow of the rise of fascism during the 1930s, Brave New World likewise speaks to a 21st-century world dominated by mass-entertainment, technology, medicine and pharmaceuticals, the arts of persuasion, and the hidden influence of elites. ",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/7.jpg",
-        "selling_price": 93.2822,
-        "in_stock_quantity": 30,
-        "hold_quantity": 10,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Harper Perennial",
+        "Genre": "Social science and history",
+        "ISBN": "9780060850524",
+        "Description": "Aldous Huxley's profoundly important classic of world literature, Brave New World is a searching vision of an unequal, technologically-advanced future where humans are genetically bred, socially indoctrinated, and pharmaceutically anesthetized to passively uphold an Authoritarian ruling order–all at the cost of our freedom, full humanity, and perhaps also our souls. “A genius [who] who spent his life decrying the onward march of the Machine” (The New Yorker), Huxley was a man of incomparable talents: equally an artist, a spiritual seeker, and one of history’s keenest observers of human nature and civilization. Brave New World, his masterpiece, has enthralled and terrified millions of readers, and retains its urgent relevance to this day as both a warning to be heeded as we head into tomorrow and as thought-provoking, satisfying work of literature. Written in the shadow of the rise of fascism during the 1930s, Brave New World likewise speaks to a 21st-century world dominated by mass-entertainment, technology, medicine and pharmaceuticals, the arts of persuasion, and the hidden influence of elites. ",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/7.jpg",
+        "Selling_Price": 93.2822,
+        "In_Stock_Quantity": 30,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "8": {
-        "book_title": "Lord of the Flies",
-        "author": [
+        "Book_Title": "Lord of the Flies",
+        "Author": [
             "William Golding"
         ],
-        "publisher": "Penguin",
-        "genre": "Classic Literature",
-        "isbn": "9780399501487",
-        "description": "At the dawn of the next world war, a plane crashes on an uncharted island, stranding a group of schoolboys. At first, with no adult supervision, their freedom is something to celebrate. This far from civilization they can do anything they want. Anything. But as order collapses, as strange howls echo in the night, as terror begins its reign, the hope of adventure seems as far removed from reality as the hope of being rescued.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/8.jpg",
-        "selling_price": 62.1622,
-        "in_stock_quantity": 20,
-        "hold_quantity": 5,
-        "sold_quantity": 15,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Penguin",
+        "Genre": "Classic Literature",
+        "ISBN": "9780399501487",
+        "Description": "At the dawn of the next world war, a plane crashes on an uncharted island, stranding a group of schoolboys. At first, with no adult supervision, their freedom is something to celebrate. This far from civilization they can do anything they want. Anything. But as order collapses, as strange howls echo in the night, as terror begins its reign, the hope of adventure seems as far removed from reality as the hope of being rescued.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/8.jpg",
+        "Selling_Price": 62.1622,
+        "In_Stock_Quantity": 20,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 15,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "9": {
-        "book_title": "Pride and Prejudice",
-        "author": [
+        "Book_Title": "Pride and Prejudice",
+        "Author": [
             "Jane Austen"
         ],
-        "publisher": "Dover Publications",
-        "genre": "Novel",
-        "isbn": "9780486284736",
-        "description": "Set in a small English village during 1812, this classic novel is one of the greatest love stories ever told!  \nA poor country squire is trying to find husbands for his five daughters.  When one of them, Elizabeth, meets rich Mr. Darcy at a dance, they don't find much in common.  But during the next few months, they overcome their differences and fall in love.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/9.jpg",
-        "selling_price": 85.5022,
-        "in_stock_quantity": 40,
-        "hold_quantity": 20,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Dover Publications",
+        "Genre": "Novel",
+        "ISBN": "9780486284736",
+        "Description": "Set in a small English village during 1812, this classic novel is one of the greatest love stories ever told!  \nA poor country squire is trying to find husbands for his five daughters.  When one of them, Elizabeth, meets rich Mr. Darcy at a dance, they don't find much in common.  But during the next few months, they overcome their differences and fall in love.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/9.jpg",
+        "Selling_Price": 85.5022,
+        "In_Stock_Quantity": 40,
+        "Hold_Quantity": 20,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "10": {
-        "book_title": "One Hundred Years of Solitude",
-        "author": [
+        "Book_Title": "One Hundred Years of Solitude",
+        "Author": [
             "Gabriel García Márquez"
         ],
-        "publisher": "Harper Perennial",
-        "genre": "Novel",
-        "isbn": "9780060883287",
-        "description": "One Hundred Years of Solitude tells the story of the rise and fall, birth and death of the mythical town of Macondo through the history of the Buendiá family. Inventive, amusing, magnetic, sad and alive with unforgettable men and women—brimming with truth, compassion, and a lyrical magic that strikes the soul—this novel is a masterpiece in the art of fiction.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/10.jpg",
-        "selling_price": 108.842,
-        "in_stock_quantity": 15,
-        "hold_quantity": 10,
-        "sold_quantity": 5,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Harper Perennial",
+        "Genre": "Novel",
+        "ISBN": "9780060883287",
+        "Description": "One Hundred Years of Solitude tells the story of the rise and fall, birth and death of the mythical town of Macondo through the history of the Buendiá family. Inventive, amusing, magnetic, sad and alive with unforgettable men and women—brimming with truth, compassion, and a lyrical magic that strikes the soul—this novel is a masterpiece in the art of fiction.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/10.jpg",
+        "Selling_Price": 108.842,
+        "In_Stock_Quantity": 15,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 5,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "11": {
-        "book_title": "Catch-22",
-        "author": [
+        "Book_Title": "Catch-22",
+        "Author": [
             "Joseph Heller"
         ],
-        "publisher": "Simon & Schuster",
-        "genre": "Novel",
-        "isbn": "9780684833392",
-        "description": "At the heart of Catch-22 resides the incomparable, malingering bombardier, Yossarian, a hero endlessly inventive in his schemes to save his skin from the horrible chances of war. His efforts are perfectly understandable because as he furiously scrambles, thousands of people he hasn't even met are trying to kill him. His problem is Colonel Cathcart, who keeps raising the number of missions the men must fly to complete their service. Yet if Yossarian makes any attempts to excuse himself from the perilous missions that he is committed to flying, he is trapped by the Great Loyalty Oath Crusade, the hilariously sinister bureaucratic rule from which the book takes its title: a man is considered insane if he willingly continues to fly dangerous combat missions, but if he makes the necessary formal request to be relieved of such missions, the very act of making the request proves that he is sane and therefore ineligible to be relieved.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/11.jpg",
-        "selling_price": 77.7222,
-        "in_stock_quantity": 55,
-        "hold_quantity": 15,
-        "sold_quantity": 40,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Simon & Schuster",
+        "Genre": "Novel",
+        "ISBN": "9780684833392",
+        "Description": "At the heart of Catch-22 resides the incomparable, malingering bombardier, Yossarian, a hero endlessly inventive in his schemes to save his skin from the horrible chances of war. His efforts are perfectly understandable because as he furiously scrambles, thousands of people he hasn't even met are trying to kill him. His problem is Colonel Cathcart, who keeps raising the number of missions the men must fly to complete their service. Yet if Yossarian makes any attempts to excuse himself from the perilous missions that he is committed to flying, he is trapped by the Great Loyalty Oath Crusade, the hilariously sinister bureaucratic rule from which the book takes its title: a man is considered insane if he willingly continues to fly dangerous combat missions, but if he makes the necessary formal request to be relieved of such missions, the very act of making the request proves that he is sane and therefore ineligible to be relieved.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/11.jpg",
+        "Selling_Price": 77.7222,
+        "In_Stock_Quantity": 55,
+        "Hold_Quantity": 15,
+        "Sold_Quantity": 40,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "12": {
-        "book_title": "The Catcher in the Rye",
-        "author": [
+        "Book_Title": "The Catcher in the Rye",
+        "Author": [
             "J.D. Salinger"
         ],
-        "publisher": "Little, Brown and Company",
-        "genre": "Classic Literature",
-        "isbn": "9780316769174",
-        "description": "The hero-narrator of The Catcher in the Rye is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/12.jpg",
-        "selling_price": 101.062,
-        "in_stock_quantity": 30,
-        "hold_quantity": 5,
-        "sold_quantity": 25,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Little, Brown and Company",
+        "Genre": "Classic Literature",
+        "ISBN": "9780316769174",
+        "Description": "The hero-narrator of The Catcher in the Rye is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand Description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/12.jpg",
+        "Selling_Price": 101.062,
+        "In_Stock_Quantity": 30,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 25,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "13": {
-        "book_title": "The Diary of a Young Girl",
-        "author": [
+        "Book_Title": "The Diary of a Young Girl",
+        "Author": [
             "Anne Frank"
         ],
-        "publisher": "Bantam",
-        "genre": "Classic Literature",
-        "isbn": "9780553577129",
-        "description": "Discovered in the attic where she spnt the last years of her life, Anne Frank’s remarkable diary has become a world classic—a powerful reminder of the horrors of war and an eloquent testament to the human spirit.\n\nIn 1942, as Nazis occupied Holland, a thirteen-year-old Jewish girl and her family fled their home in Amsterdam and went into hiding. For the next two years, until their whereabouts were betrayed to the Gestapo, they and another family lived cloistered in the secret upstairs rooms of an old office building. Cut off from the outside world, they faced hunger, boredom, the constant cruelties of living in confined quarters, and the ever-present threat of discovery and death.\n\nIn her diary Anne Frank recorded vivid impressions of her experiences during this period. By turns thoughtful, moving, and amusing, Anne’s account offers a fascinating commentary on human courage and frailty and a compelling self-portrait of a sensitive and spirited young woman whose promise was tragically cut short.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/13.jpg",
-        "selling_price": 69.9422,
-        "in_stock_quantity": 20,
-        "hold_quantity": 10,
-        "sold_quantity": 10,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Bantam",
+        "Genre": "Classic Literature",
+        "ISBN": "9780553577129",
+        "Description": "Discovered in the attic where she spnt the last years of her life, Anne Frank’s remarkable diary has become a world classic—a powerful reminder of the horrors of war and an eloquent testament to the human spirit.\n\nIn 1942, as Nazis occupied Holland, a thirteen-year-old Jewish girl and her family fled their home in Amsterdam and went into hiding. For the next two years, until their whereabouts were betrayed to the Gestapo, they and another family lived cloistered in the secret upstairs rooms of an old office building. Cut off from the outside world, they faced hunger, boredom, the constant cruelties of living in confined quarters, and the ever-present threat of discovery and death.\n\nIn her diary Anne Frank recorded vivid impressions of her experiences during this period. By turns thoughtful, moving, and amusing, Anne’s account offers a fascinating commentary on human courage and frailty and a compelling self-portrait of a sensitive and spirited young woman whose promise was tragically cut short.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/13.jpg",
+        "Selling_Price": 69.9422,
+        "In_Stock_Quantity": 20,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 10,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "14": {
-        "book_title": "The Hobbit",
-        "author": [
+        "Book_Title": "The Hobbit",
+        "Author": [
             "J.R.R. Tolkien"
         ],
-        "publisher": "HarperCollins",
-        "genre": "Novel",
-        "isbn": "9780261102217",
-        "description": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day to whisk him away on an unexpected journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon…",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/14.jpg",
-        "selling_price": 93.2822,
-        "in_stock_quantity": 25,
-        "hold_quantity": 5,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "HarperCollins",
+        "Genre": "Novel",
+        "ISBN": "9780261102217",
+        "Description": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day to whisk him away on an unexpected journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon…",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/14.jpg",
+        "Selling_Price": 93.2822,
+        "In_Stock_Quantity": 25,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "15": {
-        "book_title": "The Hitchhiker's Guide to the Galaxy",
-        "author": [
+        "Book_Title": "The Hitchhiker's Guide to the Galaxy",
+        "Author": [
             "Douglas Adams"
         ],
-        "publisher": "Del Rey",
-        "genre": "Novel",
-        "isbn": "9780345391803",
-        "description": "It’s an ordinary Thursday morning for Arthur Dent . . . until his house gets demolished. The Earth follows shortly after to make way for a new hyperspace express route, and Arthur’s best friend has just announced that he’s an alien.\n\nAfter that, things get much, much worse.\n\nWith just a towel, a small yellow fish, and a book, Arthur has to navigate through a very hostile universe in the company of a gang of unreliable aliens. Luckily the fish is quite good at languages. And the book is The Hitchhiker’s Guide to the Galaxy . . . which helpfully has the words DON’T PANIC inscribed in large, friendly letters on its cover.\n\nDouglas Adams’s mega-selling pop-culture classic sends logic into orbit, plays havoc with both time and physics, offers up pithy commentary on such things as ballpoint pens, potted plants, and digital watches . . . and, most important, reveals the ultimate answer to life, the universe, and everything.\n\nNow, if you could only figure out the question. . . .",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/15.jpg",
-        "selling_price": 116.622,
-        "in_stock_quantity": 15,
-        "hold_quantity": 5,
-        "sold_quantity": 10,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Del Rey",
+        "Genre": "Novel",
+        "ISBN": "9780345391803",
+        "Description": "It’s an ordinary Thursday morning for Arthur Dent . . . until his house gets demolished. The Earth follows shortly after to make way for a new hyperspace express route, and Arthur’s best friend has just announced that he’s an alien.\n\nAfter that, things get much, much worse.\n\nWith just a towel, a small yellow fish, and a book, Arthur has to navigate through a very hostile universe in the company of a gang of unreliable aliens. Luckily the fish is quite good at languages. And the book is The Hitchhiker’s Guide to the Galaxy . . . which helpfully has the words DON’T PANIC inscribed in large, friendly letters on its cover.\n\nDouglas Adams’s mega-selling pop-culture classic sends logic into orbit, plays havoc with both time and physics, offers up pithy commentary on such things as ballpoint pens, potted plants, and digital watches . . . and, most important, reveals the ultimate answer to life, the universe, and everything.\n\nNow, if you could only figure out the question. . . .",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/15.jpg",
+        "Selling_Price": 116.622,
+        "In_Stock_Quantity": 15,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 10,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "16": {
-        "book_title": "Harry Potter and the Philosopher's Stone",
-        "author": [
+        "Book_Title": "Harry Potter and the Philosopher's Stone",
+        "Author": [
             "J.K. Rowling"
         ],
-        "publisher": "Bloomsbury Publishing",
-        "genre": "Novel",
-        "isbn": "9780747532743",
-        "description": "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in a 'car crash'. He is bullied by them and his fat, spoilt cousin Dudley, and lives a very unremarkable life with only the odd hiccup (like his hair growing back overnight!) to cause him much to think about. That is until an owl turns up with a letter addressed to Harry and all hell breaks loose! He is literally rescued by a world where nothing is as it seems and magic lessons are the order of the day. Read and find out how Harry discovers his true heritage at Hogwarts School of Wizardry and Witchcraft, the reason behind his parents mysterious death, who is out to kill him, and how he uncovers the most amazing secret of all time, the fabled Philosopher's Stone! All this and muggles too. Now, what are they?",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/16.jpg",
-        "selling_price": 132.182,
-        "in_stock_quantity": 10,
-        "hold_quantity": 5,
-        "sold_quantity": 5,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Bloomsbury Publishing",
+        "Genre": "Novel",
+        "ISBN": "9780747532743",
+        "Description": "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in a 'car crash'. He is bullied by them and his fat, spoilt cousin Dudley, and lives a very unremarkable life with only the odd hiccup (like his hair growing back overnight!) to cause him much to think about. That is until an owl turns up with a letter addressed to Harry and all hell breaks loose! He is literally rescued by a world where nothing is as it seems and magic lessons are the order of the day. Read and find out how Harry discovers his true heritage at Hogwarts School of Wizardry and Witchcraft, the reason behind his parents mysterious death, who is out to kill him, and how he uncovers the most amazing secret of all time, the fabled Philosopher's Stone! All this and muggles too. Now, what are they?",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/16.jpg",
+        "Selling_Price": 132.182,
+        "In_Stock_Quantity": 10,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 5,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "17": {
-        "book_title": "The Lord of the Rings: The Fellowship of the Ring",
-        "author": [
+        "Book_Title": "The Lord of the Rings: The Fellowship of the Ring",
+        "Author": [
             "J.R.R. Tolkien"
         ],
-        "publisher": "HarperCollins",
-        "genre": "Novel",
-        "isbn": "9780261102354",
-        "description": "Continuing the story begun in The Hobbit, this is the first part of Tolkien’s epic masterpiece, The Lord of the Rings, featuring a striking black cover based on Tolkien’s own design, the definitive text, and a detailed map of Middle-earth.\n\nSauron, the Dark Lord, has gathered to him all the Rings of Power – the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring – the ring that rules them all – which has fallen into the hands of the hobbit, Bilbo Baggins.\n\nIn a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/17.jpg",
-        "selling_price": 155.522,
-        "in_stock_quantity": 5,
-        "hold_quantity": 0,
-        "sold_quantity": 5,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "HarperCollins",
+        "Genre": "Novel",
+        "ISBN": "9780261102354",
+        "Description": "Continuing the story begun in The Hobbit, this is the first part of Tolkien’s epic masterpiece, The Lord of the Rings, featuring a striking black cover based on Tolkien’s own design, the definitive text, and a detailed map of Middle-earth.\n\nSauron, the Dark Lord, has gathered to him all the Rings of Power – the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring – the ring that rules them all – which has fallen into the hands of the hobbit, Bilbo Baggins.\n\nIn a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/17.jpg",
+        "Selling_Price": 155.522,
+        "In_Stock_Quantity": 5,
+        "Hold_Quantity": 0,
+        "Sold_Quantity": 5,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "18": {
-        "book_title": "The Picture of Dorian Gray",
-        "author": [
+        "Book_Title": "The Picture of Dorian Gray",
+        "Author": [
             "Oscar Wilde"
         ],
-        "publisher": "Dover Publications",
-        "genre": "Classic Literature",
-        "isbn": "9780486278070",
-        "description": "The Picture of Dorian Gray is a philosophical novel by Irish writer Oscar Wilde. A shorter novella-length version was published in the July 1890 issue of the American periodical Lippincott's Monthly Magazine. The novel-length version was published in April 1891.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/18.jpg",
-        "selling_price": 101.062,
-        "in_stock_quantity": 30,
-        "hold_quantity": 10,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Dover Publications",
+        "Genre": "Classic Literature",
+        "ISBN": "9780486278070",
+        "Description": "The Picture of Dorian Gray is a philosophical novel by Irish writer Oscar Wilde. A shorter novella-length version was published in the July 1890 issue of the American periodical Lippincott's Monthly Magazine. The novel-length version was published in April 1891.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/18.jpg",
+        "Selling_Price": 101.062,
+        "In_Stock_Quantity": 30,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "19": {
-        "book_title": "The Bell Jar",
-        "author": [
+        "Book_Title": "The Bell Jar",
+        "Author": [
             "Sylvia Plath"
         ],
-        "publisher": "Harper Perennial",
-        "genre": "Classic Literature",
-        "isbn": "9780060837020",
-        "description": "The Bell Jar is the only novel written by the American writer and poet Sylvia Plath. Originally published under the pseudonym \"Victoria Lucas\" in 1963, the novel is semi-autobiographical with the names of places and people changed. The book is often regarded as a roman à clef because the protagonist's descent into mental illness parallels Plath's own experiences with what may have been clinical depression or bipolar II disorder.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/19.jpg",
-        "selling_price": 77.7222,
-        "in_stock_quantity": 25,
-        "hold_quantity": 5,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Harper Perennial",
+        "Genre": "Classic Literature",
+        "ISBN": "9780060837020",
+        "Description": "The Bell Jar is the only novel written by the American writer and poet Sylvia Plath. Originally published under the pseudonym \"Victoria Lucas\" in 1963, the novel is semi-autobiographical with the names of places and people changed. The book is often regarded as a roman à clef because the protagonist's descent into mental illness parallels Plath's own experiences with what may have been clinical depression or bipolar II disorder.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/19.jpg",
+        "Selling_Price": 77.7222,
+        "In_Stock_Quantity": 25,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "20": {
-        "book_title": "The Color Purple",
-        "author": [
+        "Book_Title": "The Color Purple",
+        "Author": [
             "Alice Walker"
         ],
-        "publisher": "Mariner Books",
-        "genre": "Classic Literature",
-        "isbn": "9780156028356",
-        "description": "The Color Purple is a 1982 epistolary novel by American author Alice Walker which won the 1983 Pulitzer Prize for Fiction and the National Book Award for Fiction. It was later adapted into a film and musical of the same name.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/20.jpg",
-        "selling_price": 116.622,
-        "in_stock_quantity": 35,
-        "hold_quantity": 15,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Mariner Books",
+        "Genre": "Classic Literature",
+        "ISBN": "9780156028356",
+        "Description": "The Color Purple is a 1982 epistolary novel by American Author Alice Walker which won the 1983 Pulitzer Prize for Fiction and the National Book Award for Fiction. It was later adapted into a film and musical of the same name.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/20.jpg",
+        "Selling_Price": 116.622,
+        "In_Stock_Quantity": 35,
+        "Hold_Quantity": 15,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "21": {
-        "book_title": "The Road",
-        "author": [
+        "Book_Title": "The Road",
+        "Author": [
             "Cormac McCarthy"
         ],
-        "publisher": "Vintage Books",
-        "genre": "Classic Literature",
-        "isbn": "9780307387899",
-        "description": "The Road is a 2006 post-apocalyptic novel by American writer Cormac McCarthy. The book details the grueling journey of a father and his young son over a period of several months across a landscape blasted by an unspecified cataclysm that has destroyed industrial civilization and almost all life. The novel was awarded the 2007 Pulitzer Prize for Fiction and the James Tait Black Memorial Prize for Fiction in 2006.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/21.jpg",
-        "selling_price": 69.9422,
-        "in_stock_quantity": 45,
-        "hold_quantity": 0,
-        "sold_quantity": 45,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Vintage Books",
+        "Genre": "Classic Literature",
+        "ISBN": "9780307387899",
+        "Description": "The Road is a 2006 post-apocalyptic novel by American writer Cormac McCarthy. The book details the grueling journey of a father and his young son over a period of several months across a landscape blasted by an unspecified cataclysm that has destroyed industrial civilization and almost all life. The novel was awarded the 2007 Pulitzer Prize for Fiction and the James Tait Black Memorial Prize for Fiction in 2006.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/21.jpg",
+        "Selling_Price": 69.9422,
+        "In_Stock_Quantity": 45,
+        "Hold_Quantity": 0,
+        "Sold_Quantity": 45,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "22": {
-        "book_title": "The Handmaid's Tale",
-        "author": [
+        "Book_Title": "The Handmaid's Tale",
+        "Author": [
             "Margaret Atwood"
         ],
-        "publisher": "Anchor Books",
-        "genre": "Classic Literature",
-        "isbn": "9780385490818",
-        "description": "The Handmaid's Tale is a futuristic dystopian novel[6] by Canadian author Margaret Atwood and published in 1985. It is set in a near-future New England in a patriarchal, totalitarian theonomic state known as the Republic of Gilead, which has overthrown the United States government. Offred is the central character and narrator and one of the \"handmaids\", women who are forcibly assigned to produce children for the \"commanders\", who are the ruling class in Gilead.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/22.jpg",
-        "selling_price": 93.2822,
-        "in_stock_quantity": 30,
-        "hold_quantity": 10,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Anchor Books",
+        "Genre": "Classic Literature",
+        "ISBN": "9780385490818",
+        "Description": "The Handmaid's Tale is a futuristic dystopian novel[6] by Canadian Author Margaret Atwood and published in 1985. It is set in a near-future New England in a patriarchal, totalitarian theonomic state known as the Republic of Gilead, which has overthrown the United States government. Offred is the central character and narrator and one of the \"handmaids\", women who are forcibly assigned to produce children for the \"commanders\", who are the ruling class in Gilead.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/22.jpg",
+        "Selling_Price": 93.2822,
+        "In_Stock_Quantity": 30,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "23": {
-        "book_title": "The Sun Also Rises",
-        "author": [
+        "Book_Title": "The Sun Also Rises",
+        "Author": [
             "Ernest Hemingway"
         ],
-        "publisher": "Scribner",
-        "genre": "Classic Literature",
-        "isbn": "9780743297332",
-        "description": "The Sun Also Rises is a 1926 novel by American writer Ernest Hemingway, his first, that portrays American and British expatriates who travel from Paris to the Festival of San Fermín in Pamplona to watch the running of the bulls and the bullfights. An early modernist novel, it received mixed reviews upon publication. Hemingway biographer Jeffrey Meyers writes that it is now \"recognized as Hemingway's greatest work\" and Hemingway scholar Linda Wagner-Martin calls it his most important novel. The novel was published in the United States in October 1926 by Scribner's. A year later, Jonathan Cape published the novel in London under the title Fiesta.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/23.jpg",
-        "selling_price": 62.1622,
-        "in_stock_quantity": 15,
-        "hold_quantity": 5,
-        "sold_quantity": 10,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Scribner",
+        "Genre": "Classic Literature",
+        "ISBN": "9780743297332",
+        "Description": "The Sun Also Rises is a 1926 novel by American writer Ernest Hemingway, his first, that portrays American and British expatriates who travel from Paris to the Festival of San Fermín in Pamplona to watch the running of the bulls and the bullfights. An early modernist novel, it received mixed reviews upon publication. Hemingway biographer Jeffrey Meyers writes that it is now \"recognized as Hemingway's greatest work\" and Hemingway scholar Linda Wagner-Martin calls it his most important novel. The novel was published in the United States in October 1926 by Scribner's. A year later, Jonathan Cape published the novel in London under the title Fiesta.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/23.jpg",
+        "Selling_Price": 62.1622,
+        "In_Stock_Quantity": 15,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 10,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "24": {
-        "book_title": "The Hobbit and The Lord of the Rings Boxed Set",
-        "author": [
+        "Book_Title": "The Hobbit and The Lord of the Rings Boxed Set",
+        "Author": [
             "J.R.R. Tolkien"
         ],
-        "publisher": "HarperCollins",
-        "genre": "Classic Literature",
-        "isbn": "9780261103566",
-        "description": "Boxed gift set of Tolkien’s classic masterpieces, fully illustrated throughout in watercolour by the acclaimed and award-winning artist, Alan Lee, Conceptual Designer on Peter Jackson’s THE HOBBIT films.\n\nSince they were first published, The Hobbit and The Lord of the Rings have been two books people have treasured. Steeped in unrivalled magic and otherworldliness, these works of sweeping fantasy have touched the hearts of young and old alike. Between them, nearly 150 million copies have been sold around the world. And no editions have proved more popular than the two that were illustrated by award-winning artist, Alan Lee – the Centenary edition of The Lord of the Rings and the 60th Anniversary edition of The Hobbit.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/24.jpg",
-        "selling_price": 85.5022,
-        "in_stock_quantity": 20,
-        "hold_quantity": 10,
-        "sold_quantity": 10,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "HarperCollins",
+        "Genre": "Classic Literature",
+        "ISBN": "9780261103566",
+        "Description": "Boxed gift set of Tolkien’s classic masterpieces, fully illustrated throughout in watercolour by the acclaimed and award-winning artist, Alan Lee, Conceptual Designer on Peter Jackson’s THE HOBBIT films.\n\nSince they were first published, The Hobbit and The Lord of the Rings have been two books people have treasured. Steeped in unrivalled magic and otherworldliness, these works of sweeping fantasy have touched the hearts of young and old alike. Between them, nearly 150 million copies have been sold around the world. And no editions have proved more popular than the two that were illustrated by award-winning artist, Alan Lee – the Centenary edition of The Lord of the Rings and the 60th Anniversary edition of The Hobbit.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/24.jpg",
+        "Selling_Price": 85.5022,
+        "In_Stock_Quantity": 20,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 10,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "25": {
-        "book_title": "The Alchemist",
-        "author": [
+        "Book_Title": "The Alchemist",
+        "Author": [
             "Paulo Coelho"
         ],
-        "publisher": "HarperOne",
-        "genre": "Classic Literature",
-        "isbn": "9780062315007",
-        "description": "The Alchemist is a novel by Brazilian author Paulo Coelho which was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/25.jpg",
-        "selling_price": 108.842,
-        "in_stock_quantity": 25,
-        "hold_quantity": 15,
-        "sold_quantity": 10,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "HarperOne",
+        "Genre": "Classic Literature",
+        "ISBN": "9780062315007",
+        "Description": "The Alchemist is a novel by Brazilian Author Paulo Coelho which was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller. An allegorical novel, The Alchemist follows a young Andalusian shepherd in his journey to the pyramids of Egypt, after having a recurring dream of finding a treasure there.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/25.jpg",
+        "Selling_Price": 108.842,
+        "In_Stock_Quantity": 25,
+        "Hold_Quantity": 15,
+        "Sold_Quantity": 10,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "26": {
-        "book_title": "The Brothers Karamazov",
-        "author": [
+        "Book_Title": "The Brothers Karamazov",
+        "Author": [
             "Fyodor Dostoevsky"
         ],
-        "publisher": "Penguin Classics",
-        "genre": "Classic Literature",
-        "isbn": "9780140449242",
-        "description": "The Brothers Karamazov, also translated as The Karamazov Brothers, is the last novel by Russian author Fyodor Dostoevsky. Dostoevsky spent nearly two years writing The Brothers Karamazov, which was published as a serial in The Russian Messenger from January 1879 to November 1880. Dostoevsky died less than four months after its publication.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/26.jpg",
-        "selling_price": 77.7222,
-        "in_stock_quantity": 40,
-        "hold_quantity": 20,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Penguin Classics",
+        "Genre": "Classic Literature",
+        "ISBN": "9780140449242",
+        "Description": "The Brothers Karamazov, also translated as The Karamazov Brothers, is the last novel by Russian Author Fyodor Dostoevsky. Dostoevsky spent nearly two years writing The Brothers Karamazov, which was published as a serial in The Russian Messenger from January 1879 to November 1880. Dostoevsky died less than four months after its publication.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/26.jpg",
+        "Selling_Price": 77.7222,
+        "In_Stock_Quantity": 40,
+        "Hold_Quantity": 20,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "27": {
-        "book_title": "Heart of Darkness",
-        "author": [
+        "Book_Title": "Heart of Darkness",
+        "Author": [
             "Joseph Conrad"
         ],
-        "publisher": "Dover Publications",
-        "genre": "Social science and history",
-        "isbn": "9780486264646",
-        "description": "Heart of Darkness (1899) is a novella by Polish-English novelist Joseph Conrad in which the sailor Charles Marlow tells his listeners the story of his assignment as steamer captain for a Belgian company in the African interior. The novel is widely regarded as a critique of European colonial rule in Africa, whilst also examining the themes of power dynamics and morality.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/27.jpg",
-        "selling_price": 93.2822,
-        "in_stock_quantity": 30,
-        "hold_quantity": 3,
-        "sold_quantity": 27,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Dover Publications",
+        "Genre": "Social science and history",
+        "ISBN": "9780486264646",
+        "Description": "Heart of Darkness (1899) is a novella by Polish-English novelist Joseph Conrad in which the sailor Charles Marlow tells his listeners the story of his assignment as steamer captain for a Belgian company in the African interior. The novel is widely regarded as a critique of European colonial rule in Africa, whilst also examining the themes of power dynamics and morality.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/27.jpg",
+        "Selling_Price": 93.2822,
+        "In_Stock_Quantity": 30,
+        "Hold_Quantity": 3,
+        "Sold_Quantity": 27,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "28": {
-        "book_title": "The Adventures of Huckleberry Finn",
-        "author": [
+        "Book_Title": "The Adventures of Huckleberry Finn",
+        "Author": [
             "Mark Twain"
         ],
-        "publisher": "Dover Publications",
-        "genre": "Social science and history",
-        "isbn": "9780486280615",
-        "description": "Adventures of Huckleberry Finn is a novel by American author Mark Twain, which was first published in the United Kingdom in December 1884 and in the United States in February 1885. Commonly named among the Great American Novels, the work is among the first in major American literature to be written throughout in vernacular English, characterized by local color regionalism.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/28.jpg",
-        "selling_price": 69.9422,
-        "in_stock_quantity": 15,
-        "hold_quantity": 5,
-        "sold_quantity": 10,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Dover Publications",
+        "Genre": "Social science and history",
+        "ISBN": "9780486280615",
+        "Description": "Adventures of Huckleberry Finn is a novel by American Author Mark Twain, which was first published in the United Kingdom in December 1884 and in the United States in February 1885. Commonly named among the Great American Novels, the work is among the first in major American literature to be written throughout in vernacular English, characterized by local color regionalism.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/28.jpg",
+        "Selling_Price": 69.9422,
+        "In_Stock_Quantity": 15,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 10,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "29": {
-        "book_title": "The Odyssey",
-        "author": [
+        "Book_Title": "The Odyssey",
+        "Author": [
             "Homer"
         ],
-        "publisher": "Penguin Classics",
-        "genre": "Social science and history",
-        "isbn": "9780140268867",
-        "description": "The Odyssey is one of two major ancient Greek epic poems attributed to Homer. It is one of the oldest extant works of literature still widely read by modern audiences. As with the Iliad, the poem is divided into 24 books. It follows the Greek hero Odysseus, king of Ithaca, and his journey home after the Trojan War.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/29.jpg",
-        "selling_price": 101.062,
-        "in_stock_quantity": 50,
-        "hold_quantity": 10,
-        "sold_quantity": 40,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Penguin Classics",
+        "Genre": "Social science and history",
+        "ISBN": "9780140268867",
+        "Description": "The Odyssey is one of two major ancient Greek epic poems attributed to Homer. It is one of the oldest extant works of literature still widely read by modern audiences. As with the Iliad, the poem is divided into 24 books. It follows the Greek hero Odysseus, king of Ithaca, and his journey home after the Trojan War.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/29.jpg",
+        "Selling_Price": 101.062,
+        "In_Stock_Quantity": 50,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 40,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "30": {
-        "book_title": "The Divine Comedy",
-        "author": [
+        "Book_Title": "The Divine Comedy",
+        "Author": [
             "Dante Alighieri"
         ],
-        "publisher": "Penguin Classics",
-        "genre": "Social science and history",
-        "isbn": "9780140449327",
-        "description": "The Divine Comedy is an Italian narrative poem by Dante Alighieri, begun c. 1308 and completed around 1321, shortly before the author's death. It is widely considered the pre-eminent work in Italian literature and one of the greatest works of world literature.[2] The poem's imaginative vision of the afterlife is representative of the medieval worldview as it existed in the Western Church by the 14th century.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/30.jpg",
-        "selling_price": 116.622,
-        "in_stock_quantity": 35,
-        "hold_quantity": 15,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Penguin Classics",
+        "Genre": "Social science and history",
+        "ISBN": "9780140449327",
+        "Description": "The Divine Comedy is an Italian narrative poem by Dante Alighieri, begun c. 1308 and completed around 1321, shortly before the Author's death. It is widely considered the pre-eminent work in Italian literature and one of the greatest works of world literature.[2] The poem's imaginative vision of the afterlife is representative of the medieval worldview as it existed in the Western Church by the 14th century.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/30.jpg",
+        "Selling_Price": 116.622,
+        "In_Stock_Quantity": 35,
+        "Hold_Quantity": 15,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "31": {
-        "book_title": "The War of the Worlds",
-        "author": [
+        "Book_Title": "The War of the Worlds",
+        "Author": [
             "H.G. Wells"
         ],
-        "publisher": "Penguin Classics",
-        "genre": "Literature",
-        "isbn": "9780141441030",
-        "description": "The War of the Worlds is a science fiction novel by English author H. G. Wells, written between 1895 and 1897, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from publisher William Heinemann of London. It is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/31.jpg",
-        "selling_price": 62.1622,
-        "in_stock_quantity": 20,
-        "hold_quantity": 5,
-        "sold_quantity": 15,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Penguin Classics",
+        "Genre": "Literature",
+        "ISBN": "9780141441030",
+        "Description": "The War of the Worlds is a science fiction novel by English Author H. G. Wells, written between 1895 and 1897, first serialised in 1897 by Pearson's Magazine in the UK and by Cosmopolitan magazine in the US. The novel's first appearance in hardcover was in 1898 from Publisher William Heinemann of London. It is one of the earliest stories to detail a conflict between mankind and an extra-terrestrial race.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/31.jpg",
+        "Selling_Price": 62.1622,
+        "In_Stock_Quantity": 20,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 15,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "32": {
-        "book_title": "Frankenstein",
-        "author": [
+        "Book_Title": "Frankenstein",
+        "Author": [
             "Mary Shelley"
         ],
-        "publisher": "Dover Publications",
-        "genre": "Literature",
-        "isbn": "9780486282114",
-        "description": "Frankenstein is an 1818 novel written by English author Mary Shelley. Frankenstein tells the story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment. Shelley started writing the story when she was 18, and the first edition was published anonymously in London on 1 January 1818, when she was 20. Her name first appeared in the second edition, which was published in Paris in 1821.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/32.jpg",
-        "selling_price": 85.5022,
-        "in_stock_quantity": 40,
-        "hold_quantity": 20,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Dover Publications",
+        "Genre": "Literature",
+        "ISBN": "9780486282114",
+        "Description": "Frankenstein is an 1818 novel written by English Author Mary Shelley. Frankenstein tells the story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment. Shelley started writing the story when she was 18, and the first edition was published anonymously in London on 1 January 1818, when she was 20. Her name first appeared in the second edition, which was published in Paris in 1821.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/32.jpg",
+        "Selling_Price": 85.5022,
+        "In_Stock_Quantity": 40,
+        "Hold_Quantity": 20,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "33": {
-        "book_title": "Fading Neon Lights: An Archive of Hong Kong’s Visual Culture",
-        "author": [
+        "Book_Title": "Fading Neon Lights: An Archive of Hong Kong’s Visual Culture",
+        "Author": [
             "Kwok Sze Hang, Brian"
         ],
-        "publisher": "City University of Hong Kong Press",
-        "genre": "Hong Kong Studies",
-        "isbn": "9789629375928",
-        "description": "This book documents Hong Kong’s neon signs whilst taking on a historical, socio-cultural, and contextual study of visual culture around the city. It explores the inter-related components of neon signs, including each sign’s unique visual aesthetic and design, the history of craftsmanship and training, and how the streetscape relates to Hong Kong’s consumer culture.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/33.jpg",
-        "selling_price": 101.062,
-        "in_stock_quantity": 50,
-        "hold_quantity": 10,
-        "sold_quantity": 40,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "City University of Hong Kong Press",
+        "Genre": "Hong Kong Studies",
+        "ISBN": "9789629375928",
+        "Description": "This book documents Hong Kong’s neon signs whilst taking on a historical, socio-cultural, and contextual study of visual culture around the city. It explores the inter-related components of neon signs, including each sign’s unique visual aesthetic and design, the history of craftsmanship and training, and how the streetscape relates to Hong Kong’s consumer culture.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/33.jpg",
+        "Selling_Price": 101.062,
+        "In_Stock_Quantity": 50,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 40,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "34": {
-        "book_title": "Meditations",
-        "author": [
+        "Book_Title": "Meditations",
+        "Author": [
             "Marcus Aurelius"
         ],
-        "publisher": "Dover Publications",
-        "genre": "Philosophy",
-        "isbn": "9780486298238",
-        "description": "Meditations is a series of personal writings by Marcus Aurelius, Roman Emperor from AD 161 to 180, recording his private notes to himself and ideas on Stoic philosophy.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/34.jpg",
-        "selling_price": 77.7222,
-        "in_stock_quantity": 25,
-        "hold_quantity": 5,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Dover Publications",
+        "Genre": "Philosophy",
+        "ISBN": "9780486298238",
+        "Description": "Meditations is a series of personal writings by Marcus Aurelius, Roman Emperor from AD 161 to 180, recording his private notes to himself and ideas on Stoic philosophy.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/34.jpg",
+        "Selling_Price": 77.7222,
+        "In_Stock_Quantity": 25,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "35": {
-        "book_title": "The Death and Life of Great American Cities",
-        "author": [
+        "Book_Title": "The Death and Life of Great American Cities",
+        "Author": [
             "Jane Jacobs"
         ],
-        "publisher": "Random House, New York",
-        "genre": "Urban studies",
-        "isbn": "9780679741954",
-        "description": "The Death and Life of Great American Cities is a 1961 book by writer and activist Jane Jacobs. The book is a critique of 1950s urban planning policy, which it holds responsible for the decline of many city neighborhoods in the United States. The book is Jacobs' best-known and most influential work.",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/35.jpg",
-        "selling_price": 116.622,
-        "in_stock_quantity": 35,
-        "hold_quantity": 15,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "Random House, New York",
+        "Genre": "Urban studies",
+        "ISBN": "9780679741954",
+        "Description": "The Death and Life of Great American Cities is a 1961 book by writer and activist Jane Jacobs. The book is a critique of 1950s urban planning policy, which it holds responsible for the decline of many city neighborhoods in the United States. The book is Jacobs' best-known and most influential work.",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/35.jpg",
+        "Selling_Price": 116.622,
+        "In_Stock_Quantity": 35,
+        "Hold_Quantity": 15,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "36": {
-        "book_title": "教你看懂電影的20堂課：好電影如何好？",
-        "author": [
+        "Book_Title": "教你看懂電影的20堂課：好電影如何好？",
+        "Author": [
             "湯瑪斯．佛斯特"
         ],
-        "publisher": "本事出版",
-        "genre": "電影/戲劇",
-        "isbn": "9789579121125",
-        "description": "本書提供20堂有關於「看電影」的課程，列舉多達100部電影做為範例，不管是好片、爛片，如何從一部片，看出一些以往你從未發現過的趣味，讀懂一些從前你根本不在意的橋段，讓你驚覺「看電影」原來是一種獨特的動態語言的學習",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/36.jpg",
-        "selling_price": 69.9422,
-        "in_stock_quantity": 45,
-        "hold_quantity": 0,
-        "sold_quantity": 45,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "本事出版",
+        "Genre": "電影/戲劇",
+        "ISBN": "9789579121125",
+        "Description": "本書提供20堂有關於「看電影」的課程，列舉多達100部電影做為範例，不管是好片、爛片，如何從一部片，看出一些以往你從未發現過的趣味，讀懂一些從前你根本不在意的橋段，讓你驚覺「看電影」原來是一種獨特的動態語言的學習",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/36.jpg",
+        "Selling_Price": 69.9422,
+        "In_Stock_Quantity": 45,
+        "Hold_Quantity": 0,
+        "Sold_Quantity": 45,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "37": {
-        "book_title": "dA夯12：地理啟蒙",
-        "author": [
+        "Book_Title": "dA夯12：地理啟蒙",
+        "Author": [
             "劉克峰"
         ],
-        "publisher": "田園城市",
-        "genre": "城市地理",
-        "isbn": "9789866204494",
-        "description": "《dA夯12》延續前一期的現代性議題，著眼於「啟蒙之後」的亞洲建築樣態論述，探討包含台南、象集團等案例如何從「地方」挖掘出在地的視野與構成，同時也收錄2012威尼斯建築雙年展台灣館以「地理啟蒙」為主題的完整展出內容。而在新單元「夯建築」系列，則推介以今年威尼斯建築雙年展參展建築師廖偉立、林友寒兩人的作品，廖偉立的水彩手稿與在地文化的挖掘、林友寒的歐洲執業經驗，以及兩人分別與台灣知名建築評論名家阮慶岳的對談中，都從建築師自身出發，呼應了本期軸心主題。",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/37.jpg",
-        "selling_price": 93.2822,
-        "in_stock_quantity": 30,
-        "hold_quantity": 10,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "田園城市",
+        "Genre": "城市地理",
+        "ISBN": "9789866204494",
+        "Description": "《dA夯12》延續前一期的現代性議題，著眼於「啟蒙之後」的亞洲建築樣態論述，探討包含台南、象集團等案例如何從「地方」挖掘出在地的視野與構成，同時也收錄2012威尼斯建築雙年展台灣館以「地理啟蒙」為主題的完整展出內容。而在新單元「夯建築」系列，則推介以今年威尼斯建築雙年展參展建築師廖偉立、林友寒兩人的作品，廖偉立的水彩手稿與在地文化的挖掘、林友寒的歐洲執業經驗，以及兩人分別與台灣知名建築評論名家阮慶岳的對談中，都從建築師自身出發，呼應了本期軸心主題。",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/37.jpg",
+        "Selling_Price": 93.2822,
+        "In_Stock_Quantity": 30,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "38": {
-        "book_title": "金庸小說裏的中國文學",
-        "author": [
+        "Book_Title": "金庸小說裏的中國文學",
+        "Author": [
             "潘步釗"
         ],
-        "publisher": "三聯書店(香港)有限公司",
-        "genre": "文學",
-        "isbn": "9789620446351",
-        "description": "本書一方面從中國傳統的文學體裁出發，提取金庸小說中的詩詞、散文、歌賦、對聯等內容，分析其與中國文學的內在關聯及文藝價值，同時從金庸小說中的人物形象、故事情節和時代背景切入，探究金庸的文學思想及其作品在中國文學發展脈絡中所處的地位和作用。語言通俗易懂，是品讀金庸作品和中國傳統文學不可多得的“小書”。",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/38.jpg",
-        "selling_price": 62.1622,
-        "in_stock_quantity": 20,
-        "hold_quantity": 5,
-        "sold_quantity": 15,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "三聯書店(香港)有限公司",
+        "Genre": "文學",
+        "ISBN": "9789620446351",
+        "Description": "本書一方面從中國傳統的文學體裁出發，提取金庸小說中的詩詞、散文、歌賦、對聯等內容，分析其與中國文學的內在關聯及文藝價值，同時從金庸小說中的人物形象、故事情節和時代背景切入，探究金庸的文學思想及其作品在中國文學發展脈絡中所處的地位和作用。語言通俗易懂，是品讀金庸作品和中國傳統文學不可多得的“小書”。",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/38.jpg",
+        "Selling_Price": 62.1622,
+        "In_Stock_Quantity": 20,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 15,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "39": {
-        "book_title": "當代藝術是甚麼",
-        "author": [
+        "Book_Title": "當代藝術是甚麼",
+        "Author": [
             "小崎哲哉"
         ],
-        "publisher": "石頭出版股份有限公司",
-        "genre": "文化藝術理論",
-        "isbn": "9789866660481",
-        "description": "在創意文化、美學經濟與全面設計的時代，當代藝術具有甚麼樣的面貌？《當代藝術是甚麼》全面地測繪了形塑當前藝術世界樣態的角色與力量，以及他們為這個時代所帶來的影響。這是所有希望一窺當代藝術堂奧的讀者不可忽略的藝術指南。",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/39.jpg",
-        "selling_price": 85.5022,
-        "in_stock_quantity": 40,
-        "hold_quantity": 20,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "石頭出版股份有限公司",
+        "Genre": "文化藝術理論",
+        "ISBN": "9789866660481",
+        "Description": "在創意文化、美學經濟與全面設計的時代，當代藝術具有甚麼樣的面貌？《當代藝術是甚麼》全面地測繪了形塑當前藝術世界樣態的角色與力量，以及他們為這個時代所帶來的影響。這是所有希望一窺當代藝術堂奧的讀者不可忽略的藝術指南。",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/39.jpg",
+        "Selling_Price": 85.5022,
+        "In_Stock_Quantity": 40,
+        "Hold_Quantity": 20,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "40": {
-        "book_title": "中國研究：理論與實際",
-        "author": [
+        "Book_Title": "中國研究：理論與實際",
+        "Author": [
             "李英明"
         ],
-        "publisher": "三民",
-        "genre": "中國研究",
-        "isbn": "9789571446844",
-        "description": "本書的七篇文章通過對名家著作的省思，探討的是在中國研究這個範疇中，種種歷史記憶的型塑與建構是如何被表現，敘述者如何使用語言符號來描述自己所觀察、認知到的事件。\n\n　　同樣一個事件，在不同的視野和敘事觀點上所表現出來的面貌可能天差地遠，如此，記憶和歷史真實其實是無法通過種種觀察或研究被客觀如實的還原，但是在每一次的研究和觀察的過程中，記憶或歷史因應著不同的時空條件被賦予新的詮釋、解釋或是敘事，從而也建構或型塑了新的記憶與歷史，這些時空條件可能是權力、社會網絡甚至是個人的症候，然而也使得記憶或歷史所形成的文本展現出多元的面貌。",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/40.jpg",
-        "selling_price": 108.842,
-        "in_stock_quantity": 15,
-        "hold_quantity": 10,
-        "sold_quantity": 5,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "三民",
+        "Genre": "中國研究",
+        "ISBN": "9789571446844",
+        "Description": "本書的七篇文章通過對名家著作的省思，探討的是在中國研究這個範疇中，種種歷史記憶的型塑與建構是如何被表現，敘述者如何使用語言符號來描述自己所觀察、認知到的事件。\n\n　　同樣一個事件，在不同的視野和敘事觀點上所表現出來的面貌可能天差地遠，如此，記憶和歷史真實其實是無法通過種種觀察或研究被客觀如實的還原，但是在每一次的研究和觀察的過程中，記憶或歷史因應著不同的時空條件被賦予新的詮釋、解釋或是敘事，從而也建構或型塑了新的記憶與歷史，這些時空條件可能是權力、社會網絡甚至是個人的症候，然而也使得記憶或歷史所形成的文本展現出多元的面貌。",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/40.jpg",
+        "Selling_Price": 108.842,
+        "In_Stock_Quantity": 15,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 5,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "41": {
-        "book_title": "香港簡史",
-        "author": [
+        "Book_Title": "香港簡史",
+        "Author": [
             "林立偉"
         ],
-        "publisher": "蜂鳥出版",
-        "genre": "香港研究",
-        "isbn": "9789887505303",
-        "description": "由「不毛之地」到「東方之珠」，由小漁港到國際金融中心，香港的地理優勢，令這個彈丸之地總是在世界舞台佔一席位；由兩個世界的邊界，由英國殖民地到中國的特別行政區，香港的曖昧身世，令這個矛盾的地方總是難以說得清。\n\n1997 年7 月1 日，香港主權回權中國。「香港故事展覽以香港回歸作結，但這個由香港人書寫的故事仍將會日復日、年復年的永遠延續下去。」香港歷史博物館常設展更新之前，以這句作結。今天，香港再次站在歷史關口，香港人書寫的故事面臨另一次重要轉折。",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/41.jpg",
-        "selling_price": 77.7222,
-        "in_stock_quantity": 55,
-        "hold_quantity": 15,
-        "sold_quantity": 40,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "蜂鳥出版",
+        "Genre": "香港研究",
+        "ISBN": "9789887505303",
+        "Description": "由「不毛之地」到「東方之珠」，由小漁港到國際金融中心，香港的地理優勢，令這個彈丸之地總是在世界舞台佔一席位；由兩個世界的邊界，由英國殖民地到中國的特別行政區，香港的曖昧身世，令這個矛盾的地方總是難以說得清。\n\n1997 年7 月1 日，香港主權回權中國。「香港故事展覽以香港回歸作結，但這個由香港人書寫的故事仍將會日復日、年復年的永遠延續下去。」香港歷史博物館常設展更新之前，以這句作結。今天，香港再次站在歷史關口，香港人書寫的故事面臨另一次重要轉折。",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/41.jpg",
+        "Selling_Price": 77.7222,
+        "In_Stock_Quantity": 55,
+        "Hold_Quantity": 15,
+        "Sold_Quantity": 40,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "42": {
-        "book_title": "上帝、世俗社會與道德的基礎—當代宗教哲學的探索",
-        "author": [
+        "Book_Title": "上帝、世俗社會與道德的基礎—當代宗教哲學的探索",
+        "Author": [
             "關啟文"
         ],
-        "publisher": "天道書樓",
-        "genre": "宗教神學",
-        "isbn": "9789622086632",
-        "description": "不少文化人對宗教倫理嗤之以鼻，儼然已假設了在現代世俗社會中，道德的基礎只能建立在世俗主義或自然主義之上。本書作者的看法與此大相徑庭，認爲宗教世界觀能爲道德提供更穩固的基礎，而道德的心靈是我們通向超越界的一面窗戶；相反，以自然主義世界觀來建立道德基礎，其實難度極高。",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/42.jpg",
-        "selling_price": 101.062,
-        "in_stock_quantity": 30,
-        "hold_quantity": 5,
-        "sold_quantity": 25,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "天道書樓",
+        "Genre": "宗教神學",
+        "ISBN": "9789622086632",
+        "Description": "不少文化人對宗教倫理嗤之以鼻，儼然已假設了在現代世俗社會中，道德的基礎只能建立在世俗主義或自然主義之上。本書作者的看法與此大相徑庭，認爲宗教世界觀能爲道德提供更穩固的基礎，而道德的心靈是我們通向超越界的一面窗戶；相反，以自然主義世界觀來建立道德基礎，其實難度極高。",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/42.jpg",
+        "Selling_Price": 101.062,
+        "In_Stock_Quantity": 30,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 25,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "43": {
-        "book_title": "如何認識世界與自我: 大學哲學通識入門",
-        "author": [
+        "Book_Title": "如何認識世界與自我: 大學哲學通識入門",
+        "Author": [
             "譚家博"
         ],
-        "publisher": "時報文化出版企業股份有限公司",
-        "genre": "哲學",
-        "isbn": "9786263536012",
-        "description": "哲學一點也不難！讓你輕鬆讀懂哲學的第一本書\n\n哲學教人如何思考、如何發現謬誤，更教人尋找生命意義與人生價值：\n我是誰？我為何而活？我又該如何活出自我？",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/43.jpg",
-        "selling_price": 69.9422,
-        "in_stock_quantity": 20,
-        "hold_quantity": 10,
-        "sold_quantity": 10,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "時報文化出版企業股份有限公司",
+        "Genre": "哲學",
+        "ISBN": "9786263536012",
+        "Description": "哲學一點也不難！讓你輕鬆讀懂哲學的第一本書\n\n哲學教人如何思考、如何發現謬誤，更教人尋找生命意義與人生價值：\n我是誰？我為何而活？我又該如何活出自我？",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/43.jpg",
+        "Selling_Price": 69.9422,
+        "In_Stock_Quantity": 20,
+        "Hold_Quantity": 10,
+        "Sold_Quantity": 10,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "44": {
-        "book_title": "精神分析引論（新版）",
-        "author": [
+        "Book_Title": "精神分析引論（新版）",
+        "Author": [
             "Sigmund Freud"
         ],
-        "publisher": "左岸文化",
-        "genre": "精神分析",
-        "isbn": "9789865727826",
-        "description": "本書為佛洛伊德於1915-1917年間，在維也納大學冬季學期開設的精神分析課程之演講內容集結。書中不僅可以看到佛洛伊德本人對其先前理論所做的整理，也可發現許多後續發展的線索，如「強迫性重複」、自我的分析，以及「無意識」一詞的多重意義所導致的困難等，皆已有所討論。\n",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/44.jpg",
-        "selling_price": 93.2822,
-        "in_stock_quantity": 25,
-        "hold_quantity": 5,
-        "sold_quantity": 20,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "左岸文化",
+        "Genre": "精神分析",
+        "ISBN": "9789865727826",
+        "Description": "本書為佛洛伊德於1915-1917年間，在維也納大學冬季學期開設的精神分析課程之演講內容集結。書中不僅可以看到佛洛伊德本人對其先前理論所做的整理，也可發現許多後續發展的線索，如「強迫性重複」、自我的分析，以及「無意識」一詞的多重意義所導致的困難等，皆已有所討論。\n",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/44.jpg",
+        "Selling_Price": 93.2822,
+        "In_Stock_Quantity": 25,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 20,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "45": {
-        "book_title": "多重伴侶下的安全感：依附關係、創傷理論，與知情同意的開放式關係",
-        "author": [
+        "Book_Title": "多重伴侶下的安全感：依附關係、創傷理論，與知情同意的開放式關係",
+        "Author": [
             "潔西卡．芬恩"
         ],
-        "publisher": "麥田",
-        "genre": "性別研究",
-        "isbn": "9786263104204",
-        "description": "寫給受過性別運動經典《道德浪女》啟蒙，\n和已經在實踐——或曾動念探索——道德多重伴侶關係的人，\n一本審視童年與內在，處理占有欲和不安全感的非典型關係指南",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/45.jpg",
-        "selling_price": 116.622,
-        "in_stock_quantity": 15,
-        "hold_quantity": 5,
-        "sold_quantity": 10,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "麥田",
+        "Genre": "性別研究",
+        "ISBN": "9786263104204",
+        "Description": "寫給受過性別運動經典《道德浪女》啟蒙，\n和已經在實踐——或曾動念探索——道德多重伴侶關係的人，\n一本審視童年與內在，處理占有欲和不安全感的非典型關係指南",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/45.jpg",
+        "Selling_Price": 116.622,
+        "In_Stock_Quantity": 15,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 10,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     },
     "46": {
-        "book_title": "文化經濟學",
-        "author": [
+        "Book_Title": "文化經濟學",
+        "Author": [
             "胡惠林"
         ],
-        "publisher": "清華大學出版社",
-        "genre": "社會文化經濟",
-        "isbn": "9787302372912",
-        "description": "經濟學與文化──就像南半球和北半球，它們是人類社會裡最關心的兩件事，但長久以來卻像井水不犯河水般存在於人類社會。\n\n本書對文化採取較寬廣的定義，從學術領域到社會組織的系統，探索文化的經濟面，以及經濟學的文化脈絡。\n\n全書以價值理論為基礎，從經濟價值的及文化價值兩種概念出發，將兩造之間整合起來。",
-        "book_cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/46.jpg",
-        "selling_price": 132.182,
-        "in_stock_quantity": 20,
-        "hold_quantity": 5,
-        "sold_quantity": 15,
-        "last_update": "2023-04-14 08:56:13"
+        "Publisher": "清華大學出版社",
+        "Genre": "社會文化經濟",
+        "ISBN": "9787302372912",
+        "Description": "經濟學與文化──就像南半球和北半球，它們是人類社會裡最關心的兩件事，但長久以來卻像井水不犯河水般存在於人類社會。\n\n本書對文化採取較寬廣的定義，從學術領域到社會組織的系統，探索文化的經濟面，以及經濟學的文化脈絡。\n\n全書以價值理論為基礎，從經濟價值的及文化價值兩種概念出發，將兩造之間整合起來。",
+        "Book_Cover": "https://hkreader-book-cover.s3.ap-southeast-1.amazonaws.com/46.jpg",
+        "Selling_Price": 132.182,
+        "In_Stock_Quantity": 20,
+        "Hold_Quantity": 5,
+        "Sold_Quantity": 15,
+        "Last_Update_Date": "2023-04-14 08:56:13"
     }
 }

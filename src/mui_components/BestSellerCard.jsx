@@ -46,7 +46,7 @@ function BestSellerCard({ book, i }) {
           <img
             src={book.cover}
             loading="lazy"
-            alt={book.title}
+            alt={book.Book_Title}
             style={{ display: 'block' }}
           />
         </AspectRatio>
@@ -58,16 +58,16 @@ function BestSellerCard({ book, i }) {
             sx={{ color: 'text.tertiary' }}
           >
             <Typography level="h2" fontSize="lg" id="card-description" mb={1}>
-              {book.title}
+              {book.Book_Title}
 
             </Typography>
           </Link>
           <Typography fontSize="sm" aria-describedby="card-description" mb={1}>
-            Authors: {book.authors}
+            Authors: {book.Author}
           </Typography>
           <Typography fontSize="sm" aria-describedby="card-description" mb={1}>
 
-            Publisher: {book.publisher}
+            Publisher: {book.Publisher}
           </Typography>
         </div>
       </Card>

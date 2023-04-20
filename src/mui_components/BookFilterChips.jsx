@@ -26,11 +26,12 @@ const filterCriteria = [
   { id: 17, label: "同人誌" },
   { id: 18, label: "歷史與政治" },
   { id: 19, label: "社會 文化 經濟" },
-  { id: 20, label: "Literature" },
+  { id: 20, label: "Classic Literature" },
   { id: 21, label: "Hong Kong Studies" },
   { id: 22, label: "Social science and history" },
   { id: 23, label: "Philosophy" },
   { id: 24, label: "Urban studies" },
+  { id: 25, label: "Novel" },
 ];
 
 export default function FilterChips({ selected, setSelected }) {

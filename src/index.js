@@ -12,7 +12,6 @@ import awsconfig from "./aws-exports";
 import { studioTheme } from "./ui-components";
 
 import Context from "./context/Context";
-import { GetData } from "./context/FetchBooks";
 
 Amplify.configure(awsconfig);
 
@@ -23,7 +22,6 @@ root.render(
       <ThemeProvider theme={studioTheme}>
         <Context>
           <App />
-          {/* <GetData /> */}
         </Context>
       </ThemeProvider>
     </BrowserRouter>
