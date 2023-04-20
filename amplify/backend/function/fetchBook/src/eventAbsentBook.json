@@ -1,0 +1,6 @@
+{
+  "httpMethod": "GET",
+  "pathParameters": {
+    "bookId": "999999999999999999"
+  }
+}

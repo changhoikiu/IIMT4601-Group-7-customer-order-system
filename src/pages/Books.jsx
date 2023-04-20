@@ -20,7 +20,10 @@ import { State } from "../context/Context";
 export default function Books() {
   const {
     state: { bookList },
+    dispatch,
   } = State();
+
+  console.log(bookList)
 
   const pageSize = 12;
 
@@ -45,38 +48,46 @@ export default function Books() {
     setPage(0);
   };
 
-  console.log(selectedFilter);
-  console.log(selectedSort);
+  // console.log(selectedFilter);
+  // console.log(selectedSort);
+  let filteredBookList = [];
+  if (bookList.length > 0) {
+    filteredBookList = bookList.filter((book) => {
+      console.log(book);
+      let searchLower, titleLower, authorsLower, publisherLower;
+      try {
+        searchLower = searchQuery.toLowerCase();
+        titleLower = book.Book_Title.toLowerCase();
+        authorsLower = book.Author.toLowerCase();
+        publisherLower = book.Publisher.toLowerCase();
+      } catch (err) {
+        searchLower = searchQuery;
+        titleLower = book.Book_Title;
+        authorsLower = book.Author;
+        publisherLower = book.Publisher;
+      }
+      console.log(searchLower);
+      console.log(titleLower);
+      console.log(authorsLower);
+      console.log(publisherLower);
 
-const filteredBookList = bookList.filter((book) => {
-  let searchLower, titleLower, authorsLower, publisherLower;
-  try {
-    searchLower = searchQuery.toLowerCase();
-    titleLower = book.book_title.toLowerCase();
-    authorsLower = book.author.map((a) => a.toLowerCase()).join(" ");
-    publisherLower = book.publisher.toLowerCase();
-  } catch (err) {
-    searchLower = searchQuery;
-    titleLower = book.book_title;
-    authorsLower = book.author.map((a) => a).join(" ");
-    publisherLower = book.publisher;
-  }
-  if (selectedFilter.length === 0) {
-    return (
-      titleLower.includes(searchLower) ||
-      authorsLower.includes(searchLower) ||
-      publisherLower.includes(searchLower)
-    );
-  } else {
-    return (
-      selectedFilter.includes(book.genre) &&
-      (titleLower.includes(searchLower) ||
-        authorsLower.includes(searchLower) ||
-        publisherLower.includes(searchLower))
-    );
-  }
-});
-  
+      if (selectedFilter.length === 0) {
+        return (
+          titleLower.includes(searchLower) ||
+          authorsLower.includes(searchLower) ||
+          publisherLower.includes(searchLower)
+        );
+      } else {
+        return (
+          selectedFilter.includes(book.genre) &&
+          (titleLower.includes(searchLower) ||
+            authorsLower.includes(searchLower) ||
+            publisherLower.includes(searchLower))
+        );
+      }
+    });
+  };
+
   const sortedBookList = filteredBookList.sort((a, b) => {
     if (selectedSort === "Price (ascending)") {
       return a.selling_price - b.selling_price;
@@ -95,8 +106,7 @@ const filteredBookList = bookList.filter((book) => {
     }
   });
 
-  console.log(filteredBookList);
-
+  // console.log(filteredBookList);
 
   const numPages = Math.ceil(filteredBookList.length / pageSize);
 
@@ -166,7 +176,7 @@ const filteredBookList = bookList.filter((book) => {
                 {filteredBookList
                   .slice(page * pageSize, (page + 1) * pageSize)
                   .map((book) => (
-                    <Grid key={book.id} item xs={12} sm={6} md={6} lg={3}>
+                    <Grid key={book.Book_id} item xs={12} sm={6} md={6} lg={3}>
                       <BookCard key={book.id} {...book} />
                     </Grid>
                   ))}

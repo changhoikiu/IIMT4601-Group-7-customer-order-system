@@ -19,7 +19,7 @@ import { State } from "../context/Context";
 const steps = [
   "Confirm cart",
   "Input personal information",
-  "Verification",
+  // "Verification",
   "Finish",
 ];
 
@@ -78,13 +78,13 @@ export default function SubmitReservation() {
             handleSubmittedData={setSubmittedData}
           />
         </Content>
-      ) : activeStep === 2 ? (
-        <Content>
-          <SmsVerification
-            handleNext={handleNext}
-            submittedData={submittedData}
-          />
-        </Content>
+      // ) : activeStep === 2 ? (
+      //   <Content>
+      //     <SmsVerification
+      //       handleNext={handleNext}
+      //       submittedData={submittedData}
+      //     />
+      //   </Content>
       ) : (
         <Content>
           <Box

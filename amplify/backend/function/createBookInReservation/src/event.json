@@ -1,0 +1,5 @@
+{
+  "httpMethod": "POST",
+  "pathParameters": { "reservationId": 40 },
+  "body": "{\"book_id\": \"1\",\"quantity\": 2}"
+}

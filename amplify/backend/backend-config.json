@@ -8,7 +8,47 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "bookHandler"
+          "resourceName": "fetchBook"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "fetchBooks"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "fetchMonthlyBestSeller"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "createEnquiry"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "createReservation"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "createBookInReservation"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -49,7 +89,32 @@
     }
   },
   "function": {
-    "bookHandler": {
+    "createBookInReservation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "createEnquiry": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "createReservation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "fetchBook": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "fetchBooks": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "fetchMonthlyBestSeller": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -69,6 +134,102 @@
         {
           "category": "function",
           "resourceName": "bookHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_createBookInReservation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createBookInReservation"
+        }
+      ]
+    },
+    "AMPLIFY_function_createBookInReservation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createBookInReservation"
+        }
+      ]
+    },
+    "AMPLIFY_function_createEnquiry_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createEnquiry"
+        }
+      ]
+    },
+    "AMPLIFY_function_createEnquiry_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createEnquiry"
+        }
+      ]
+    },
+    "AMPLIFY_function_createReservation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createReservation"
+        }
+      ]
+    },
+    "AMPLIFY_function_createReservation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createReservation"
+        }
+      ]
+    },
+    "AMPLIFY_function_fetchBook_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchBook"
+        }
+      ]
+    },
+    "AMPLIFY_function_fetchBook_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchBook"
+        }
+      ]
+    },
+    "AMPLIFY_function_fetchBooks_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchBooks"
+        }
+      ]
+    },
+    "AMPLIFY_function_fetchBooks_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchBooks"
+        }
+      ]
+    },
+    "AMPLIFY_function_fetchMonthlyBestSeller_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchMonthlyBestSeller"
+        }
+      ]
+    },
+    "AMPLIFY_function_fetchMonthlyBestSeller_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fetchMonthlyBestSeller"
         }
       ]
     },

@@ -45,14 +45,24 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
           <IconButton onClick={onClose} sx={{ mb: 2 }}>
             <ArrowBackIcon />
           </IconButton>
-          <AspectRatio ratio="6/9" sx={{ width: "fitContent" }}>
-            <img
-              src={book.book_cover}
-              loading="lazy"
-              alt={book.book_title}
-              style={{ display: "block" }}
-            />
-          </AspectRatio>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+          }}
+          >
+            <AspectRatio
+              ratio="6/9"
+              sx={{ width: "40%"}}
+            >
+              <img
+                src={book.book_cover}
+                loading="lazy"
+                alt={book.book_title}
+                style={{ display: "block" }}
+              />
+            </AspectRatio>
+          </Box>
           <Typography variant="h4" my={2}>
             {book.book_title}
           </Typography>
