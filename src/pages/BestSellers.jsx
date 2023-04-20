@@ -10,6 +10,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import data from "../context/bestsellers";
 
 import Amplify, { API } from "aws-amplify";
 
@@ -21,33 +22,50 @@ export default function BestSellers() {
   const [year, setYear] = React.useState(new Date().getFullYear());
   const handleChangeYear = (event) => {
     setYear(event.target.value);
+    setBestSeller(getBestSeller(event.target.value, month));
   };
 
-  const [month, setMonth] = React.useState(new Date().getMonth());
+  const [month, setMonth] = React.useState(new Date().getMonth() - 1);
   const handleChangeMonth = (event) => {
     setMonth(event.target.value);
+    setBestSeller(getBestSeller(year, event.target.value));
   };
 
-  const [bestSeller, setBestSeller] = React.useState(null);
+  const [bestSeller, setBestSeller] = React.useState(
+    getBestSeller(year, month)
+  );
 
-  React.useEffect(() => {
-    const myAPI = "customer";
-    const path = "/bestseller";
+  // console.log(data);
 
-    API.get(myAPI, path + "/" + year + "/" + month)
-      .then((response) => {
-        setBestSeller(response.Bestsellers);
-      })
-      .catch((error) => {
-        console.log(error.response);
-      });
-  }, []);
+  function getBestSeller(selectedYear, selectedMonth) {
+    let selected = [];
+    data.forEach((record) => {
+      if (record.Year === selectedYear && record.Month === selectedMonth) {
+        selected = record.Bestsellers;
+      }
+    });
+    return selected;
+  }
 
-  console.log(bestSeller);
+  // console.log("selected", bestSeller);
 
+  // React.useEffect(() => {
+  //   const myAPI = "customer";
+  //   const path = "/bestseller";
+
+  //   API.get(myAPI, path + "/" + year + "/" + month)
+  //     .then((response) => {
+  //       setBestSeller(response.Bestsellers);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error.response);
+  //     });
+  // }, []);
+
+  const themeColor = "#0d4fa2";
   return (
     <div>
-      <Typography level="h4">
+      <Typography level="h4" sx={{ color: themeColor }}>
         <StarRoundedIcon />
         &nbsp;&nbsp;Monthly Best Sellers
       </Typography>

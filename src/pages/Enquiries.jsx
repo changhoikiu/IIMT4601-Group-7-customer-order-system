@@ -44,12 +44,12 @@ function Enquiries() {
         console.log(err.response);
     })
   }
-
+  const themeColor = "#0d4fa2";
   return (
     <>
       {!isSubmitted ? (
         <>
-          <Typography level="h4">
+          <Typography level="h4" sx={{ color: themeColor }}>
             <QuestionAnswerRoundedIcon />
             &nbsp;&nbsp;Enquiries
           </Typography>

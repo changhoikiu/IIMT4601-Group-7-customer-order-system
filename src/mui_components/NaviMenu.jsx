@@ -12,11 +12,14 @@ import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import QuestionAnswerRoundedIcon from "@mui/icons-material/QuestionAnswerRounded";
 
 export default function NaviMenu() {
-  const iconColor = "#0d4fa2";
-  const textColor = "#0d4fa2";
+  const themeColor = "#0d4fa2";
 
   return (
-    <Box>
+    <Box
+      sx={{
+        marginLeft: 2,
+      }}
+    >
       <List
         role="menubar"
         orientation="horizontal"
@@ -27,15 +30,24 @@ export default function NaviMenu() {
           "--List-gap": "8px",
         }}
       >
-        <ListItem role="none">
+        <ListItem role="none" sx={{}}>
           <ListItemButton
             role="menuitem"
             component={Link}
             to="/"
-            sx={{ color: textColor }}
+            sx={{
+              color: "#FFFFFF",
+              "&:hover": {
+                backgroundColor: "#F5F5F5",
+                color: themeColor,
+                "& .MuiSvgIcon-root": {
+                  color: themeColor,
+                },
+              },
+            }}
           >
-            <ListItemDecorator sx={{ color: textColor }}>
-              <MenuBookRoundedIcon sx={{ color: iconColor }} />
+            <ListItemDecorator sx={{ color: "#FFFFFF" }}>
+              <MenuBookRoundedIcon />
             </ListItemDecorator>
             Books
           </ListItemButton>
@@ -46,10 +58,19 @@ export default function NaviMenu() {
             role="menuitem"
             component={Link}
             to="/monthly-best-sellers"
-            sx={{ color: textColor }}
+            sx={{
+              color: "#FFFFFF",
+              "&:hover": {
+                backgroundColor: "#F5F5F5",
+                color: themeColor,
+                "& .MuiSvgIcon-root": {
+                  color: themeColor,
+                },
+              },
+            }}
           >
-            <ListItemDecorator sx={{ color: textColor }}>
-              <StarRoundedIcon sx={{ color: iconColor }} />
+            <ListItemDecorator sx={{ color: "#FFFFFF" }}>
+              <StarRoundedIcon />
             </ListItemDecorator>
             Monthly Best Sellers
           </ListItemButton>
@@ -60,10 +81,19 @@ export default function NaviMenu() {
             role="menuitem"
             component={Link}
             to="/enquiries"
-            sx={{ color: textColor }}
+            sx={{
+              color: "#FFFFFF",
+              "&:hover": {
+                backgroundColor: "#F5F5F5",
+                color: themeColor,
+                "& .MuiSvgIcon-root": {
+                  color: themeColor,
+                },
+              },
+            }}
           >
-            <ListItemDecorator sx={{ color: textColor }}>
-              <QuestionAnswerRoundedIcon sx={{ color: iconColor }} />
+            <ListItemDecorator sx={{ color: "#FFFFFF" }}>
+              <QuestionAnswerRoundedIcon />
             </ListItemDecorator>
             Enquiries
           </ListItemButton>
