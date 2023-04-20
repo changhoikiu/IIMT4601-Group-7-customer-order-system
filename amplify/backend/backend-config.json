@@ -1,4 +1,20 @@
 {
+  "api": {
+    "customer": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "bookHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "customerOrderingSys": {
       "customAuth": false,
@@ -32,7 +48,30 @@
       "service": "Cognito"
     }
   },
+  "function": {
+    "bookHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
   "parameters": {
+    "AMPLIFY_function_bookHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bookHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_bookHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bookHandler"
+        }
+      ]
+    },
     "AMPLIFY_storage_customerorderingsys6c99340a_bucketName": {
       "usedBy": [
         {

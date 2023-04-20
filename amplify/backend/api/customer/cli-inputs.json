@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/book/{isbn}": {
+      "name": "/book/{isbn}",
+      "lambdaFunction": "bookHandler",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

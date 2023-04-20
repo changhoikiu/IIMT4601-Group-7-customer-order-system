@@ -20,7 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function Enquiries() {
   const [form, setForm] = React.useState(null);
 
-  console.log(form);
+  console.log(JSON.stringify(form));
 
   return (
     <>

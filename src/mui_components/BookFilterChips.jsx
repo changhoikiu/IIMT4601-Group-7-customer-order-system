@@ -34,11 +34,11 @@ const filterCriteria = [
 ];
 
 export default function FilterChips({ selected, setSelected }) {
-  const handleChipClick = (id) => {
-    if (selected.includes(id)) {
-      setSelected(selected.filter((v) => v !== id));
+  const handleChipClick = (label) => {
+    if (selected.includes(label)) {
+      setSelected(selected.filter((v) => v !== label));
     } else {
-      setSelected([...selected, id]);
+      setSelected([...selected, label]);
     }
   };
 
@@ -55,12 +55,12 @@ export default function FilterChips({ selected, setSelected }) {
         Filter
       </Typography>
       {filterCriteria.map((criterion) => {
-        const chipSelected = selected.includes(criterion.id);
+        const chipSelected = selected.includes(criterion.label);
         return (
           <Chip
             key={criterion.id}
             label={criterion.label}
-            onClick={() => handleChipClick(criterion.id)}
+            onClick={() => handleChipClick(criterion.label)}
             color={chipSelected ? "primary" : "default"}
             variant={chipSelected ? "soft" : "outlined"}
             sx={{ m: 0.5 }}

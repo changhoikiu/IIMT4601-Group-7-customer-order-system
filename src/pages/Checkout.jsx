@@ -1,51 +1,61 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { Box, Paper } from "@mui/material";
-
 
 import Typography from "@mui/joy/Typography";
 import List from "@mui/joy/List";
-import ListDivider from '@mui/joy/ListDivider';
-import ListItem from '@mui/joy/ListItem';
-import ListItemDecorator from '@mui/joy/ListItemDecorator';
+import ListDivider from "@mui/joy/ListDivider";
+import ListItem from "@mui/joy/ListItem";
+import ListItemDecorator from "@mui/joy/ListItemDecorator";
+import AspectRatio from "@mui/joy/AspectRatio";
 
-import SubmitReservation from '../ui-components/SubmitReservation';
-import { State } from "../context/Context"
+import SubmitReservation from "../ui-components/SubmitReservation";
+import { State } from "../context/Context";
 
-const Checkout = ({handleNext, handleSubmittedData}) => {
+const Checkout = ({ handleNext, handleSubmittedData }) => {
+  const {
+    state: { cart },
+    dispatch,
+  } = State();
 
-	const {
-		state: { cart },
-		dispatch,
-	} = State();
+  console.log(JSON.stringify(cart));
+  function extractIdAndQty(books) {
+    const result = [];
+    for (const book of books) {
+      const { id, qty } = book;
+      result.push({ id, qty });
+    }
+    return result;
+  }
+  const cart_extracted = extractIdAndQty(cart);
 
-	const [total, setTotal] = React.useState();
-	React.useEffect(() => {
-		setTotal(cart.reduce((acc, book) => acc + book.price * book.qty, 0));
-	}, [cart]);
+  const [total, setTotal] = React.useState();
+  React.useEffect(() => {
+    setTotal(cart.reduce((acc, book) => acc + book.selling_price * book.qty, 0));
+  }, [cart]);
 
-	const handleCheckout = fields => {
-		handleSubmittedData(fields);
-		handleNext();
-	}
+  const handleCheckout = (fields) => {
+    handleSubmittedData(fields);
+    handleNext();
+  };
 
-	const Item = styled(Paper)(({ theme }) => ({
-		backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-		padding: theme.spacing(2),
-		textAlign: 'left',
-		color: theme.palette.text.secondary,
-		display: 'flex',
-		flexDirection: 'column',
-		variant: 'outlined',
-	}));
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    padding: theme.spacing(2),
+    textAlign: "left",
+    color: theme.palette.text.secondary,
+    display: "flex",
+    flexDirection: "column",
+    variant: "outlined",
+  }));
 
-	const Column = styled(Box)(({ theme }) => ({
-		marginLeft: theme.spacing(2),
-		textAlign: 'left',
-	}));
+  const Column = styled(Box)(({ theme }) => ({
+    marginLeft: theme.spacing(2),
+    textAlign: "left",
+  }));
 
-	return (
+  return (
     <>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ flex: 2, mr: 4 }}>
@@ -62,18 +72,18 @@ const Checkout = ({handleNext, handleSubmittedData}) => {
               </ListItem>
               {cart.map((book) => (
                 <Box>
-                  <ListItem
-                    key={book.id}
-                  >
+                  <ListItem key={book.id}>
                     <ListItemDecorator sx={{ width: "10%" }}>
-                      <img src={book.image} alt={book.title} />
+                      <AspectRatio ratio="6/9" sx={{ width: 50 }}>
+                        <img src={book.book_cover} alt={book.book_title} />
+                      </AspectRatio>
                     </ListItemDecorator>
                     <Column sx={{ width: "50%" }}>
-                      <Typography level="h5">{book.title}</Typography>
-                      <Typography>{book.authors.join(', ')}</Typography>
+                      <Typography level="h5">{book.book_title}</Typography>
+                      <Typography>{book.author.join(", ")}</Typography>
                     </Column>
                     <Typography level="h5" sx={{ marginLeft: "auto" }}>
-                      ${book.price}x{book.qty}
+                      ${book.selling_price}x{book.qty}
                     </Typography>
                   </ListItem>
                   <ListDivider inset="gutter" />
@@ -96,6 +106,6 @@ const Checkout = ({handleNext, handleSubmittedData}) => {
       </Box>
     </>
   );
-}
+};
 
 export default Checkout;

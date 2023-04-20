@@ -1,11 +1,11 @@
-import * as React from 'react';
-import AspectRatio from '@mui/joy/AspectRatio';
-import Link from '@mui/joy/Link';
-import Card from '@mui/joy/Card';
-import Chip from '@mui/joy/Chip';
-import Typography from '@mui/joy/Typography';
-import Box from '@mui/joy/Box';
-import BookDetailsDrawer from './BookDetailDrawer';
+import * as React from "react";
+import AspectRatio from "@mui/joy/AspectRatio";
+import Link from "@mui/joy/Link";
+import Card from "@mui/joy/Card";
+import Chip from "@mui/joy/Chip";
+import Typography from "@mui/joy/Typography";
+import Box from "@mui/joy/Box";
+import BookDetailsDrawer from "./BookDetailDrawer";
 
 export default function BookCard(book) {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
@@ -24,70 +24,81 @@ export default function BookCard(book) {
         variant="outlined"
         sx={{
           gap: 2,
-          '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' },
-          width: '100%',
-          height: '100%',
+          "&:hover": {
+            boxShadow: "md",
+            borderColor: "neutral.outlinedHoverBorder",
+          },
+          width: "100%",
+          height: "100%",
         }}
       >
-        <AspectRatio
-          ratio="6/9"
-          sx={{ width: 'fitContent' }}>
+        <AspectRatio ratio="6/9" sx={{ width: "fitContent" }}>
           <img
-            src={book.cover}
+            src={book.book_cover}
             loading="lazy"
             alt={book.title}
-            style={{ display: 'block' }}
+            style={{ display: "block" }}
           />
         </AspectRatio>
-        <div>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <Link
             overlay
             underline="none"
             onClick={handleCardClick}
-            sx={{ color: 'text.tertiary' }}
+            sx={{ color: "text.tertiary" }}
           >
             <Typography level="h4" fontSize="lg" id="card-description" mb={1}>
-              {book.title}
+              {book.book_title}
             </Typography>
           </Link>
           <Typography
             aria-describedby="card-description"
             sx={{
-              fontSize: 'sm',
-              color: 'text.tertiary',
-              mb: 0.5
+              fontSize: "sm",
+              color: "text.tertiary",
+              mb: 0.5,
             }}
           >
-            {book.authors.join(', ')}
+            {book.author.join(", ")}
           </Typography>
           <Typography
             aria-describedby="card-description"
             sx={{
-              fontSize: 'sm',
-              color: 'text.tertiary',
-              mb: 1
+              fontSize: "sm",
+              color: "text.tertiary",
+              mb: 1,
             }}
           >
             {book.publisher}
           </Typography>
           <Box
-            sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+            className="price"
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              mt: "auto",
+            }}
           >
             <Typography level="h5" fontSize="lg" id="card-description">
-              ${book.price}
+              ${book.selling_price}
             </Typography>
-            <Chip>
-              new
-            </Chip>
+            {new Date() - new Date(book.last_update) < 432000000 && (
+              <Chip>New</Chip>
+            )}
           </Box>
-        </div>
+        </Box>
       </Card>
       <BookDetailsDrawer
-          isOpen={isDrawerOpen}
-          onClose={handleDrawerClose}
-          book={book}
+        isOpen={isDrawerOpen}
+        onClose={handleDrawerClose}
+        book={book}
       />
-
     </>
   );
 }

@@ -30,26 +30,46 @@ GET Monthly_Bestseller
 
 POST Customer_Enquiry
 {
-    Enquiry_ID
     Customer_Name: form.name, 
     Customer_Email: form.email, 
     Customer_Phone_No: form.phoneNo, 
-    Enquiry_timestamp
     Enquiry_Subject: form.type:['Order a book'|'Cancel a reservation/order'|'Other'],
     Enquiry_Message: form.message
     reservation_id: form.reservation_id
-    Enquiry_status
 }
+//example
+{
+    "type":"Order a book",
+    "name":"test",
+    "email":"test@gmail.com",
+    "phoneNo":"98765432",
+    "reservation_id":"test ID",
+    "message":"test enquiry"}
 
-POST Book_In_Reservation, Reservation_Order (Checkout)
+POST Reservation_Order
 {
     Customer_Name : form.name;
     Customer_Email: form.email;
     Customer_Phone_No: form.phoneNo;
-    Reservation_Date: TIMESTAMP;
-    Reservation: [
+}
+//example
+{
+    "name":"test name",
+    "email":"test@test.com",
+    "phoneNo":"12345667",
+}
+
+
+//Reservation_ID is generated from submitting to reservation order, and the Reservation_ID here should be fetched from the above.
+POST Book_In_Reservation
+{
+    [
         Book_ID: Book_ID;
-        Quantity: Book.qty;
-        
+        Quantity: Book.qty;   
     ]
 }
+//example
+[
+    {"id":2,"qty":1},
+    {"id":4,"qty":1}
+]
