@@ -97,7 +97,7 @@ function Enquiries() {
                 }}
               >
                 <Typography level="h5" component="div" sx={{ mb: 2 }}>
-                  Enquiry submitted.
+                  Enquiry is submitted and well received.
                 </Typography>
                 <Link to="/" style={{ textDecoration: "none" }}>
                   <Button
