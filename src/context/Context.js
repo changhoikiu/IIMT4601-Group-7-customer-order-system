@@ -5,9 +5,9 @@ import data from "./book_data.json";
 function format_JSON(data) {
   const arr = [];
   for (const key in data) {
-    const obj = { id: key };
+    const obj = { Book_id: key };
     for (const ckey in data[key]) {
-      ckey === "selling_price"
+      ckey === "Selling_Price"
         ? (obj[ckey] = data[key][ckey].toFixed(2))
         : (obj[ckey] = data[key][ckey]);
     }

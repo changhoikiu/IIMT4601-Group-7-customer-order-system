@@ -13,13 +13,15 @@ import AspectRatio from "@mui/joy/AspectRatio";
 import SubmitReservation from "../ui-components/SubmitReservation";
 import { State } from "../context/Context";
 
-const Checkout = ({ handleNext, handleSubmittedData }) => {
+const Checkout = ({ handleNext }) => {
   const {
     state: { cart },
     dispatch,
   } = State();
 
-  console.log(JSON.stringify(cart));
+  const [submittedData, setSubmittedData] = React.useState({});
+    console.log(submittedData);
+
   function extractIdAndQty(books) {
     const result = [];
     for (const book of books) {
@@ -32,11 +34,11 @@ const Checkout = ({ handleNext, handleSubmittedData }) => {
 
   const [total, setTotal] = React.useState();
   React.useEffect(() => {
-    setTotal(cart.reduce((acc, book) => acc + book.selling_price * book.qty, 0));
+    setTotal(cart.reduce((acc, book) => acc + book.Selling_Price * book.qty, 0));
   }, [cart]);
 
   const handleCheckout = (fields) => {
-    handleSubmittedData(fields);
+    setSubmittedData(fields);
     handleNext();
   };
 
@@ -72,18 +74,18 @@ const Checkout = ({ handleNext, handleSubmittedData }) => {
               </ListItem>
               {cart.map((book) => (
                 <Box>
-                  <ListItem key={book.id}>
+                  <ListItem key={book.Book_id}>
                     <ListItemDecorator sx={{ width: "10%" }}>
                       <AspectRatio ratio="6/9" sx={{ width: 50 }}>
-                        <img src={book.book_cover} alt={book.book_title} />
+                        <img src={book.Book_Cover} alt={book.Book_Title} />
                       </AspectRatio>
                     </ListItemDecorator>
                     <Column sx={{ width: "50%" }}>
-                      <Typography level="h5">{book.book_title}</Typography>
-                      <Typography>{book.author.join(", ")}</Typography>
+                      <Typography level="h5">{book.Book_Title}</Typography>
+                      <Typography>{book.Author}</Typography>
                     </Column>
                     <Typography level="h5" sx={{ marginLeft: "auto" }}>
-                      ${book.selling_price}x{book.qty}
+                      ${book.Selling_Price}x{book.qty}
                     </Typography>
                   </ListItem>
                   <ListDivider inset="gutter" />

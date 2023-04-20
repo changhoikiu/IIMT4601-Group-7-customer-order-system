@@ -1,0 +1,4 @@
+{
+  "httpMethod": "POST",
+  "body": "{\"name\":\"Alice Brown\",\"email\":\"alicebrown@example.com\",\"phoneNo\":\"5555555555\",\"type\":\"General Enquiry\",\"message\":\"I have a question about your services.\",\"reservation_id\":\"11\"}"
+}

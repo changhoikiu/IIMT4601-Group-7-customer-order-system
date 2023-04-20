@@ -45,21 +45,21 @@ export default function Books() {
     setPage(0);
   };
 
-  console.log(selectedFilter);
-  console.log(selectedSort);
+  // console.log(selectedFilter);
+  // console.log(selectedSort);
 
 const filteredBookList = bookList.filter((book) => {
   let searchLower, titleLower, authorsLower, publisherLower;
   try {
     searchLower = searchQuery.toLowerCase();
-    titleLower = book.book_title.toLowerCase();
-    authorsLower = book.author.map((a) => a.toLowerCase()).join(" ");
-    publisherLower = book.publisher.toLowerCase();
+    titleLower = book.Book_Title.toLowerCase();
+    authorsLower = book.Author.toLowerCase();
+    publisherLower = book.Publisher.toLowerCase();
   } catch (err) {
     searchLower = searchQuery;
-    titleLower = book.book_title;
-    authorsLower = book.author.map((a) => a).join(" ");
-    publisherLower = book.publisher;
+    titleLower = book.Book_Title;
+    authorsLower = book.Author;
+    publisherLower = book.Publisher;
   }
   if (selectedFilter.length === 0) {
     return (
@@ -69,7 +69,7 @@ const filteredBookList = bookList.filter((book) => {
     );
   } else {
     return (
-      selectedFilter.includes(book.genre) &&
+      selectedFilter.includes(book.Genre) &&
       (titleLower.includes(searchLower) ||
         authorsLower.includes(searchLower) ||
         publisherLower.includes(searchLower))
@@ -79,23 +79,23 @@ const filteredBookList = bookList.filter((book) => {
   
   const sortedBookList = filteredBookList.sort((a, b) => {
     if (selectedSort === "Price (ascending)") {
-      return a.selling_price - b.selling_price;
+      return a.Selling_Price - b.Selling_Price;
     } else if (selectedSort === "Price (descending)") {
-      return b.selling_price - a.selling_price;
+      return b.Selling_Price - a.Selling_Price;
     } else if (selectedSort === "Latest") {
-      const a_date = new Date(a.last_update);
-      const b_date = new Date(b.last_update);
+      const a_date = new Date(a.Last_Update_Date);
+      const b_date = new Date(b.Last_Update_Date);
       return b_date.getTime() - a_date.getTime();
     } else if (selectedSort === "Oldest") {
-      const a_date = new Date(a.last_updated);
-      const b_date = new Date(b.last_updated);
+      const a_date = new Date(a.Last_Update_Date);
+      const b_date = new Date(b.Last_Update_Date);
       return a_date.getTime() - b_date.getTime();
     } else if (selectedSort === "Best Seller") {
-      return b.sold_quantity - a.sold_quantity;
+      return b.Sold_Quantity - a.Sold_Quantity;
     }
   });
 
-  console.log(filteredBookList);
+  // console.log(filteredBookList);
 
 
   const numPages = Math.ceil(filteredBookList.length / pageSize);
@@ -166,8 +166,8 @@ const filteredBookList = bookList.filter((book) => {
                 {filteredBookList
                   .slice(page * pageSize, (page + 1) * pageSize)
                   .map((book) => (
-                    <Grid key={book.id} item xs={12} sm={6} md={6} lg={3}>
-                      <BookCard key={book.id} {...book} />
+                    <Grid key={book.Book_id} item xs={12} sm={6} md={6} lg={3}>
+                      <BookCard key={book.Book_id} {...book} />
                     </Grid>
                   ))}
               </Grid>

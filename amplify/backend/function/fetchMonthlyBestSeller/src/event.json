@@ -1,0 +1,7 @@
+{
+  "httpMethod": "GET",
+  "pathParameters": {
+    "year": "2023",
+    "month": "01"
+  }
+}

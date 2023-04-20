@@ -26,7 +26,7 @@ const Cart = ({ handleNext }) => {
 
   const [total, setTotal] = React.useState();
   React.useEffect(() => {
-    setTotal(cart.reduce((acc, book) => acc + book.selling_price * book.qty, 0));
+    setTotal(cart.reduce((acc, book) => acc + book.Selling_Price * book.qty, 0));
   }, [cart]);
 
   const Item = styled(Paper)(({ theme }) => ({
@@ -67,7 +67,7 @@ const Cart = ({ handleNext }) => {
                 {cart.map((book) => (
                   <Box>
                     <ListItem
-                      key={book.id}
+                      key={book.Book_id}
                       endAction={
                         <IconButton
                           aria-label="Delete"
@@ -85,16 +85,16 @@ const Cart = ({ handleNext }) => {
                     >
                       <ListItemDecorator sx={{ width: "10%" }}>
                         <AspectRatio ratio="6/9" sx={{ width: 50 }}>
-                          <img src={book.book_cover} alt={book.book_title} />
+                          <img src={book.Book_Cover} alt={book.Book_Title} />
                         </AspectRatio>
                       </ListItemDecorator>
                       <Column sx={{ width: "50%" }}>
-                        <Typography level="h5">{book.book_title}</Typography>
-                        <Typography>{book.author.join(", ")}</Typography>
+                        <Typography level="h5">{book.Book_Title}</Typography>
+                        <Typography>{book.Author}</Typography>
                       </Column>
                       <Column>
                         <Typography level="h5">
-                          ${book.selling_price}
+                          ${book.Selling_Price}
                         </Typography>
                       </Column>
                       <Column>
@@ -109,7 +109,7 @@ const Cart = ({ handleNext }) => {
                             dispatch({
                               type: "CHANGE_CART_QUANTITY",
                               payload: {
-                                id: book.id,
+                                Book_id: book.Book_id,
                                 qty: e.target.value,
                               },
                             })

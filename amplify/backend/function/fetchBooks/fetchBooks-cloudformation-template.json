@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "bookHandler",
+            "fetchBooks",
             {
               "Fn::Join": [
                 "",
                 [
-                  "bookHandler",
+                  "fetchBooks",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "customerorderingsysLambdaRolec1a5b1a0",
+            "customerorderingsysLambdaRole9d7eb189",
             {
               "Fn::Join": [
                 "",
                 [
-                  "customerorderingsysLambdaRolec1a5b1a0",
+                  "customerorderingsysLambdaRole9d7eb189",
                   "-",
                   {
                     "Ref": "env"

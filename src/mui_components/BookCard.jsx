@@ -34,9 +34,9 @@ export default function BookCard(book) {
       >
         <AspectRatio ratio="6/9" sx={{ width: "fitContent" }}>
           <img
-            src={book.book_cover}
+            src={book.Book_Cover}
             loading="lazy"
-            alt={book.title}
+            alt={book.Book_Title}
             style={{ display: "block" }}
           />
         </AspectRatio>
@@ -53,7 +53,7 @@ export default function BookCard(book) {
             sx={{ color: "text.tertiary" }}
           >
             <Typography level="h4" fontSize="lg" id="card-description" mb={1}>
-              {book.book_title}
+              {book.Book_Title}
             </Typography>
           </Link>
           <Typography
@@ -64,7 +64,7 @@ export default function BookCard(book) {
               mb: 0.5,
             }}
           >
-            {book.author.join(", ")}
+            {book.Author}
           </Typography>
           <Typography
             aria-describedby="card-description"
@@ -74,7 +74,7 @@ export default function BookCard(book) {
               mb: 1,
             }}
           >
-            {book.publisher}
+            {book.Publisher}
           </Typography>
           <Box
             className="price"
@@ -86,9 +86,9 @@ export default function BookCard(book) {
             }}
           >
             <Typography level="h5" fontSize="lg" id="card-description">
-              ${book.selling_price}
+              ${book.Selling_Price}
             </Typography>
-            {new Date() - new Date(book.last_update) < 432000000 && (
+            {new Date() - new Date(book.Last_Update_Date) < 432000000 && (
               <Chip>New</Chip>
             )}
           </Box>

@@ -45,40 +45,50 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
           <IconButton onClick={onClose} sx={{ mb: 2 }}>
             <ArrowBackIcon />
           </IconButton>
-          <AspectRatio ratio="6/9" sx={{ width: "fitContent" }}>
-            <img
-              src={book.book_cover}
-              loading="lazy"
-              alt={book.book_title}
-              style={{ display: "block" }}
-            />
-          </AspectRatio>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+          }}
+          >
+            <AspectRatio
+              ratio="6/9"
+              sx={{ width: "40%"}}
+            >
+              <img
+                src={book.Book_Cover}
+                loading="lazy"
+                alt={book.Book_Title}
+                style={{ display: "block" }}
+              />
+            </AspectRatio>
+          </Box>
           <Typography variant="h4" my={2}>
-            {book.book_title}
+            {book.Book_Title}
           </Typography>
           <Typography variant="h6" mb={1}>
             Authors:
           </Typography>
           <Typography variant="body1" mb={2} ml={2}>
-            {book.author.join(", ")}
+            {book.Author}
           </Typography>
           <Typography variant="h6" mb={1}>
             Publisher:
           </Typography>
           <Typography variant="body1" mb={2} ml={2}>
-            {book.publisher}
+            {book.Publisher}
           </Typography>
           <Typography variant="h6" mb={1}>
             Genre:
           </Typography>
           <Typography variant="body1" mb={2} ml={2}>
-            {book.genre}
+            {book.Genre}
           </Typography>
           <Typography variant="h6" mb={1}>
             Description:
           </Typography>
           <Typography variant="body1" mb={2} ml={2} textAlign="justify">
-            {book.description}
+            {book.Description}
           </Typography>
           <Box
             sx={{
@@ -88,7 +98,7 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
             }}
           >
             <Typography variant="h4" my={2}>
-              ${book.selling_price}
+              ${book.Selling_Price}
             </Typography>
             <Button
               color="primary"

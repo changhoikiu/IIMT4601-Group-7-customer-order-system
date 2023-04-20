@@ -1,9 +1,44 @@
 {
   "version": 1,
   "paths": {
-    "/book/{isbn}": {
-      "name": "/book/{isbn}",
-      "lambdaFunction": "bookHandler",
+    "/book/{bookId}": {
+      "name": "/book/{bookId}",
+      "lambdaFunction": "fetchBook",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/books": {
+      "name": "/books",
+      "lambdaFunction": "fetchBooks",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/bestseller/{year}/{month}": {
+      "name": "/bestseller/{year}/{month}",
+      "lambdaFunction": "fetchMonthlyBestSeller",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/enquiry": {
+      "name": "/enquiry",
+      "lambdaFunction": "createEnquiry",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/reservation": {
+      "name": "/reservation",
+      "lambdaFunction": "createReservation",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/reservationBook/{reservationId}": {
+      "name": "/reservationBook/{reservationId}",
+      "lambdaFunction": "createBookInReservation",
       "permissions": {
         "setting": "open"
       }

@@ -1,0 +1,4 @@
+{
+  "httpMethod": "POST",
+  "body": "{\"name\":\"John Doe\",\"email\":\"johndoe@example.com\",\"message\":\"I would like to make an enquiry about your product.\",\"type\":\"General Enquiry\"}"
+}

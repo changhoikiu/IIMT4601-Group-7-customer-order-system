@@ -45,7 +45,7 @@ function CartPopover({ anchorEl, open, handlePopoverClose }) {
             <Divider />
             {cart.map((book) => (
               <Box
-                key={book.id}
+                key={book.Book_id}
                 sx={{
                   display: "flex",
                   alignItems: "center",
@@ -56,17 +56,17 @@ function CartPopover({ anchorEl, open, handlePopoverClose }) {
                 }}
               >
                 <img
-                  src={book.book_cover}
-                  alt={book.book_title}
+                  src={book.Book_Cover}
+                  alt={book.Book_Title}
                   style={{ width: 50 }}
                 />
                 <Box sx={{ mx: 2, flexGrow: 1, maxWidth: "70%" }}>
-                  <Typography variant="subtitle1">{book.book_title}</Typography>
+                  <Typography variant="subtitle1">{book.Book_Title}</Typography>
                   <Typography variant="subtitle1">
-                    {book.author.join(" ")}
+                    {book.Author}
                   </Typography>
                   <Typography variant="subtitle2" color="text.secondary">
-                    ${book.selling_price} x {book.qty}
+                    ${book.Selling_Price} x {book.qty}
                   </Typography>
                 </Box>
                 <IconButton

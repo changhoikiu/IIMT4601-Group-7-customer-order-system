@@ -26,6 +26,30 @@
         "bookHandler": {
           "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
           "s3Key": "amplify-builds/bookHandler-3930646778594f433979-build.zip"
+        },
+        "fetchBook": {
+          "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
+          "s3Key": "amplify-builds/fetchBook-476a717654444f623174-build.zip"
+        },
+        "fetchBooks": {
+          "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
+          "s3Key": "amplify-builds/fetchBooks-6645637736373030716c-build.zip"
+        },
+        "fetchMonthlyBestSeller": {
+          "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
+          "s3Key": "amplify-builds/fetchMonthlyBestSeller-682b764a5a4d35416464-build.zip"
+        },
+        "createEnquiry": {
+          "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
+          "s3Key": "amplify-builds/createEnquiry-50697a6b3664592b3378-build.zip"
+        },
+        "createReservation": {
+          "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
+          "s3Key": "amplify-builds/createReservation-314b6b3441796f305061-build.zip"
+        },
+        "createBookInReservation": {
+          "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
+          "s3Key": "amplify-builds/createBookInReservation-76617145346773625249-build.zip"
         }
       }
     }
