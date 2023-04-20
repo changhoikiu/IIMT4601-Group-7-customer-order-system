@@ -26,7 +26,15 @@ const Cart = ({ handleNext }) => {
 
   const [total, setTotal] = React.useState();
   React.useEffect(() => {
-    setTotal(cart.reduce((acc, book) => acc + book.Selling_Price * book.qty, 0));
+    setTotal(
+      cart.reduce((acc, book) => acc + book.Selling_Price * book.qty, 0)
+    );
+  }, [cart]);
+  const [quantity, setQuantity] = React.useState(0);
+  React.useEffect(() => {
+    setQuantity(
+      cart.reduce((acc, book) => acc + 1 * book.qty, 0)
+    );
   }, [cart]);
 
   const Item = styled(Paper)(({ theme }) => ({
@@ -44,6 +52,7 @@ const Cart = ({ handleNext }) => {
     textAlign: "left",
   }));
 
+    const themeColor = "#0d4fa2";
   return (
     <>
       {cart.length > 0 ? (
@@ -62,7 +71,9 @@ const Cart = ({ handleNext }) => {
                 }}
               >
                 <ListItem>
-                  <Typography level="h4">Cart</Typography>
+                  <Typography level="h4" sx={{ color: themeColor }}>
+                    Cart
+                  </Typography>
                 </ListItem>
                 {cart.map((book) => (
                   <Box>
@@ -131,7 +142,7 @@ const Cart = ({ handleNext }) => {
             </Item>
           </Box>
           <Item className="subtotal" sx={{ flex: 1 }}>
-            <Typography level="h4">Subtotal: {cart.length} item(s)</Typography>
+            <Typography level="h4">Quantity: {quantity} item(s)</Typography>
             <Typography level="h4" sx={{ mt: "auto" }}>
               Total: ${total}
             </Typography>

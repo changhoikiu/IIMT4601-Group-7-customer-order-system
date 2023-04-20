@@ -10,7 +10,7 @@ import NaviMenu from "./NaviMenu";
 import { State } from "../context/Context";
 
 function Header() {
-  const iconColor = "#0d4fa2";
+  const themeColor = "#0d4fa2";
 
   const {
     state: { cart },
@@ -34,17 +34,30 @@ function Header() {
       position="sticky"
       top={0}
       sx={{
-        backgroundColor: "#FFFFFF",
+        backgroundColor: themeColor,
       }}
     >
       <Toolbar>
         <a href="http://www.hkreaders.com/">
           <Box
-            sx={{ height: 50, display: { xs: "none", md: "flex" }, mr: 3 }}
-            component="img"
-            alt="Hong Kong Readers"
-            src={Logo}
-          />
+            sx={{
+              pl: 6,
+              backgroundColor: "#FFFFFF",
+              left: 0
+          }}
+          >
+            <Box
+              sx={{
+                height: 50,
+                display: { xs: "none", md: "flex" },
+                mr: 5,
+                backgroundColor: "#FFFFFF",
+              }}
+              component="img"
+              alt="Hong Kong Readers"
+              src={Logo}
+            />
+          </Box>
         </a>
 
         <NaviMenu />
@@ -54,10 +67,10 @@ function Header() {
           onClick={handlePopoverOpen}
         >
           <Badge
-            badgeContent={cart.reduce((acc, book) => acc + book.qty, 0)}
+            badgeContent={cart.reduce((acc, book) => acc + 1 * book.qty, 0)}
             color="error"
           >
-            <ShoppingBag sx={{ color: iconColor }} />
+            <ShoppingBag sx={{ color: "#FFFFFF" }} />
           </Badge>
         </IconButton>
         <CartPopover

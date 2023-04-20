@@ -48,35 +48,35 @@ export default function Books() {
   // console.log(selectedFilter);
   // console.log(selectedSort);
 
-const filteredBookList = bookList.filter((book) => {
-  let searchLower, titleLower, authorsLower, publisherLower;
-  try {
-    searchLower = searchQuery.toLowerCase();
-    titleLower = book.Book_Title.toLowerCase();
-    authorsLower = book.Author.toLowerCase();
-    publisherLower = book.Publisher.toLowerCase();
-  } catch (err) {
-    searchLower = searchQuery;
-    titleLower = book.Book_Title;
-    authorsLower = book.Author;
-    publisherLower = book.Publisher;
-  }
-  if (selectedFilter.length === 0) {
-    return (
-      titleLower.includes(searchLower) ||
-      authorsLower.includes(searchLower) ||
-      publisherLower.includes(searchLower)
-    );
-  } else {
-    return (
-      selectedFilter.includes(book.Genre) &&
-      (titleLower.includes(searchLower) ||
+  const filteredBookList = bookList.filter((book) => {
+    let searchLower, titleLower, authorsLower, publisherLower;
+    try {
+      searchLower = searchQuery.toLowerCase();
+      titleLower = book.Book_Title.toLowerCase();
+      authorsLower = book.Author.toLowerCase();
+      publisherLower = book.Publisher.toLowerCase();
+    } catch (err) {
+      searchLower = searchQuery;
+      titleLower = book.Book_Title;
+      authorsLower = book.Author;
+      publisherLower = book.Publisher;
+    }
+    if (selectedFilter.length === 0) {
+      return (
+        titleLower.includes(searchLower) ||
         authorsLower.includes(searchLower) ||
-        publisherLower.includes(searchLower))
-    );
-  }
-});
-  
+        publisherLower.includes(searchLower)
+      );
+    } else {
+      return (
+        selectedFilter.includes(book.Genre) &&
+        (titleLower.includes(searchLower) ||
+          authorsLower.includes(searchLower) ||
+          publisherLower.includes(searchLower))
+      );
+    }
+  });
+
   const sortedBookList = filteredBookList.sort((a, b) => {
     if (selectedSort === "Price (ascending)") {
       return a.Selling_Price - b.Selling_Price;
@@ -97,12 +97,12 @@ const filteredBookList = bookList.filter((book) => {
 
   // console.log(filteredBookList);
 
-
   const numPages = Math.ceil(filteredBookList.length / pageSize);
 
+  const themeColor = "#0d4fa2";
   return (
     <>
-      <Typography level="h4">
+      <Typography level="h4" sx={{color:themeColor}}>
         <MenuBookRoundedIcon />
         &nbsp;&nbsp;Books
       </Typography>

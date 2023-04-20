@@ -20,7 +20,7 @@ const Checkout = ({ handleNext }) => {
   } = State();
 
   const [submittedData, setSubmittedData] = React.useState({});
-    console.log(submittedData);
+  console.log(submittedData);
 
   function extractIdAndQty(books) {
     const result = [];
@@ -34,7 +34,13 @@ const Checkout = ({ handleNext }) => {
 
   const [total, setTotal] = React.useState();
   React.useEffect(() => {
-    setTotal(cart.reduce((acc, book) => acc + book.Selling_Price * book.qty, 0));
+    setTotal(
+      cart.reduce((acc, book) => acc + book.Selling_Price * book.qty, 0)
+    );
+  }, [cart]);
+  const [quantity, setQuantity] = React.useState(0);
+  React.useEffect(() => {
+    setQuantity(cart.reduce((acc, book) => acc + 1 * book.qty, 0));
   }, [cart]);
 
   const handleCheckout = (fields) => {
@@ -56,7 +62,7 @@ const Checkout = ({ handleNext }) => {
     marginLeft: theme.spacing(2),
     textAlign: "left",
   }));
-
+  const themeColor = "#0d4fa2";
   return (
     <>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -70,7 +76,9 @@ const Checkout = ({ handleNext }) => {
               }}
             >
               <ListItem>
-                <Typography level="h4">Cart</Typography>
+                <Typography level="h4" sx={{ color: themeColor }}>
+                  Cart
+                </Typography>
               </ListItem>
               {cart.map((book) => (
                 <Box>
@@ -92,9 +100,7 @@ const Checkout = ({ handleNext }) => {
                 </Box>
               ))}
               <ListItem>
-                <Typography level="h4">
-                  Subtotal: {cart.length} item(s)
-                </Typography>
+                <Typography level="h4">Quantity: {quantity} item(s)</Typography>
                 <Typography level="h4" sx={{ ml: "auto" }}>
                   Total: ${total}
                 </Typography>
