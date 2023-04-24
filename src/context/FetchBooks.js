@@ -13,6 +13,7 @@ export function GetData() {
 
     API.get(myAPI, path)
       .then((response) => {
+        console.log(response);
         const arr = [];
         response.forEach((d) => {
           let key = Object.keys(d)[0];
