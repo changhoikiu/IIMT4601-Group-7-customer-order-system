@@ -13,13 +13,11 @@ import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded
 
 import Cart from "./Cart";
 import Checkout from "./Checkout";
-import SmsVerification from "./SmsVerification";
 import { State } from "../context/Context";
 
 const steps = [
   "Confirm cart",
   "Input personal information",
-  // "Verification",
   "Finish",
 ];
 
@@ -43,7 +41,6 @@ export default function SubmitReservation() {
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    // ...theme.typography.body2,
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
@@ -75,13 +72,6 @@ export default function SubmitReservation() {
             handleNext={handleNext}
           />
         </Content>
-      // ) : activeStep === 2 ? (
-      //   <Content>
-      //     <SmsVerification
-      //       handleNext={handleNext}
-      //       submittedData={submittedData}
-      //     />
-      //   </Content>
       ) : (
         <Content>
           <Box

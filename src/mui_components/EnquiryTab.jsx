@@ -59,18 +59,26 @@ export default function EnquiryTab() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
+        You can order a book that is now not offering by us. We will get the
+        book for you soon. <br />
+        ############################# <br />
         Book name: <br />
         Author(s): <br />
         Publisher: <br />
-        Genre:
+        Genre: <br />
+        ############################# <br />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Order id/Reservation id: <br />
+        If you no longer need the book reserved or ordered, please provide us
+        with the details of your reservation/order. <br />
+        ############################# <br />
         Book name: <br />
         Authors(s): <br />
+        ############################# <br />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        You can ask us anything.
+        Please freely ask us anything. <br />
+        ############################# <br />
       </TabPanel>
     </Box>
   );
