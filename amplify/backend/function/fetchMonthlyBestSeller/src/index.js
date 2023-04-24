@@ -52,6 +52,7 @@ exports.handler = async (event) => {
             Genre: row.genre,
             Publication_Year: row.publication_year,
             Description: row.description,
+            Book_Cover_Url: row.book_cover
         }));
 
         // Return the bestsellers as a JSON object

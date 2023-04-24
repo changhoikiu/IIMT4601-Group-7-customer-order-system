@@ -67,7 +67,7 @@ exports.handler = async (event) => {
 
         // Execute a parameterized query to fetch the book inventory
         const [bookInventoryRows, bookInventoryFields] = await connection.execute(
-            'SELECT selling_price, in_stock_quantity, hold_quantity, sold_quantity, last_update, book_cover FROM book_inventory WHERE book_id = ?',
+            'SELECT selling_price, in_stock_quantity, hold_quantity, sold_quantity, last_update FROM book_inventory WHERE book_id = ?',
             [bookId]
         );
 
