@@ -34,7 +34,7 @@ export default function BookCard(book) {
       >
         <AspectRatio ratio="6/9" sx={{ width: "fitContent" }}>
           <img
-            src={book.Book_Cover}
+            src={book.Book_Cover_URL}
             loading="lazy"
             alt={book.Book_Title}
             style={{ display: "block" }}

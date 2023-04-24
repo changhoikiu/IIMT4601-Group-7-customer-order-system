@@ -6,7 +6,6 @@ import Chip from "@mui/joy/Chip";
 import Typography from "@mui/joy/Typography";
 import BookDetailsDrawer from "./BookDetailDrawer";
 import Box from "@mui/joy/Box";
-import { textAlign } from "@mui/system";
 
 function BestSellerCard({ book, i }) {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
@@ -45,7 +44,7 @@ function BestSellerCard({ book, i }) {
         </Chip>
         <AspectRatio ratio="6/9" sx={{ width: 90 }}>
           <img
-            src={book.Book_Cover}
+            src={book.Book_Cover_Url}
             loading="lazy"
             alt={book.Book_Title}
             style={{ display: "block" }}

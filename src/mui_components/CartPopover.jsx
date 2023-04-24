@@ -56,7 +56,7 @@ function CartPopover({ anchorEl, open, handlePopoverClose }) {
                 }}
               >
                 <img
-                  src={book.Book_Cover}
+                  src={book.Book_Cover_URL}
                   alt={book.Book_Title}
                   style={{ width: 50 }}
                 />
