@@ -18,7 +18,7 @@ export function GetData() {
           let key = Object.keys(d)[0];
           const obj = {};
           for (const ckey in d[key]) {
-            ckey === "selling_price"
+            ckey === "Selling_Price"
               ? (obj[ckey] = d[key][ckey].toFixed(2))
               : (obj[ckey] = d[key][ckey]);
           }
@@ -35,7 +35,7 @@ export function GetData() {
       });
   }, []);
 
-  return books ? "success" : null;
+  return books ? "" : null;
 }
 
 // async function format_JSON() {

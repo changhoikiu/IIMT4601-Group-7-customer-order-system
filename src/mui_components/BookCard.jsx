@@ -88,7 +88,7 @@ export default function BookCard(book) {
             <Typography level="h5" fontSize="lg" id="card-description">
               ${book.Selling_Price}
             </Typography>
-            {new Date() - new Date(book.Last_Update_Date) < 432000000 && (
+            {(new Date() - new Date(book.Last_Update_Date)) < 432000000 && (
               <Chip>New</Chip>
             )}
           </Box>

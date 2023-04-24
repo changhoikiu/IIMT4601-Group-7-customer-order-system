@@ -10,7 +10,8 @@ import Button from "@mui/joy/Button";
 import NavigateBeforeRoundedIcon from "@mui/icons-material/NavigateBeforeRounded";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@mui/material";
-import Amplify, {API} from "aws-amplify"
+import Amplify, { API } from "aws-amplify";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -25,24 +26,61 @@ const Item = styled(Paper)(({ theme }) => ({
 function Enquiries() {
   const [form, setForm] = React.useState(null);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [submitting, setSubmitting] = React.useState(false);
 
-  console.log(form);
+  // console.log(form);
 
   function handleSubmit() {
-    setIsSubmitted(true);
+    setSubmitting(true);
     const myAPI = "customer";
     const path = "/enquiry";
     const myInit = {
-      body: form
+      body: form,
     };
 
     API.post(myAPI, path, myInit)
       .then((response) => {
-      console.log(response)
+        // console.log(response);
+        setIsSubmitted(true);
+
+        //Start of sending email to the user
+        const enquiry_id = response.enquiry_id;
+        let subject = `[Hong Kong Reader] #${enquiry_id} Your enquiry details`;
+        let body = `
+              <p>Dear customer,</p>
+              <p>Below are enquiry you have made to us.</p>
+              <p>######################################</p>
+              <p>Enquiry_id ID: #${enquiry_id}</p>
+              <p>
+              Type of enquiry: ${form.type} <br>
+              Name: ${form.name} <br>
+              Email: ${form.email} <br>
+              Phone Number: ${form.phoneNo} <br>
+              Reservation ID: ${form.reservation_id} <br>
+              Message: <br> ${form.message.replaceAll('\n','<br>')} <br>
+              </p>
+              <p>######################################</p>
+              <p>Our staff will handle your enquiry soon. You will get another email notice once your enquiry is reviewed.</p>
+              <p>Cheers,<br>Hong Kong Reader</p>
+              `;
+        window.Email.send({
+          SecureToken: "85d846a2-2dd6-4d55-97fd-89b34f29f06c",
+          To: form.email,
+          From: "adm.hkreader@outlook.com",
+          Subject: subject,
+          Body: body,
+        })
+          .then((message) => {
+            console.log(message);
+            setSubmitting(false);
+          })
+          .catch((err) => console.log(err));
+        //End of sending email to the user
+
       })
       .catch((err) => {
         console.log(err.response);
-    })
+      });
   }
   const themeColor = "#0d4fa2";
   return (
@@ -73,6 +111,13 @@ function Enquiries() {
                   type: [{ type: "Required" }],
                 }}
               />
+              {submitting && (
+                <LinearProgress
+                  sx={{
+                    my: 2,
+                  }}
+                />
+              )}
             </Item>
           </Box>
         </>

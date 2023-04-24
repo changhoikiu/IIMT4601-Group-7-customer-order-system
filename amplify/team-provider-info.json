@@ -49,7 +49,7 @@
         },
         "createBookInReservation": {
           "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
-          "s3Key": "amplify-builds/createBookInReservation-76617145346773625249-build.zip"
+          "s3Key": "amplify-builds/createBookInReservation-576258636e6442594365-build.zip"
         }
       }
     }
