@@ -75,11 +75,13 @@ function BestSellerCard({ book, i }) {
           </Typography>
         </Box>
       </Card>
-      <BookDetailsDrawer
-        isOpen={isDrawerOpen}
-        onClose={handleDrawerClose}
-        book={book}
-      />
+      {isDrawerOpen && (
+        <BookDetailsDrawer
+          isOpen={isDrawerOpen}
+          onClose={handleDrawerClose}
+          book={book}
+        />
+      )}
     </>
   );
 }
