@@ -96,7 +96,7 @@ const Cart = ({ handleNext }) => {
                     >
                       <ListItemDecorator sx={{ width: "10%" }}>
                         <AspectRatio ratio="6/9" sx={{ width: 50 }}>
-                          <img src={book.Book_Cover} alt={book.Book_Title} />
+                          <img src={book.Book_Cover_URL} alt={book.Book_Title} />
                         </AspectRatio>
                       </ListItemDecorator>
                       <Column sx={{ width: "50%" }}>

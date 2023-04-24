@@ -29,11 +29,11 @@
         },
         "fetchBook": {
           "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
-          "s3Key": "amplify-builds/fetchBook-476a717654444f623174-build.zip"
+          "s3Key": "amplify-builds/fetchBook-76797964756f55474f39-build.zip"
         },
         "fetchBooks": {
           "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",
-          "s3Key": "amplify-builds/fetchBooks-6645637736373030716c-build.zip"
+          "s3Key": "amplify-builds/fetchBooks-763765432f634e484d54-build.zip"
         },
         "fetchMonthlyBestSeller": {
           "deploymentBucketName": "amplify-customerorderingsys-dev-215435-deployment",

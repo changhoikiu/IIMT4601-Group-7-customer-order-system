@@ -23,20 +23,18 @@ export default function BestSellers() {
   const [year, setYear] = React.useState(new Date().getFullYear());
   const handleChangeYear = (event) => {
     setYear(event.target.value);
-    // setBestSeller(getBestSeller(event.target.value, month));
   };
 
   const [month, setMonth] = React.useState(new Date().getMonth());
   const handleChangeMonth = (event) => {
     setMonth(event.target.value);
-    // setBestSeller(getBestSeller(year, event.target.value));
   };
 
   const [bestSeller, setBestSeller] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
 
   // console.log(data);
-  // console.log("selected", bestSeller);
+  console.log("selected", bestSeller);
 
   React.useEffect(() => {
     setLoading(true);

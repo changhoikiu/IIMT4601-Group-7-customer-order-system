@@ -74,7 +74,7 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
             >
               <AspectRatio ratio="6/9" sx={{ width: "40%" }}>
                 <img
-                  src={selectedBook.Book_Cover}
+                  src={selectedBook.Book_Cover_URL}
                   loading="lazy"
                   alt={selectedBook.Book_Title}
                   style={{ display: "block" }}
