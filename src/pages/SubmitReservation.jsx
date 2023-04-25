@@ -15,11 +15,7 @@ import Cart from "./Cart";
 import Checkout from "./Checkout";
 import { State } from "../context/Context";
 
-const steps = [
-  "Confirm cart",
-  "Input personal information",
-  "Finish",
-];
+const steps = ["Confirm cart", "Input personal information", "Finish"];
 
 export default function SubmitReservation() {
   const { dispatch } = State();
@@ -68,9 +64,7 @@ export default function SubmitReservation() {
         </Content>
       ) : activeStep === 1 ? (
         <Content>
-          <Checkout
-            handleNext={handleNext}
-          />
+          <Checkout handleNext={handleNext} />
         </Content>
       ) : (
         <Content>
@@ -113,7 +107,7 @@ export default function SubmitReservation() {
         </Content>
       )}
       <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-        {activeStep !== steps.length - 1 && activeStep !== 0 ? (
+        {activeStep === 1 ? (
           <Button
             variant="plain"
             color="inherit"

@@ -45,7 +45,7 @@ export default function OtherEnquiry(props) {
     setErrors({});
   };
   const validations = {
-    type: [],
+    type: [{ type: "Required" }],
     name: [{ type: "Required" }],
     email: [{ type: "Required" }, { type: "Email" }],
     phoneNo: [{ type: "Required" }, { type: "Phone" }],
@@ -112,6 +112,7 @@ export default function OtherEnquiry(props) {
       <SelectField
         label="Select the type of your enquiry"
         placeholder="Please select an option"
+        isRequired={true}
         value={type}
         onChange={(e) => {
           let { value } = e.target;

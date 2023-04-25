@@ -32,9 +32,7 @@ const Cart = ({ handleNext }) => {
   }, [cart]);
   const [quantity, setQuantity] = React.useState(0);
   React.useEffect(() => {
-    setQuantity(
-      cart.reduce((acc, book) => acc + 1 * book.qty, 0)
-    );
+    setQuantity(cart.reduce((acc, book) => acc + 1 * book.qty, 0));
   }, [cart]);
 
   const Item = styled(Paper)(({ theme }) => ({
@@ -52,7 +50,7 @@ const Cart = ({ handleNext }) => {
     textAlign: "left",
   }));
 
-    const themeColor = "#0d4fa2";
+  const themeColor = "#0d4fa2";
   return (
     <>
       {cart.length > 0 ? (
@@ -96,44 +94,60 @@ const Cart = ({ handleNext }) => {
                     >
                       <ListItemDecorator sx={{ width: "10%" }}>
                         <AspectRatio ratio="6/9" sx={{ width: 50 }}>
-                          <img src={book.Book_Cover_URL} alt={book.Book_Title} />
+                          <img
+                            src={book.Book_Cover_URL}
+                            alt={book.Book_Title}
+                          />
                         </AspectRatio>
                       </ListItemDecorator>
                       <Column sx={{ width: "50%" }}>
                         <Typography level="h5">{book.Book_Title}</Typography>
                         <Typography>{book.Author}</Typography>
                       </Column>
-                      <Column>
+                      <Box
+                        sx={{
+                          marginLeft: 2,
+                          width: 100,
+                        }}
+                      >
                         <Typography level="h5">
                           ${book.Selling_Price}
                         </Typography>
-                      </Column>
-                      <Column>
-                        <Typography>Qty:</Typography>
-                      </Column>
-                      <Column>
-                        <Input
-                          type="number"
-                          value={book.qty}
-                          sx={{ width: 80 }}
-                          onChange={(e) =>
-                            dispatch({
-                              type: "CHANGE_CART_QUANTITY",
-                              payload: {
-                                Book_id: book.Book_id,
-                                qty: e.target.value,
+                      </Box>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          textAlign: "right",
+                        }}
+                      >
+                        <Column>
+                          <Typography>Qty:</Typography>
+                        </Column>
+                        <Column>
+                          <Input
+                            type="number"
+                            value={book.qty}
+                            sx={{ width: 80 }}
+                            onChange={(e) =>
+                              dispatch({
+                                type: "CHANGE_CART_QUANTITY",
+                                payload: {
+                                  Book_id: book.Book_id,
+                                  qty: e.target.value,
+                                },
+                              })
+                            }
+                            slotProps={{
+                              input: {
+                                min: 1,
+                                max: 100,
+                                step: 1,
                               },
-                            })
-                          }
-                          slotProps={{
-                            input: {
-                              min: 1,
-                              max: 100,
-                              step: 1,
-                            },
-                          }}
-                        />
-                      </Column>
+                            }}
+                          />
+                        </Column>
+                      </Box>
                     </ListItem>
                     <ListDivider inset="gutter" />
                   </Box>
