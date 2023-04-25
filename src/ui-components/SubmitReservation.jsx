@@ -38,9 +38,9 @@ export default function SubmitReservation(props) {
   };
   const validations = {
     name: [{ type: "Required" }],
-    email: [{ type: "Email" }],
+    email: [{ type: "Required" }, { type: "Email" }],
     phoneNo: [{ type: "Required" }, { type: "Phone" }],
-    agreement: [],
+    agreement: [{ type: "Required" }],
   };
   const runValidationTasks = async (
     fieldName,
@@ -131,7 +131,7 @@ export default function SubmitReservation(props) {
       ></TextField>
       <TextField
         label="Email"
-        isRequired={false}
+        isRequired={true}
         placeholder="Your email"
         value={email}
         onChange={(e) => {
@@ -189,6 +189,7 @@ export default function SubmitReservation(props) {
         name="fieldName"
         value="fieldName"
         checked={agreement}
+        isRequired={true}
         onChange={(e) => {
           let value = e.target.checked;
           if (onChange) {

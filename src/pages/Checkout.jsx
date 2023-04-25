@@ -166,7 +166,7 @@ const Checkout = ({ handleNext }) => {
                       <Typography>{book.Author}</Typography>
                     </Column>
                     <Typography level="h5" sx={{ marginLeft: "auto" }}>
-                      ${book.Selling_Price}x{book.qty}
+                      ${book.Selling_Price} x {book.qty}
                     </Typography>
                   </ListItem>
                   <ListDivider inset="gutter" />

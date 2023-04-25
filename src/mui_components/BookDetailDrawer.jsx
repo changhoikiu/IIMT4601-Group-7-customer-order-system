@@ -24,7 +24,6 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
   } = State();
 
   const [isAddedToCart, setIsAddedToCart] = React.useState(false);
-  const [isAddToCartDisabled, setIsAddToCartDisabled] = React.useState(false);
   const [selectedBook, setSelectedBook] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -34,12 +33,11 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
       payload: selectedBook,
     });
     setIsAddedToCart(true);
-    setIsAddToCartDisabled(true);
     onClose();
   };
 
   const handleCloseSnackbar = () => {
-    setIsAddedToCart(false);
+    setIsAddedToCart(true);
   };
 
   React.useEffect(() => {
@@ -121,17 +119,11 @@ export default function BookDetailsDrawer({ isOpen, onClose, book }) {
               <Button
                 color="primary"
                 startDecorator={<Add />}
-                onClick={handleAddToCart}
-                disabled={isAddToCartDisabled}
+                onClick={() => handleAddToCart()}
               >
                 Add to Cart
               </Button>
             </Box>
-            {isAddToCartDisabled && (
-              <Typography variant="body2" textAlign="right">
-                Change the quantity in Cart.
-              </Typography>
-            )}
           </Box>
         ) : (
           <Box
