@@ -8,6 +8,6 @@ To run the app, please go to https://main.d22vn2zar3ohs7.amplifyapp.com/.
 
 ## Folder structure
 
-[amplify](): configuration and code for back-end of customerOrderingSys.
+[amplify](https://github.com/changhoikiu/IIMT4601-Group-7-customer-order-system/tree/main/amplify): configuration and code for back-end of customerOrderingSys.
 
-[src](): configuration and code for the front-end of customerOrderingSys.
+[src](https://github.com/changhoikiu/IIMT4601-Group-7-customer-order-system/tree/main/src): configuration and code for the front-end of customerOrderingSys.
